@@ -10,22 +10,20 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private LayerMask platformLayerMask;
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpPower;
-    private int num;
-    [SerializeField] private Collider2D myCollider; 
+    [SerializeField] private Collider2D groundedCheckCollider; 
     // Start is called before the first frame update
     [SerializeField] private bool facingLeft = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        myCollider = GetComponentInChildren<EdgeCollider2D>();
+        groundedCheckCollider = GetComponentInChildren<EdgeCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-        { 
-            Debug.Log("Here" + ++num);
+        {
             if(IsGrounded())
                 rb.velocity = Vector2.up * _jumpPower;
         }
@@ -52,6 +50,6 @@ public class PlayerMove : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return myCollider.IsTouchingLayers(platformLayerMask);
+        return groundedCheckCollider.IsTouchingLayers(platformLayerMask);
     }
 }
