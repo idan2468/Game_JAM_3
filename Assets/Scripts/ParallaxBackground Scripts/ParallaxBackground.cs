@@ -21,10 +21,10 @@ public class ParallaxBackground : MonoBehaviour
 
     private void LateUpdate()
     {
-        var currPos = cam.transform.position;
-        var temp = currPos.x * (1 - parallaxEffect);
-        var dist = currPos.x * parallaxEffect;
-        transform.position = new Vector3(startPos + dist, currPos.y, currPos.z);
+        var currCamPos = cam.transform.position;
+        var temp = currCamPos.x * (1 - parallaxEffect);
+        var dist = currCamPos.x * parallaxEffect;
+        transform.position = new Vector3(startPos + dist, transform.position.y, transform.position.z);
         if (temp < startPos - length)
         {
             startPos -= length;
