@@ -96,8 +96,24 @@
               <e p="EmojiOne Attribution.txt" t="Include" />
             </e>
           </e>
+          <e p="UB" t="Include">
+            <e p="Simple2dWeatherEffects" t="Include">
+              <e p="Standard" t="Include">
+                <e p="D2Fogs.shader" t="Include" />
+                <e p="D2FogsNoiseTex.shader" t="Include" />
+                <e p="D2FogsNoiseTexPE.cs" t="Include" />
+                <e p="D2FogsPE.cs" t="Include" />
+                <e p="EffectBase.cs" t="Include" />
+              </e>
+            </e>
+          </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="ParallaxBackground Scripts" t="Include">
+            <e p="ParallaxBackground.cs" t="Include" />
+            <e p="ParallaxCamera.cs" t="Include" />
+            <e p="ParallaxLayer.cs" t="Include" />
+          </e>
           <e p="PlayerMove.cs" t="Include" />
           <e p="SampleScripts" t="Include">
             <e p="SimpleCameraController.cs" t="Include" />
