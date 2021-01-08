@@ -221,7 +221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &449906847
 Transform:
   m_ObjectHideFlags: 0
@@ -303,7 +303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &581183022
 Transform:
   m_ObjectHideFlags: 0
@@ -399,7 +399,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.9724922, y: 0}
+  m_Offset: {x: -0.8070755, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -410,7 +410,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 75.309456, y: 1}
+  m_Size: {x: 365.87903, y: 1}
   m_EdgeRadius: 0
 --- !u!4 &615383629
 Transform:
@@ -442,7 +442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &714804227
 Transform:
   m_ObjectHideFlags: 0
@@ -591,7 +591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &976797100
 Transform:
   m_ObjectHideFlags: 0
@@ -668,6 +668,7 @@ GameObject:
   - component: {fileID: 1127888193}
   - component: {fileID: 1127888194}
   - component: {fileID: 1127888195}
+  - component: {fileID: 1127888196}
   m_Layer: 9
   m_Name: Trees
   m_TagString: Untagged
@@ -683,7 +684,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127888192}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.64, y: 1.3, z: -2}
+  m_LocalPosition: {x: -2.64, y: 0.9, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 581183022}
@@ -735,8 +736,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 375, y: 135}
+  m_DrawMode: 2
+  m_Size: {x: 150, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -749,7 +750,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127888192}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b04cb071fda1df47b8e20198a84684d, type: 3}
   m_Name: 
@@ -758,6 +759,22 @@ MonoBehaviour:
   startPos: 0
   cam: {fileID: 2142978365}
   parallaxEffect: 0
+  temp: 0
+--- !u!114 &1127888196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127888192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19039c95066995b4ea99a2fba0b52694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxEffectMultiplier: {x: 0.2, y: 0}
+  infiniteHorizontal: 1
+  infiniteVertical: 0
 --- !u!1 &1190959349
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,7 +791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1190959350
 Transform:
   m_ObjectHideFlags: 0
@@ -856,7 +873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1238288068
 Transform:
   m_ObjectHideFlags: 0
@@ -938,7 +955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1282280945
 Transform:
   m_ObjectHideFlags: 0
@@ -1136,6 +1153,7 @@ GameObject:
   - component: {fileID: 1488747053}
   - component: {fileID: 1488747054}
   - component: {fileID: 1488747055}
+  - component: {fileID: 1488747056}
   m_Layer: 9
   m_Name: Mountains
   m_TagString: Untagged
@@ -1203,8 +1221,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 282, y: 108}
+  m_DrawMode: 2
+  m_Size: {x: 150, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1217,7 +1235,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488747052}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b04cb071fda1df47b8e20198a84684d, type: 3}
   m_Name: 
@@ -1226,6 +1244,22 @@ MonoBehaviour:
   startPos: 0
   cam: {fileID: 2142978365}
   parallaxEffect: 0.2
+  temp: 0
+--- !u!114 &1488747056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488747052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19039c95066995b4ea99a2fba0b52694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxEffectMultiplier: {x: 0.4, y: 0}
+  infiniteHorizontal: 1
+  infiniteVertical: 0
 --- !u!1001 &1774045571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1410,6 +1444,7 @@ GameObject:
   - component: {fileID: 1862027049}
   - component: {fileID: 1862027050}
   - component: {fileID: 1862027051}
+  - component: {fileID: 1862027052}
   m_Layer: 9
   m_Name: Clouds
   m_TagString: Untagged
@@ -1425,7 +1460,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862027048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.64, y: 3, z: -7}
+  m_LocalPosition: {x: -2.64, y: 5.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 976797100}
@@ -1477,8 +1512,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 660, y: 80}
+  m_DrawMode: 2
+  m_Size: {x: 150, y: 45}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1491,7 +1526,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862027048}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b04cb071fda1df47b8e20198a84684d, type: 3}
   m_Name: 
@@ -1500,6 +1535,22 @@ MonoBehaviour:
   startPos: 0
   cam: {fileID: 2142978365}
   parallaxEffect: 0.1
+  temp: 0
+--- !u!114 &1862027052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862027048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19039c95066995b4ea99a2fba0b52694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxEffectMultiplier: {x: 0.3, y: 0.5}
+  infiniteHorizontal: 1
+  infiniteVertical: 1
 --- !u!1 &1909733199 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5434310846285001679, guid: bc2e25c8e3713ff45af3e0ea2aea83ec, type: 3}
@@ -1547,8 +1598,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008814178}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.36, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -4.9, z: 0}
+  m_LocalScale: {x: 0.24, y: 0.24, z: 1}
   m_Children:
   - {fileID: 1238288068}
   - {fileID: 2012803629}
@@ -1599,8 +1650,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 21.333334, y: 10.666667}
+  m_DrawMode: 2
+  m_Size: {x: 2000, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1613,7 +1664,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008814178}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b04cb071fda1df47b8e20198a84684d, type: 3}
   m_Name: 
@@ -1622,6 +1673,7 @@ MonoBehaviour:
   startPos: 0
   cam: {fileID: 2142978365}
   parallaxEffect: 0
+  temp: 0
 --- !u!1 &2012803628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,7 +1690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2012803629
 Transform:
   m_ObjectHideFlags: 0

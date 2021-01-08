@@ -12,6 +12,7 @@ public class ParallaxBackground : MonoBehaviour
 
     [SerializeField] private float parallaxEffect = 1f;
     private SpriteRenderer _spriteRenderer;
+    public float temp;
     private void Start()
     {
         startPos = transform.position.x;
@@ -22,7 +23,7 @@ public class ParallaxBackground : MonoBehaviour
     private void LateUpdate()
     {
         var currCamPos = cam.transform.position;
-        var temp = currCamPos.x * (1 - parallaxEffect);
+        temp = currCamPos.x * (1 - parallaxEffect);
         var dist = currCamPos.x * parallaxEffect;
         transform.position = new Vector3(startPos + dist, transform.position.y, transform.position.z);
         if (temp < startPos - length)
@@ -74,6 +75,6 @@ public class ParallaxBackground : MonoBehaviour
     //     {
     //         _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     //     }
-    //     // Gizmos.DrawWireCube(_spriteRenderer.bounds.center,_spriteRenderer.bounds.size);
+    //     Gizmos.DrawWireCube(_spriteRenderer.bounds.center,_spriteRenderer.bounds.size);
     // }
 }
