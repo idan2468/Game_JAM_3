@@ -10,24 +10,38 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private LayerMask platformLayerMask;
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpPower;
-    [SerializeField] private Collider2D groundedCheckCollider; 
+
+    [SerializeField] private Collider2D groundedCheckCollider;
+
     // Start is called before the first frame update
     [SerializeField] private bool facingLeft = false;
-    
+    private PushObject _pushObject;
+    private Animator _animator;
+
     public bool IsFacingLeft => facingLeft;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         groundedCheckCollider = GetComponentInChildren<EdgeCollider2D>();
+        _pushObject = GetComponent<PushObject>();
+        _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Jump"))
         {
-            if(IsGrounded())
+            if (IsGrounded() && !_pushObject.IsPushing)
                 rb.velocity = Vector2.up * _jumpPower;
+        }
+
+        if (_animator)
+        {
+            _animator.SetFloat("speed", Mathf.Abs(rb.velocity.x));
+            _animator.SetBool("isGrounded", IsGrounded());
+            _animator.SetBool("isPushing", _pushObject.IsPushing);
         }
     }
 
@@ -35,18 +49,20 @@ public class PlayerMove : MonoBehaviour
     {
         var dirTaken = new Vector2(Input.GetAxis("Horizontal"), 0);
         var dirVelocity = dirTaken * _speed;
-        if (facingLeft && dirVelocity.x > 0)
+        if (facingLeft && dirVelocity.x > 0.01f)
         {
-            transform.rotation = Quaternion.Euler(0,0,0);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
-        if (!facingLeft && dirVelocity.x < 0)
+
+        if (!facingLeft && dirVelocity.x < -0.01f)
         {
-            transform.rotation = Quaternion.Euler(0,180,0);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
-        rb.velocity = new Vector2(dirVelocity.x,rb.velocity.y);
+
+        rb.velocity = new Vector2(dirVelocity.x, rb.velocity.y);
         if (dirVelocity != Vector2.zero)
         {
-            facingLeft = dirVelocity.x < 0;    
+            facingLeft = dirVelocity.x < 0;
         }
     }
 

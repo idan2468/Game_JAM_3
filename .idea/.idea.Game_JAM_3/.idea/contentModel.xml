@@ -120,6 +120,7 @@
             <e p="ParallaxLayer.cs" t="Include" />
           </e>
           <e p="PlayerMove.cs" t="Include" />
+          <e p="PushableObject.cs" t="Include" />
           <e p="PushObject.cs" t="Include" />
           <e p="SampleScripts" t="Include">
             <e p="SimpleCameraController.cs" t="Include" />
