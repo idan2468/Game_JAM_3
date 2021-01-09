@@ -15,7 +15,6 @@ public class PushObject : MonoBehaviour
     private bool isPushing;
 
     public bool IsPushing => isPushing;
-    
 
     // Use this for initialization
     void Start()

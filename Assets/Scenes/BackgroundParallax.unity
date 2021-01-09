@@ -1957,6 +1957,14 @@ PrefabInstance:
       propertyPath: _speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5434310846285001676, guid: bc2e25c8e3713ff45af3e0ea2aea83ec, type: 3}
+      propertyPath: _jumpPower
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434310846285001676, guid: bc2e25c8e3713ff45af3e0ea2aea83ec, type: 3}
+      propertyPath: platformLayerMask.m_Bits
+      value: 1280
+      objectReference: {fileID: 0}
     - target: {fileID: 5434310846285001677, guid: bc2e25c8e3713ff45af3e0ea2aea83ec, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2253,6 +2261,25 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   hight: 0.5
+--- !u!95 &1909733205
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909733199}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 093c077bd6066e8489d195ba6e46347c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2008814178
 GameObject:
   m_ObjectHideFlags: 0
@@ -2369,6 +2396,18 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 2142978365}
+    - target: {fileID: 5751552300684732293, guid: acb885fcc1760464aaafb8f17d6a68d3, type: 3}
+      propertyPath: parallaxEffectMultiplier.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5751552300908526527, guid: acb885fcc1760464aaafb8f17d6a68d3, type: 3}
+      propertyPath: parallaxEffectMultiplier.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5751552300937088436, guid: acb885fcc1760464aaafb8f17d6a68d3, type: 3}
+      propertyPath: parallaxEffectMultiplier.x
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 5751552301086983844, guid: acb885fcc1760464aaafb8f17d6a68d3, type: 3}
       propertyPath: m_Name
       value: ParallaxBackground
@@ -2416,6 +2455,10 @@ PrefabInstance:
     - target: {fileID: 5751552301086983845, guid: acb885fcc1760464aaafb8f17d6a68d3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5751552301706369362, guid: acb885fcc1760464aaafb8f17d6a68d3, type: 3}
+      propertyPath: parallaxEffectMultiplier.x
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acb885fcc1760464aaafb8f17d6a68d3, type: 3}
@@ -2473,6 +2516,50 @@ PrefabInstance:
     - target: {fileID: 7187467376552201438, guid: 83dc70c68065670479c997ec5e31b7a2, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187467376608662288, guid: 83dc70c68065670479c997ec5e31b7a2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8.174571
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187467376608662288, guid: 83dc70c68065670479c997ec5e31b7a2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.5932555
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187467376608662288, guid: 83dc70c68065670479c997ec5e31b7a2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0306805
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187467376608662288, guid: 83dc70c68065670479c997ec5e31b7a2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187467376608662288, guid: 83dc70c68065670479c997ec5e31b7a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187467376608662290, guid: 83dc70c68065670479c997ec5e31b7a2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187467377185830488, guid: 83dc70c68065670479c997ec5e31b7a2, type: 3}
+      propertyPath: m_CameraDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187467377185830488, guid: 83dc70c68065670479c997ec5e31b7a2, type: 3}
+      propertyPath: m_DeadZoneHeight
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187467377658831132, guid: 83dc70c68065670479c997ec5e31b7a2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187467377658831132, guid: 83dc70c68065670479c997ec5e31b7a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187467377658831132, guid: 83dc70c68065670479c997ec5e31b7a2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7187467377658831133, guid: 83dc70c68065670479c997ec5e31b7a2, type: 3}
       propertyPath: m_Follow
