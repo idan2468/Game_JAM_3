@@ -44,25 +44,24 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_canMove)
+        if (!_canMove) return;
+        if (Input.GetButtonDown("Jump"))
         {
-            if (Input.GetButtonDown("Jump"))
-            {
-                if (IsGrounded() && !_pushObject.IsPushing)
-                    rb.velocity = Vector2.up * _jumpPower;
-            }
+            if (IsGrounded() && !_pushObject.IsPushing)
+                rb.velocity = Vector2.up * _jumpPower;
+        }
 
-            if (_animator)
-            {
-                _animator.SetFloat("speed", Mathf.Abs(rb.velocity.x));
-                _animator.SetBool("isGrounded", IsGrounded());
-                _animator.SetBool("isPushing", _pushObject.IsPushing);
-            }
+        if (_animator)
+        {
+            _animator.SetFloat("speed", Mathf.Abs(rb.velocity.x));
+            _animator.SetBool("isGrounded", IsGrounded());
+            _animator.SetBool("isPushing", _pushObject.IsPushing);
         }
     }
 
     private void FixedUpdate()
     {
+        if (!_canMove) return;
         var dirTaken = new Vector2(Input.GetAxis("Horizontal"), 0);
         var dirVelocity = dirTaken * _speed;
         if (facingLeft && dirVelocity.x > 0.01f)
