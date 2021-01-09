@@ -13,6 +13,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Collider2D groundedCheckCollider; 
     // Start is called before the first frame update
     [SerializeField] private bool facingLeft = false;
+    
+    public bool IsFacingLeft => facingLeft;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
