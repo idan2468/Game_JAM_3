@@ -40,8 +40,8 @@ public class PushObject : MonoBehaviour
         
         if (hit.collider != null && Input.GetButtonDown("Interact"))
         {
-            if (hit.collider.gameObject.GetComponent<PushableObject>() == null) return;
             box = hit.collider.gameObject.GetComponent<PushableObject>();
+            if (box == null) return;
             isPushing = true;
             box.BeingPushedSetter(isPushing,_rigidbody2D);
         }

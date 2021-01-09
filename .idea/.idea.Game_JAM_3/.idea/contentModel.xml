@@ -125,6 +125,10 @@
           <e p="SampleScripts" t="Include">
             <e p="SimpleCameraController.cs" t="Include" />
           </e>
+          <e p="Singletons" t="Include">
+            <e p="MusicController.cs" t="Include" />
+            <e p="SceneLoader.cs" t="Include" />
+          </e>
           <e p="SpiritAnimation.cs" t="Include" />
           <e p="UIManger.cs" t="Include" />
         </e>
