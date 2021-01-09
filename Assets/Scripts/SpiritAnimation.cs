@@ -11,7 +11,7 @@ public class SpiritAnimation : MonoBehaviour
 
     public float strength = 2f;
     private Sequence animation;
-    private UIManger _uiManger;
+    //private UIManager _uiManger;
     private float intervalTime;
     [Range(1,5)]
     private float intervalRandomMin = 1f;
@@ -19,7 +19,7 @@ public class SpiritAnimation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _uiManger = FindObjectOfType<UIManger>();
+        //_uiManger = FindObjectOfType<UIManager>();
         animation = DOTween.Sequence();
         animation.Append(gameObject.transform.DOShakeScale(duration, strength));
         animation.Join(gameObject.transform.DOShakePosition(duration, strength));
@@ -38,7 +38,7 @@ public class SpiritAnimation : MonoBehaviour
     {
         if (other is EdgeCollider2D) return;
         animation.Kill();
-        _uiManger.AddScore();
+        //_uiManger.AddScore();
         Destroy(gameObject);
     }
 }
