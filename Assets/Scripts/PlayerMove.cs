@@ -13,12 +13,14 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Collider2D groundedCheckCollider; 
     // Start is called before the first frame update
     [SerializeField] private bool facingLeft = false;
-    
+    private PushObject _pushObject;
+
     public bool IsFacingLeft => facingLeft;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         groundedCheckCollider = GetComponentInChildren<EdgeCollider2D>();
+        _pushObject = GetComponent<PushObject>();
     }
 
     // Update is called once per frame
@@ -26,7 +28,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(IsGrounded())
+            if(IsGrounded() && !_pushObject.IsPushing)
                 rb.velocity = Vector2.up * _jumpPower;
         }
     }

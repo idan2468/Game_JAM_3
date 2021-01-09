@@ -7,11 +7,15 @@ public class PushObject : MonoBehaviour
     [SerializeField] private float distance = 1f;
     [SerializeField] private LayerMask boxMask;
 
-    GameObject box;
+    PushableObject box;
     private FixedJoint2D boxJoint;
     [SerializeField] private float hight;
     private Rigidbody2D _rigidbody2D;
     private PlayerMove _playerMove;
+    private bool isPushing;
+
+    public bool IsPushing => isPushing;
+    
 
     // Use this for initialization
     void Start()
@@ -23,27 +27,32 @@ public class PushObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Physics2D.queriesStartInColliders = false;
-        var dir = _playerMove.IsFacingLeft ? Vector2.left : Vector2.right;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + Vector3.up * hight, dir * transform.localScale.x,
-            distance);
-        if (hit.collider != null && Input.GetButtonDown("Interact"))
-        {
-            box = hit.collider.gameObject;
-            boxJoint = box.GetComponent<FixedJoint2D>();
-            boxJoint.connectedBody = _rigidbody2D;
-            boxJoint.enabled = true;
-            // box.GetComponent<boxpull> ().beingPushed = true;
-        }
-        else if (Input.GetKeyUp(KeyCode.E) && box != null)
-        {
-            box = null;
-            boxJoint.enabled = false;
-            boxJoint = null;
-            // box.GetComponent<boxpull> ().beingPushed = false;
-        }
+        HandlePushButtonMode();
     }
 
+    private void HandlePushButtonMode()
+    {
+        Physics2D.queriesStartInColliders = false;
+       
+        var dir = _playerMove.IsFacingLeft ? Vector2.left : Vector2.right;
+        dir *= transform.localScale.x;
+        var origin = (Vector2) transform.position + Vector2.up * hight;
+        var hit = Physics2D.Raycast(origin, dir, distance, boxMask);
+        
+        if (hit.collider != null && Input.GetButtonDown("Interact"))
+        {
+            if (hit.collider.gameObject.GetComponent<PushableObject>() == null) return;
+            box = hit.collider.gameObject.GetComponent<PushableObject>();
+            isPushing = true;
+            box.BeingPushedSetter(isPushing,_rigidbody2D);
+        }
+        
+        else if (Input.GetKeyUp(KeyCode.E) && isPushing)
+        {
+            isPushing = false;
+            box.BeingPushedSetter(isPushing,null);
+        }
+    }
 
     void OnDrawGizmos()
     {

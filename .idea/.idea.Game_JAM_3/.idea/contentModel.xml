@@ -114,6 +114,7 @@
             </e>
           </e>
         </e>
+        <e p="PushableObject.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ParallaxBackground Scripts" t="Include">
             <e p="ParallaxBackground.cs" t="Include" />
