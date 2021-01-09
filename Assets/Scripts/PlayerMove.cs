@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private LayerMask platformLayerMask;
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpPower;
+    [SerializeField] private bool _canMove = false;
 
     [SerializeField] private Collider2D groundedCheckCollider;
 
@@ -17,6 +18,18 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private bool facingLeft = false;
     private PushObject _pushObject;
     private Animator _animator;
+
+    public bool CanMove
+    {
+        get
+        {
+            return _canMove;
+        }
+        set
+        {
+            _canMove = value;
+        }
+    }
 
     public bool IsFacingLeft => facingLeft;
 
@@ -31,17 +44,20 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (_canMove)
         {
-            if (IsGrounded() && !_pushObject.IsPushing)
-                rb.velocity = Vector2.up * _jumpPower;
-        }
+            if (Input.GetButtonDown("Jump"))
+            {
+                if (IsGrounded() && !_pushObject.IsPushing)
+                    rb.velocity = Vector2.up * _jumpPower;
+            }
 
-        if (_animator)
-        {
-            _animator.SetFloat("speed", Mathf.Abs(rb.velocity.x));
-            _animator.SetBool("isGrounded", IsGrounded());
-            _animator.SetBool("isPushing", _pushObject.IsPushing);
+            if (_animator)
+            {
+                _animator.SetFloat("speed", Mathf.Abs(rb.velocity.x));
+                _animator.SetBool("isGrounded", IsGrounded());
+                _animator.SetBool("isPushing", _pushObject.IsPushing);
+            }
         }
     }
 
