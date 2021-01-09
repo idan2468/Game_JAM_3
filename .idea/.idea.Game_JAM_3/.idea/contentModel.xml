@@ -128,9 +128,9 @@
           <e p="Singletons" t="Include">
             <e p="MusicController.cs" t="Include" />
             <e p="SceneLoader.cs" t="Include" />
+            <e p="Singleton.cs" t="Include" />
           </e>
           <e p="SpiritAnimation.cs" t="Include" />
-          <e p="UIManger.cs" t="Include" />
         </e>
       </e>
       <e p="Game_JAM_3.sln" t="IncludeFlat" />

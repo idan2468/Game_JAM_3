@@ -4,8 +4,8 @@
     <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BackgroundParallax.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BackgroundParallax.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PushObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PushObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singletons/MusicController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Singletons/MusicController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singletons/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Singletons/SceneLoader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpiritAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpiritAnimation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,10 +31,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/ParallaxLayer.cs" />
       <option value="$PROJECT_DIR$/Assets/PushableObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/MusicController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/SceneLoader.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PushObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SpiritAnimation.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/MusicController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/SceneLoader.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZ4YEMI8xej9xB9eS5RmwInxe2" />
@@ -81,7 +81,7 @@
       <updated>1609687831683</updated>
       <workItem from="1609687862531" duration="13094000" />
       <workItem from="1610025584226" duration="8046000" />
-      <workItem from="1610138063897" duration="16152000" />
+      <workItem from="1610138063897" duration="16461000" />
     </task>
     <servers />
   </component>

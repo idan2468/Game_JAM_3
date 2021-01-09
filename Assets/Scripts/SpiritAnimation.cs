@@ -8,10 +8,8 @@ using Random = UnityEngine.Random;
 public class SpiritAnimation : MonoBehaviour
 {
     public float duration = 1f;
-
     public float strength = 2f;
     private Sequence animation;
-    private UIManger _uiManger;
     private float intervalTime;
     [Range(1, 5)] private float intervalRandomMin = 1f;
     private float intervalRandomMax = 5f;
@@ -24,7 +22,6 @@ public class SpiritAnimation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _uiManger = FindObjectOfType<UIManger>();
         initialPos = transform.localPosition;
         initialScale = transform.localScale;
         CreateAnimation();
@@ -63,7 +60,6 @@ public class SpiritAnimation : MonoBehaviour
     {
         if (other is EdgeCollider2D) return;
         animation.Kill();
-        _uiManger.AddScore();
         Destroy(gameObject);
     }
 }
