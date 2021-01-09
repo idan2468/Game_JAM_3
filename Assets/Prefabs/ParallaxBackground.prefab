@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19039c95066995b4ea99a2fba0b52694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0.3, y: 0}
+  parallaxEffectMultiplier: {x: 0.1, y: 0}
   infiniteHorizontal: 1
   infiniteVertical: 0
 --- !u!1 &5751552300696978337
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19039c95066995b4ea99a2fba0b52694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0, y: 0}
+  parallaxEffectMultiplier: {x: 0.3, y: 0}
   infiniteHorizontal: 1
   infiniteVertical: 0
 --- !u!1 &5751552300908526525
@@ -391,7 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19039c95066995b4ea99a2fba0b52694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0.4, y: 0}
+  parallaxEffectMultiplier: {x: 0.05, y: 0}
   infiniteHorizontal: 1
   infiniteVertical: 0
 --- !u!1 &5751552300937088434
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19039c95066995b4ea99a2fba0b52694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0.2, y: 0}
+  parallaxEffectMultiplier: {x: 0.15, y: 0}
   infiniteHorizontal: 1
   infiniteVertical: 0
 --- !u!1 &5751552301086983844
@@ -626,7 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19039c95066995b4ea99a2fba0b52694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0, y: 0}
+  parallaxEffectMultiplier: {x: 0.3, y: 0}
   infiniteHorizontal: 1
   infiniteVertical: 0
 --- !u!1 &5751552301706369360
@@ -724,7 +724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19039c95066995b4ea99a2fba0b52694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0.1, y: 0}
+  parallaxEffectMultiplier: {x: 0.2, y: 0}
   infiniteHorizontal: 1
   infiniteVertical: 0
 --- !u!1 &5751552301853721800
@@ -822,7 +822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19039c95066995b4ea99a2fba0b52694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0, y: 0}
+  parallaxEffectMultiplier: {x: 0.3, y: 0}
   infiniteHorizontal: 1
   infiniteVertical: 0
 --- !u!1 &5751552302067037877

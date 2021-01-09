@@ -60,6 +60,7 @@ public class SpiritAnimation : MonoBehaviour
     {
         if (other is EdgeCollider2D) return;
         animation.Kill();
+        MusicController.Instance.PlaySound(MusicController.SoundEffects.Score,.5f);
         Destroy(gameObject);
     }
 }
