@@ -85,4 +85,5 @@ public class PlayerMove : MonoBehaviour
     {
         return groundedCheckCollider.IsTouchingLayers(platformLayerMask);
     }
+    
 }

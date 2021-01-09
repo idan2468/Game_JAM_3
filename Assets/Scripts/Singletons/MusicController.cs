@@ -13,7 +13,10 @@ public class MusicController : Singleton<MusicController>
         Hit,
         Click,
         EndGame,
-        Score
+        Score,
+        Step1,
+        Step2,
+        Step3
     }
 
     private Dictionary<SoundEffects, AudioClip> sounds;
