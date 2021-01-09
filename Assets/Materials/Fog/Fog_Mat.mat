@@ -37,11 +37,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _FogSize: 70
+    - _FogSize: 50
     m_Colors:
-    - Color_EACF0FD8: {r: 0.24901961, g: 0.12941177, b: 0.07254902, a: 0.33333334}
+    - Color_EACF0FD8: {r: 1.0039216, g: 0.5176471, b: 0.28235295, a: 0.43529412}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _FogSpeed: {r: 0.05, g: 0, b: 0, a: 0}
+    - _FogSpeed: {r: 0.2, g: 0, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

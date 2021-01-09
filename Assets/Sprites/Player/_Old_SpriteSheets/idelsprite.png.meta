@@ -1,0 +1,661 @@
+fileFormatVersion: 2
+guid: 07c5c8a4c66580749b51e15cf412fe2e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7538959748480829336
+    second: idelsprite_0
+  - first:
+      213: -3447870623648327884
+    second: idelsprite_1
+  - first:
+      213: -6898335022556693966
+    second: idelsprite_2
+  - first:
+      213: 7162591820899057950
+    second: idelsprite_3
+  - first:
+      213: 2614030217231960511
+    second: idelsprite_4
+  - first:
+      213: -5162264821521382871
+    second: idelsprite_5
+  - first:
+      213: 5084288082151072744
+    second: idelsprite_6
+  - first:
+      213: 5487021544253729850
+    second: idelsprite_7
+  - first:
+      213: -6596138686925875995
+    second: idelsprite_8
+  - first:
+      213: 1774212012208365397
+    second: idelsprite_9
+  - first:
+      213: -8695403141943545336
+    second: idelsprite_10
+  - first:
+      213: -8281205102928186270
+    second: idelsprite_11
+  - first:
+      213: 8732617662717695379
+    second: idelsprite_12
+  - first:
+      213: -7636394481748783880
+    second: idelsprite_13
+  - first:
+      213: -7146339716261510906
+    second: idelsprite_14
+  - first:
+      213: 5457035249461539883
+    second: idelsprite_15
+  - first:
+      213: 6931590545115500518
+    second: idelsprite_16
+  - first:
+      213: -5607136686497574441
+    second: idelsprite_17
+  - first:
+      213: 4869085904390626439
+    second: idelsprite_18
+  - first:
+      213: 8073083522098715834
+    second: idelsprite_19
+  - first:
+      213: 5626523707983166426
+    second: idelsprite_20
+  - first:
+      213: 2514764391234793038
+    second: idelsprite_21
+  - first:
+      213: 6068189471106535241
+    second: idelsprite_22
+  - first:
+      213: 2542355897522365758
+    second: idelsprite_23
+  - first:
+      213: 2604537507252930396
+    second: idelsprite_24
+  - first:
+      213: 687413981577599480
+    second: idelsprite_25
+  - first:
+      213: 2001648072570865796
+    second: idelsprite_26
+  - first:
+      213: -770631581945918453
+    second: idelsprite_27
+  - first:
+      213: -8063094051568138723
+    second: idelsprite_28
+  - first:
+      213: 7631008982000849198
+    second: idelsprite_29
+  - first:
+      213: -7939080355666795306
+    second: idelsprite_30
+  - first:
+      213: 8141513147193895093
+    second: idelsprite_31
+  - first:
+      213: -7207493534771873586
+    second: idelsprite_32
+  - first:
+      213: 4430169793930322089
+    second: idelsprite_33
+  - first:
+      213: 6040302801265596365
+    second: idelsprite_34
+  - first:
+      213: -6198873429681992231
+    second: idelsprite_35
+  - first:
+      213: 7477395094049802419
+    second: idelsprite_36
+  - first:
+      213: 8760038543710630435
+    second: idelsprite_37
+  - first:
+      213: -7918688459540610903
+    second: idelsprite_38
+  - first:
+      213: -3443590293307602116
+    second: idelsprite_39
+  - first:
+      213: 5877576691407167435
+    second: idelsprite_40
+  - first:
+      213: -3313766747209072843
+    second: idelsprite_41
+  - first:
+      213: -6298504455953775502
+    second: idelsprite_42
+  - first:
+      213: 887000356355463928
+    second: idelsprite_43
+  - first:
+      213: -2488062656040313000
+    second: idelsprite_44
+  - first:
+      213: 2005122793870388237
+    second: idelsprite_45
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: idelsprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 891.8823
+        height: 1201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868f4d74d0c306790800000000000000
+      internalID: -7538959748480829336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idelsprite_1
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 0
+        width: 891.8823
+        height: 1201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437dfe57fe3b620d0800000000000000
+      internalID: -3447870623648327884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idelsprite_2
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 0
+        width: 891.8823
+        height: 1201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a3fde88d03440a0800000000000000
+      internalID: -6898335022556693966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idelsprite_3
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 0
+        width: 891.8823
+        height: 1201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e118ec3ef43a66360800000000000000
+      internalID: 7162591820899057950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idelsprite_4
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 0
+        width: 891.8823
+        height: 1201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb98f3202a6e64420800000000000000
+      internalID: 2614030217231960511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idelsprite_5
+      rect:
+        serializedVersion: 2
+        x: 4455
+        y: 0
+        width: 891.8823
+        height: 1201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92209b4ee73fb58b0800000000000000
+      internalID: -5162264821521382871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idelsprite_6
+      rect:
+        serializedVersion: 2
+        x: 5346
+        y: 0
+        width: 891.8823
+        height: 1201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e3ed50b2150f8640800000000000000
+      internalID: 5084288082151072744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idelsprite_7
+      rect:
+        serializedVersion: 2
+        x: 6237
+        y: 0
+        width: 891.8823
+        height: 1201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ca824e501d52c40800000000000000
+      internalID: 5487021544253729850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idelsprite_8
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 0
+        width: 891.8823
+        height: 1201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e45294efcec574a0800000000000000
+      internalID: -6596138686925875995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idelsprite_9
+      rect:
+        serializedVersion: 2
+        x: 8019
+        y: 0
+        width: 891.8823
+        height: 1201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f19e7cc644f9810800000000000000
+      internalID: 1774212012208365397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idelsprite_10
+      rect:
+        serializedVersion: 2
+        x: 8910
+        y: 0
+        width: 891.8823
+        height: 1201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 802b3a1a9e8b35780800000000000000
+      internalID: -8695403141943545336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idelsprite_11
+      rect:
+        serializedVersion: 2
+        x: 9801
+        y: 0
+        width: 891.8823
+        height: 1201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26430d7a5df331d80800000000000000
+      internalID: -8281205102928186270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idelsprite_12
+      rect:
+        serializedVersion: 2
+        x: 10692
+        y: 0
+        width: 891.8823
+        height: 1201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39517913f7d703970800000000000000
+      internalID: 8732617662717695379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idelsprite_13
+      rect:
+        serializedVersion: 2
+        x: 11583
+        y: 0
+        width: 891.8823
+        height: 1201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc4c9e9da3160690800000000000000
+      internalID: -7636394481748783880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idelsprite_14
+      rect:
+        serializedVersion: 2
+        x: 12474
+        y: 0
+        width: 891.8823
+        height: 1201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60187f714e913dc90800000000000000
+      internalID: -7146339716261510906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idelsprite_15
+      rect:
+        serializedVersion: 2
+        x: 13365
+        y: 0
+        width: 891.8823
+        height: 1201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24b0f295a84bbb40800000000000000
+      internalID: 5457035249461539883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idelsprite_16
+      rect:
+        serializedVersion: 2
+        x: 14256
+        y: 0
+        width: 891.8823
+        height: 1201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efc01a20e4f13060800000000000000
+      internalID: 6931590545115500518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 69b9aa99080a02a48994b0da1c83148f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

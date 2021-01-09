@@ -25,7 +25,7 @@ public class PlayerMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         groundedCheckCollider = GetComponentInChildren<EdgeCollider2D>();
         _pushObject = GetComponent<PushObject>();
-        _animator = GetComponent<Animator>();
+        _animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
