@@ -24,7 +24,7 @@ public class PushObject : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         HandlePushButtonMode();
     }
