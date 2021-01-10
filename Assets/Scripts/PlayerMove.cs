@@ -34,7 +34,7 @@ public class PlayerMove : MonoBehaviour
         _pushObject = GetComponent<PushObject>();
         _animator = GetComponentInChildren<Animator>();
     }
-
+    //todo: Move all movement handlers to FixedUpdate
     // Update is called once per frame
     void Update()
     {
@@ -73,7 +73,7 @@ public class PlayerMove : MonoBehaviour
         }
 
         rb.velocity = new Vector2(dirVelocity.x, rb.velocity.y);
-        if (dirVelocity != Vector2.zero)
+        if (dirVelocity != Vector2.zero && !_pushObject.IsPushing)
         {
             facingLeft = dirVelocity.x < 0;
         }

@@ -6432,6 +6432,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2925913286659249816, guid: bc2e25c8e3713ff45af3e0ea2aea83ec, type: 3}
+      propertyPath: distance
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5434310845841258977, guid: bc2e25c8e3713ff45af3e0ea2aea83ec, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -6523,6 +6527,14 @@ PrefabInstance:
     - target: {fileID: 5434310846285001679, guid: bc2e25c8e3713ff45af3e0ea2aea83ec, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7201363890250018681, guid: bc2e25c8e3713ff45af3e0ea2aea83ec, type: 3}
+      propertyPath: m_Size.x
+      value: 0.74885845
+      objectReference: {fileID: 0}
+    - target: {fileID: 7201363890250018681, guid: bc2e25c8e3713ff45af3e0ea2aea83ec, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.1544292
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc2e25c8e3713ff45af3e0ea2aea83ec, type: 3}
