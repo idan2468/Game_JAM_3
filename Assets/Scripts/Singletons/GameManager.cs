@@ -6,9 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : Singleton<GameManager>
 {
     // TODO: LOOK INTO SAVING THE GAME
-
-    [SerializeField] private GameObject _pauseMenu;
-    [SerializeField] private GameObject menuBackground;
     [SerializeField] private GameObject _player;
 
     private PlayerMove _playerScript;
@@ -23,16 +20,10 @@ public class GameManager : Singleton<GameManager>
     // TODO: CHECK IF MOVE THIS TO DIFFERENT SCRIPT
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            StopTime();
-            _pauseMenu.SetActive(true);
-            menuBackground.SetActive(true);
-            
-        }
+        
     }
 
-    private void StopTime()
+    public void StopTime()
     {
         Time.timeScale = 0;
         _playerScript.CanMove = false;
