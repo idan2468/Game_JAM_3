@@ -21,14 +21,8 @@ public class PlayerMove : MonoBehaviour
 
     public bool CanMove
     {
-        get
-        {
-            return _canMove;
-        }
-        set
-        {
-            _canMove = value;
-        }
+        get { return _canMove; }
+        set { _canMove = value; }
     }
 
     public bool IsFacingLeft => facingLeft;
@@ -44,11 +38,13 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!_canMove) return;
-        if (Input.GetButtonDown("Jump"))
+        if (_canMove)
         {
-            if (IsGrounded() && !_pushObject.IsPushing)
-                rb.velocity = Vector2.up * _jumpPower;
+            if (Input.GetButtonDown("Jump"))
+            {
+                if (IsGrounded() && !_pushObject.IsPushing)
+                    rb.velocity = Vector2.up * _jumpPower;
+            }
         }
 
         if (_animator)
@@ -58,20 +54,22 @@ public class PlayerMove : MonoBehaviour
             _animator.SetBool("isPushing", _pushObject.IsPushing);
         }
     }
-
     private void FixedUpdate()
     {
         if (!_canMove) return;
         var dirTaken = new Vector2(Input.GetAxis("Horizontal"), 0);
         var dirVelocity = dirTaken * _speed;
-        if (facingLeft && dirVelocity.x > 0.01f)
+        if (!_pushObject.IsPushing)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
+            if (facingLeft && dirVelocity.x > 0.01f)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
 
-        if (!facingLeft && dirVelocity.x < -0.01f)
-        {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            if (!facingLeft && dirVelocity.x < -0.01f)
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
         }
 
         rb.velocity = new Vector2(dirVelocity.x, rb.velocity.y);
@@ -85,5 +83,4 @@ public class PlayerMove : MonoBehaviour
     {
         return groundedCheckCollider.IsTouchingLayers(platformLayerMask);
     }
-    
 }
