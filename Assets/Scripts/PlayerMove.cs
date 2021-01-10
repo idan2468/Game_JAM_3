@@ -3,22 +3,28 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerMove : MonoBehaviour
 {
-    public Rigidbody2D rb;
+    [Header("Params")]
     [SerializeField] private LayerMask platformLayerMask;
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpPower;
+    [SerializeField] private float _jumpVolume = 0.2f;
+
+
+    [Header("Debugging")]
     [SerializeField] private bool _canMove = false;
-
-    [SerializeField] private Collider2D groundedCheckCollider;
-
-    // Start is called before the first frame update
     [SerializeField] private bool facingLeft = false;
+    [SerializeField] private Collider2D groundedCheckCollider;
+    // Start is called before the first frame update
+
     private PushObject _pushObject;
     private Animator _animator;
-    
+    public Rigidbody2D rb;
+
+
     public bool CanMove
     {
         get { return _canMove; }
@@ -43,7 +49,10 @@ public class PlayerMove : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 if (IsGrounded() && !_pushObject.IsPushing)
+                {
                     rb.velocity = Vector2.up * _jumpPower;
+                    MusicController.Instance.PlaySound("Jump"+Random.Range(1,3),_jumpVolume);
+                }
             }
         }
 
