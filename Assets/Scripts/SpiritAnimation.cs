@@ -56,11 +56,19 @@ public class SpiritAnimation : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    // Destory on collision with player
+    public void Kill()
     {
-        if (other is EdgeCollider2D) return;
         animation.Kill();
-        MusicController.Instance.PlaySound(MusicController.SoundEffects.Score,.5f);
+        MusicController.Instance.PlaySound(MusicController.SoundEffects.Score, .5f);
         Destroy(gameObject);
     }
+
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other is EdgeCollider2D) return;
+    //    animation.Kill();
+    //    MusicController.Instance.PlaySound(MusicController.SoundEffects.Score,.5f);
+    //    Destroy(gameObject);
+    //}
 }
