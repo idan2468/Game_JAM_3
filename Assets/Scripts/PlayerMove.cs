@@ -18,7 +18,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private bool facingLeft = false;
     private PushObject _pushObject;
     private Animator _animator;
-
+    
     public bool CanMove
     {
         get { return _canMove; }
@@ -79,7 +79,7 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
         return groundedCheckCollider.IsTouchingLayers(platformLayerMask);
     }

@@ -38,7 +38,7 @@ public class PushObject : MonoBehaviour
         var origin = (Vector2) transform.position + Vector2.up * hight;
         var hit = Physics2D.Raycast(origin, dir, distance, boxMask);
         
-        if (hit.collider != null && Input.GetButtonDown("Interact"))
+        if (hit.collider != null && Input.GetButtonDown("Interact") && _playerMove.IsGrounded())
         {
             box = hit.collider.gameObject.GetComponent<PushableObject>();
             if (box == null) return;

@@ -8,6 +8,7 @@ public class GameManager : Singleton<GameManager>
     // TODO: LOOK INTO SAVING THE GAME
 
     [SerializeField] private GameObject _pauseMenu;
+    [SerializeField] private GameObject menuBackground;
     [SerializeField] private GameObject _player;
 
     private PlayerMove _playerScript;
@@ -26,6 +27,8 @@ public class GameManager : Singleton<GameManager>
         {
             StopTime();
             _pauseMenu.SetActive(true);
+            menuBackground.SetActive(true);
+            
         }
     }
 
