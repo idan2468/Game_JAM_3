@@ -126,6 +126,12 @@
           <e p="PlayerMove.cs" t="Include" />
           <e p="PushableObject.cs" t="Include" />
           <e p="PushObject.cs" t="Include" />
+          <e p="Puzzles" t="Include">
+            <e p="SpotsPuzzle" t="Include">
+              <e p="SpotEnterEvent.cs" t="Include" />
+              <e p="SpotsPuzzle.cs" t="Include" />
+            </e>
+          </e>
           <e p="SampleScripts" t="Include">
             <e p="SimpleCameraController.cs" t="Include" />
           </e>
