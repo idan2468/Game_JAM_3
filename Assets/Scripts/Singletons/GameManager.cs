@@ -36,6 +36,18 @@ public class GameManager : Singleton<GameManager>
         _playerScript.CanMove = true;
     }
 
+    public void ResetScene()
+    {
+        DOTween.KillAll();
+        Destroy(UIManager.Instance.gameObject);
+        Destroy(GameManager.Instance.gameObject);
+        Destroy(MusicController.Instance.gameObject);
+        SceneManager.LoadScene(0);
+        //_playerScript = _player.GetComponent<PlayerMove>();
+        //_playerScript.CanMove = false; // Freeze player but not time
+        //MusicController.Instance.PlayMenuBGM();
+    }    
+
     public void ExitGame()
     {
         Application.Quit();

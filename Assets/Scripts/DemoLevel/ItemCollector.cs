@@ -13,12 +13,6 @@ public class ItemCollector : MonoBehaviour
         set { _whiteSpiritAmt = value; }
     }
 
-    public int BlueSpiritAmt
-    {
-        get { return _blueSpiritAmt; }
-        set { _blueSpiritAmt = value; }
-    }
-
     // Start is called before the first frame update
     void Start()
     {
