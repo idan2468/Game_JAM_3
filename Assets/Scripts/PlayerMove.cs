@@ -18,11 +18,13 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private bool _canMove = false;
     [SerializeField] private bool facingLeft = false;
     [SerializeField] private Collider2D groundedCheckCollider;
+    [SerializeField] private bool _isGrounded;
     // Start is called before the first frame update
 
     private PushObject _pushObject;
     private Animator _animator;
     public Rigidbody2D rb;
+
 
 
     public bool CanMove
@@ -39,16 +41,19 @@ public class PlayerMove : MonoBehaviour
         groundedCheckCollider = GetComponentInChildren<EdgeCollider2D>();
         _pushObject = GetComponent<PushObject>();
         _animator = GetComponentInChildren<Animator>();
+        _isGrounded = IsGrounded();
     }
     //todo: Move all movement handlers to FixedUpdate
     // Update is called once per frame
     void Update()
     {
+        
         if (_canMove)
         {
+            _isGrounded = IsGrounded();
             if (Input.GetButtonDown("Jump"))
             {
-                if (IsGrounded() && !_pushObject.IsPushing)
+                if (_isGrounded && !_pushObject.IsPushing)
                 {
                     rb.velocity = Vector2.up * _jumpPower;
                     MusicController.Instance.PlaySound("Jump"+Random.Range(1,3),_jumpVolume);
