@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -18,12 +19,14 @@ public class SpiritAnimation : MonoBehaviour
     private Vector3 initialScale;
 
     [SerializeField] private bool resetAnimation = false;
+    [SerializeField] private ItemCollector _itemCollector;
 
     // Start is called before the first frame update
     void Start()
     {
         initialPos = transform.localPosition;
         initialScale = transform.localScale;
+        _itemCollector = FindObjectOfType<ItemCollector>();
         CreateAnimation();
     }
 
@@ -64,11 +67,12 @@ public class SpiritAnimation : MonoBehaviour
         Destroy(gameObject);
     }
 
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other is EdgeCollider2D) return;
-    //    animation.Kill();
-    //    MusicController.Instance.PlaySound(MusicController.SoundEffects.Score,.5f);
-    //    Destroy(gameObject);
-    //}
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other is EdgeCollider2D || !other.gameObject.CompareTag("Player")) return;
+        animation.Kill();
+        _itemCollector.WhiteSpiritAmt++;
+        MusicController.Instance.PlaySound(MusicController.SoundEffects.Score,.5f);
+        Destroy(gameObject);
+    }
 }

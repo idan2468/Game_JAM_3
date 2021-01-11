@@ -16,32 +16,22 @@ public class ItemCollector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        // Collect spirits
-        if (other.tag.Equals("Spirit"))
-        {
-            if (other.name.Equals("WhiteSpirit"))
-            {
-                _whiteSpiritAmt++;
-            }
-            else if (other.name.Equals("BlueSpirit"))
-            {
-                _blueSpiritAmt++;
-            }
-
-            other.GetComponent<SpiritAnimation>().Kill();
-        }
-
-        // Open gates
-    }
+    // private void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     // Collect spirits
+    //     if (other.tag.Equals("Spirit"))
+    //     {
+    //         _whiteSpiritAmt++;
+    //         other.GetComponent<SpiritAnimation>().Kill();
+    //     }
+    //
+    //     // Open gates
+    // }
 }
