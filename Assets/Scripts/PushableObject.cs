@@ -25,6 +25,7 @@ public class PushableObject : MonoBehaviour
     {
         beingPushed = isPushed;
         _rigidbody2D.bodyType = beingPushed ? RigidbodyType2D.Dynamic : RigidbodyType2D.Kinematic;
+        _rigidbody2D.velocity = Vector2.zero;
         _fixedJoint.connectedBody = playerRigidbody2D;
         _fixedJoint.enabled = isPushed;
     }
