@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemCollector : MonoBehaviour
 {
     [SerializeField] private int _whiteSpiritAmt = 0;
+    [SerializeField] private int _blueSpiritAmt = 0;
 
     public int WhiteSpiritAmt
     {
