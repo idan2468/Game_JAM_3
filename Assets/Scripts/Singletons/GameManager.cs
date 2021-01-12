@@ -8,12 +8,13 @@ public class GameManager : Singleton<GameManager>
     // TODO: LOOK INTO SAVING THE GAME
     [SerializeField] private GameObject _player;
 
-    private PlayerMove _playerScript;
+    private PlayerMove _playerMoveScript;
+    private PlayerMove _playerItemScript;
 
     private void Start()
     {
-        _playerScript = _player.GetComponent<PlayerMove>();
-        _playerScript.CanMove = false; // Freeze player but not time
+        _playerMoveScript = _player.GetComponent<PlayerMove>();
+        _playerMoveScript.CanMove = false; // Freeze player but not time
         MusicController.Instance.PlayMenuBGM();
     }
 
@@ -26,14 +27,14 @@ public class GameManager : Singleton<GameManager>
     public void StopTime()
     {
         Time.timeScale = 0;
-        _playerScript.CanMove = false;
+        _playerMoveScript.CanMove = false;
     }
 
     // TODO: CHECK IF MOVE THIS TO DIFFERENT SCRIPT
     public void StartTime()
     {
         Time.timeScale = 1;
-        _playerScript.CanMove = true;
+        _playerMoveScript.CanMove = true;
     }
 
     public void ResetScene()

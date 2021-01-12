@@ -7,6 +7,7 @@ using TMPro;
 public class UIManager : Singleton<UIManager>
 {
     [SerializeField] private GameObject _pauseMenu;
+    [SerializeField] private GameObject _endMenu;
     [SerializeField] private GameObject menuBackground;
 
     [SerializeField] private TextMeshProUGUI _whiteSpiritAmount;
@@ -27,6 +28,15 @@ public class UIManager : Singleton<UIManager>
     {
         UpdateScore();
 
+        // Endgame Menu
+        if (_playerItemCollector.WhiteSpiritAmt == 3)
+        {
+            GameManager.Instance.StopTime();
+            _endMenu.SetActive(true);
+            menuBackground.SetActive(true);
+        }
+
+        // Pause Menu
         if (Input.GetKey(KeyCode.Escape))
         {
             GameManager.Instance.StopTime();
