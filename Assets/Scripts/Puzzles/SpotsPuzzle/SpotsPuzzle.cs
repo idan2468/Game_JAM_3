@@ -76,6 +76,7 @@ public class SpotsPuzzle : MonoBehaviour
                     _spiritAnimation.enabled = true;
                     _spotsContainer.SetActive(false);
                 });
+                _animation.SetEase(Ease.InOutSine);
                 _animation.Play();
             }
         }

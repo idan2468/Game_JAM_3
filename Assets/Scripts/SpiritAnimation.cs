@@ -43,6 +43,7 @@ public class SpiritAnimation : MonoBehaviour
         animation.AppendCallback(() => intervalTime = Random.Range(intervalRandomMin, intervalRandomMax));
         animation.AppendInterval(intervalTime);
         animation.SetLoops(-1);
+        animation.SetEase(Ease.InOutCubic);
         animation.Play();
     }
 
