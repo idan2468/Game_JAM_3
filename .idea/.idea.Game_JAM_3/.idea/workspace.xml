@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelDemo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelDemo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PushObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PushObject.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +18,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PushObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/ParallaxBackground.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Desktop/test2/Assets/_/Base/BaseScripts/PlayerPlatformer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Desktop/test2/Assets/ParallaxBackground/Scripts/ParallaxBackground.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -29,7 +30,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/SceneLoader.cs" />
       <option value="$PROJECT_DIR$/Assets/FootStepSFX.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PushObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/MusicController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" />
       <option value="$PROJECT_DIR$/Assets/SpotEnterEvent.cs" />
@@ -38,6 +38,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/DemoLevel/ItemCollector.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SpiritAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" />
+      <option value="$PROJECT_DIR$/Assets/FlyHighEffect.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PushObject.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZ4YEMI8xej9xB9eS5RmwInxe2" />
@@ -72,10 +74,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="10752">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="10752" />
+      <option name="pid" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -93,6 +95,7 @@
       <workItem from="1609687862531" duration="13094000" />
       <workItem from="1610025584226" duration="8046000" />
       <workItem from="1610138063897" duration="21862000" />
+      <workItem from="1610555405055" duration="6329000" />
     </task>
     <servers />
   </component>
