@@ -46,7 +46,7 @@ public class PushObject : MonoBehaviour
             box.BeingPushedSetter(isPushing,_rigidbody2D);
         }
         
-        else if (Input.GetKeyUp(KeyCode.E) && isPushing)
+        else if ((Input.GetKeyUp(KeyCode.E) && isPushing) || (!_playerMove.IsGrounded() && isPushing))
         {
             isPushing = false;
             box.BeingPushedSetter(isPushing,null);
