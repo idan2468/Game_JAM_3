@@ -53,13 +53,13 @@ public class SpotsPuzzle : MonoBehaviour
         }
     }
     public void SpotActivated(GameObject spot, GameObject other)
-    { 
-        //TODO: check if working with fix
+    {
         if (IsInLayerMask(other.gameObject))
         {
             spots.Remove(spot);
             if (spots.Count == 0)
             {
+                _spiritAnimation.enabled = false;
                 _animation = DOTween.Sequence();
                 _animation.AppendInterval(delayTime);
                 _animation.AppendCallback(() =>
@@ -69,15 +69,11 @@ public class SpotsPuzzle : MonoBehaviour
                         _animation.Kill();
                     }
                 });
-                _animation.AppendCallback(() =>
-                {
-                    _spirit.SetActive(true);
-                    _spiritAnimation.KillAnimation();
-                });
+                _animation.AppendCallback(() => _spirit.SetActive(true));
                 _animation.Append(_spirit.transform.DOMoveY(_spirit.transform.position.y - getDownHeight, getDownTime));
                 _animation.OnComplete(() =>
                 {
-                    _spiritAnimation.StartAnimation();
+                    _spiritAnimation.enabled = true;
                     _spotsContainer.SetActive(false);
                 });
                 _animation.SetEase(Ease.InOutSine);

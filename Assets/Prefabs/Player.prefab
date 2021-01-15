@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7201363890250018681}
   - component: {fileID: 7201363890250018676}
   - component: {fileID: 5434310847756422841}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7201363890468763884}
   - component: {fileID: 7201363890468763885}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 7201363891066821507}
   - component: {fileID: 2925913286659249823}
   - component: {fileID: 2925913286659249816}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,15 +297,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c45c93ad2fcb9ed429d0a24238ca27b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
   platformLayerMask:
     serializedVersion: 2
     m_Bits: 1280
   _speed: 5
   _jumpPower: 15
+  _jumpVolume: 0.2
   _canMove: 0
-  groundedCheckCollider: {fileID: 0}
   facingLeft: 0
+  groundedCheckCollider: {fileID: 0}
+  _isGrounded: 0
+  rb: {fileID: 0}
 --- !u!210 &2925913286659249823
 SortingGroup:
   m_ObjectHideFlags: 0

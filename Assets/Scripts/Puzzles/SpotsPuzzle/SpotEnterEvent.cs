@@ -19,11 +19,13 @@ public class SpotEnterEvent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Enter");
         _puzzle.SpotActivated(gameObject,other.gameObject);
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        Debug.Log("Exit");
         _puzzle.SpotDeactivated(gameObject,other.gameObject);
     }
 }
