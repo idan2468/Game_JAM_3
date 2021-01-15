@@ -28,11 +28,17 @@ public class SpiritAnimation : MonoBehaviour
         initialScale = transform.localScale;
         _itemCollector = FindObjectOfType<ItemCollector>();
         CreateAnimation();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+    }
+
+    private void OnEnable()
+    {
+        
     }
 
     private void CreateAnimation()
@@ -60,6 +66,15 @@ public class SpiritAnimation : MonoBehaviour
         }
     }
 
+    public void KillAnimation()
+    {
+        animation.Kill();
+    }
+
+    public void StartAnimation()
+    {
+        CreateAnimation();
+    }
     // Destory on collision with player
     public void Kill()
     {
