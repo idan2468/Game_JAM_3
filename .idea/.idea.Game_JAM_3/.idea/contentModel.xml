@@ -8,7 +8,6 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="HookController.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
@@ -123,6 +122,7 @@
           <e p="FootStepSFX.cs" t="Include" />
           <e p="MovingInAirAnimation.cs" t="Include" />
           <e p="ParallaxBackground Scripts" t="Include">
+            <e p="FogMover.cs" t="Include" />
             <e p="ParallaxBackground.cs" t="Include" />
             <e p="ParallaxLayer.cs" t="Include" />
           </e>
@@ -132,6 +132,9 @@
           <e p="Puzzles" t="Include">
             <e p="FlyHigh" t="Include">
               <e p="FlyHighEffect.cs" t="Include" />
+            </e>
+            <e p="HookPuzzle" t="Include">
+              <e p="HookController.cs" t="Include" />
             </e>
             <e p="RiverPuzzle" t="Include">
               <e p="RiverPuzzle.cs" t="Include" />
