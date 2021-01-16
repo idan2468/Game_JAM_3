@@ -97,7 +97,7 @@ public class HookController : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other is EdgeCollider2D) return;
-        if (other.CompareTag("Player") && !playerHooked && Input.GetButtonDown("Interact"))
+        if (other.CompareTag("Player") && !playerHooked)
         {
             if(!collectedInfo)
             {
