@@ -12,10 +12,11 @@ public class HookController : MonoBehaviour
     private Transform playerTransform;
     private Transform grabStartPos;
     private bool playerHooked;
-    [SerializeField] private float rotationSpeed;
+    // [SerializeField] private float rotationSpeed;
     [SerializeField] private Vector3 playerScale;
     [SerializeField] private DistanceJoint2D _playerJoint;
     [SerializeField] private Transform startHook;
+    [SerializeField] private Vector2 jumpForceOnDisconnect;
     private Transform playerSpriteObject;
     private bool collectedInfo;
 
@@ -32,7 +33,7 @@ public class HookController : MonoBehaviour
     {
         if (playerHooked)
         {
-            if (Input.GetButtonDown("Interact"))
+            if (Input.GetButtonDown("Jump"))
             {
                 DisconnectPlayerFromHook();
                 return;
@@ -48,21 +49,13 @@ public class HookController : MonoBehaviour
     }
     // Update is called once per frame
 
-    void FixedUpdate()
-    {
-        if (playerHooked)
-        {
-            // HandleHookMovement();
-        }
-    }
-
-    private void HandleHookMovement()
-    {
-        var rotationDir = Input.GetAxis("Horizontal");
-        var currentAngel = transform.eulerAngles.z;
-        transform.eulerAngles = new Vector3(0, 0, currentAngel + rotationDir * rotationSpeed * Time.deltaTime);
-        // hookRB.AddTorque(rotationDir * rotationSpeed);
-    }
+    // private void HandleHookMovement()
+    // {
+    //     var rotationDir = Input.GetAxis("Horizontal");
+    //     var currentAngel = transform.eulerAngles.z;
+    //     transform.eulerAngles = new Vector3(0, 0, currentAngel + rotationDir * rotationSpeed * Time.deltaTime);
+    //     // hookRB.AddTorque(rotationDir * rotationSpeed);
+    // }
 
 
     private void ConnectPlayerToHook()
@@ -97,12 +90,14 @@ public class HookController : MonoBehaviour
         transform.DORotate(Vector3.zero, 1f);
         playerSpriteObject.localEulerAngles = Vector3.zero;
         ChangePlayerRotation();
+        var forceToApply = _playerMove.IsFacingLeft ? jumpForceOnDisconnect * Vector2.left : jumpForceOnDisconnect;
+        _playerRB.AddForce(forceToApply);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other is EdgeCollider2D) return;
-        if (other.CompareTag("Player") && !playerHooked)
+        if (other.CompareTag("Player") && !playerHooked && Input.GetButtonDown("Interact"))
         {
             if(!collectedInfo)
             {
