@@ -3,7 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/PlayerController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestPuzzlesScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestPuzzlesScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Objects/BigStone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Objects/BigStone.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Objects/Stone1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Objects/Stone1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Objects/Stone2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Objects/Stone2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Objects/Stone3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Objects/Stone3.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +119,7 @@
       <workItem from="1610138063897" duration="21862000" />
       <workItem from="1610555405055" duration="6921000" />
       <workItem from="1610694890590" duration="9358000" />
-      <workItem from="1610706159243" duration="26056000" />
+      <workItem from="1610706159243" duration="35552000" />
     </task>
     <servers />
   </component>

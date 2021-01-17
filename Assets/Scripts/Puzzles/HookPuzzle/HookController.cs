@@ -7,26 +7,31 @@ using UnityEngine.Rendering.VirtualTexturing;
 
 public class HookController : MonoBehaviour
 {
-    private PlayerMove _playerMove;
-    private Rigidbody2D _playerRB;
-    private Transform playerTransform;
-    private Transform grabStartPos;
-    private bool playerHooked;
-    // [SerializeField] private float rotationSpeed;
-    [SerializeField] private Vector3 playerScale;
-    [SerializeField] private DistanceJoint2D _playerJoint;
-    [SerializeField] private Transform startHook;
+    [Header("Params")] [SerializeField] private Transform startHook;
+    [SerializeField] private Transform grabStartPos;
     [SerializeField] private Vector2 jumpForceOnDisconnect;
-    private Transform playerSpriteObject;
-    private bool collectedInfo;
+    [SerializeField] private EdgeCollider2D restrictAngleCollider;
+    [SerializeField] private float delayEnableHookAfterDisconnect = 1f;
+    [SerializeField] private bool catchFixedHigh = true;
+
+    [Header("Debugging")] [SerializeField] private bool collectedInfo;
+    [SerializeField] private PlayerMove _playerMove;
+    [SerializeField] private Rigidbody2D _playerRB;
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private bool playerHooked;
+    [SerializeField] private Transform playerSpriteObject;
+    [SerializeField] private DistanceJoint2D _playerJoint;
+    [SerializeField] private Animator _playerAnimator;
+    [SerializeField] private BoxCollider2D catchCollider;
+    [SerializeField] private float diffAngle = 90f;
+
 
     // Start is called before the first frame update
     void Start()
     {
         collectedInfo = false;
-        grabStartPos = transform.GetChild(0);
-        startHook = transform.GetChild(1);
         playerHooked = false;
+        catchCollider = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
@@ -39,30 +44,24 @@ public class HookController : MonoBehaviour
                 return;
             }
 
-            Vector3 targetDir = (playerTransform.position - transform.position).normalized;
+            Vector3 targetDir = (playerTransform.position - startHook.position).normalized;
             float angle = Mathf.Atan2(targetDir.y, targetDir.x) * Mathf.Rad2Deg;
-
-            transform.eulerAngles = new Vector3(0, 0, angle + 90);
-            playerTransform.eulerAngles = new Vector3(0, 0, angle + 90);
-            ChangePlayerRotation();
+            angle += diffAngle;
+            var newRotation = new Vector3(0, 0, angle);
+            transform.eulerAngles = newRotation;
+            playerTransform.eulerAngles = newRotation;
+            // ChangePlayerRotation();
         }
     }
-    // Update is called once per frame
-
-    // private void HandleHookMovement()
-    // {
-    //     var rotationDir = Input.GetAxis("Horizontal");
-    //     var currentAngel = transform.eulerAngles.z;
-    //     transform.eulerAngles = new Vector3(0, 0, currentAngel + rotationDir * rotationSpeed * Time.deltaTime);
-    //     // hookRB.AddTorque(rotationDir * rotationSpeed);
-    // }
-
 
     private void ConnectPlayerToHook()
     {
         playerHooked = true;
-        playerScale = playerTransform.localScale;
-        playerTransform.position = grabStartPos.position;
+        _playerAnimator.SetBool("isHooked", true);
+        restrictAngleCollider.enabled = true;
+        playerTransform.position = catchFixedHigh
+            ? grabStartPos.position
+            : new Vector3(grabStartPos.position.x, playerTransform.position.y, grabStartPos.position.z);
         _playerJoint.connectedAnchor = startHook.position;
         _playerJoint.enableCollision = true;
         _playerJoint.enabled = true;
@@ -81,33 +80,49 @@ public class HookController : MonoBehaviour
             playerSpriteObject.localEulerAngles = Vector3.up * rotationYPlayer;
             return;
         }
+
         playerTransform.eulerAngles = Vector3.up * rotationYPlayer;
     }
+
+    private IEnumerator EnableHookAgainDelay()
+    {
+        catchCollider.enabled = false;
+        yield return new WaitForSeconds(delayEnableHookAfterDisconnect);
+        catchCollider.enabled = true;
+    }
+
     private void DisconnectPlayerFromHook()
     {
+        StartCoroutine(EnableHookAgainDelay());
         playerHooked = false;
+        _playerAnimator.SetBool("isHooked", false);
         _playerJoint.enabled = false;
+        restrictAngleCollider.enabled = false;
         transform.DORotate(Vector3.zero, 1f);
         playerSpriteObject.localEulerAngles = Vector3.zero;
         ChangePlayerRotation();
-        var forceToApply = _playerMove.IsFacingLeft ? jumpForceOnDisconnect * Vector2.left : jumpForceOnDisconnect;
+        var forceToApply = _playerMove.IsFacingLeft
+            ? jumpForceOnDisconnect * (Vector2.left + Vector2.up)
+            : jumpForceOnDisconnect;
         _playerRB.AddForce(forceToApply);
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other is EdgeCollider2D) return;
-        if (other.CompareTag("Player") && !playerHooked && Input.GetButtonDown("Interact"))
+        if (other.CompareTag("Player") && !playerHooked)
         {
-            if(!collectedInfo)
+            if (!collectedInfo)
             {
                 playerTransform = other.gameObject.transform.parent;
                 _playerMove = playerTransform.gameObject.GetComponent<PlayerMove>();
                 _playerRB = playerTransform.gameObject.GetComponent<Rigidbody2D>();
                 _playerJoint = playerTransform.gameObject.GetComponent<DistanceJoint2D>();
                 playerSpriteObject = playerTransform.GetChild(0);
+                _playerAnimator = playerSpriteObject.gameObject.GetComponent<Animator>();
                 collectedInfo = true;
             }
+
             ConnectPlayerToHook();
         }
     }
