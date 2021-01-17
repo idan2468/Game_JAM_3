@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/PlayerController.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestPuzzlesScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestPuzzlesScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Objects/BigStone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Objects/BigStone.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Objects/Stone1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Objects/Stone1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Objects/Stone2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Objects/Stone2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Objects/Stone3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Objects/Stone3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MovingInAirAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MovingInAirAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/WaterfallPuzzle/ParticleCollisionEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/WaterfallPuzzle/ParticleCollisionEvent.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,16 +47,17 @@
       <option value="$PROJECT_DIR$/Assets/RiverPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/ParticleCollisionEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/MovingInAirAnimation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MovingInAirAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotEnterEvent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SpiritAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" />
       <option value="$PROJECT_DIR$/Assets/HookController.cs" />
       <option value="$PROJECT_DIR$/Assets/FogMover.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/WaterfallPuzzle/ParticleCollisionEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/FogMover.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Utility.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/WaterfallPuzzle/ParticleCollisionEvent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MovingInAirAnimation.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZ4YEMI8xej9xB9eS5RmwInxe2" />
@@ -96,10 +92,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="18972">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="18972" />
+      <option name="pid" />
       <option name="selectedOptions">
         <list />
       </option>

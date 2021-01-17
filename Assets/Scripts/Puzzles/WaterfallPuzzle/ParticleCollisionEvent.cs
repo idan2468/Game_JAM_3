@@ -37,18 +37,14 @@ public class ParticleCollisionEvent : MonoBehaviour
     }
     private void OnParticleCollision(GameObject other)
     {
-        if(IsInLayerMask(other,playerLayer))
+        if(Utility.IsInLayerMask(other,playerLayer))
         {
             other.transform.position = checkpointPuzzle.position;
         }
 
-        if (IsInLayerMask(other, moveableObjectLayer)  && !showenSpirit)
+        if (Utility.IsInLayerMask(other, moveableObjectLayer)  && !showenSpirit)
         {
             StartSpiritFadeInAnimation();
         }
-    }
-    private bool IsInLayerMask(GameObject obj, LayerMask layerMask)
-    {
-        return ((layerMask.value & (1 << obj.layer)) > 0);
     }
 }

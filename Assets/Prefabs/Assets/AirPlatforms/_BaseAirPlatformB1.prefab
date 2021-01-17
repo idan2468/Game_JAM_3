@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8392622098756169734}
   - component: {fileID: 6123031589739099085}
   m_Layer: 8
-  m_Name: AirPlatformBase
+  m_Name: _BaseAirPlatformB1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,4 +146,7 @@ MonoBehaviour:
   speed: 0.3
   restartAnimation: 0
   easing: 0
+  pushableObjectLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
   startPos: {x: 0, y: 0, z: 0}

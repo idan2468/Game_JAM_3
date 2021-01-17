@@ -36,7 +36,7 @@ public class SpotsPuzzle : MonoBehaviour
     IEnumerator SpotActivateWithDelay(GameObject spot, GameObject other)
     {
         yield return new WaitForSeconds(delayTime);
-        if (IsInLayerMask(other.gameObject))
+        if (Utility.IsInLayerMask(other.gameObject,layersAllowedToEnterSpots))
         {
             spots.Remove(spot);
             if (spots.Count == 0)
@@ -54,7 +54,7 @@ public class SpotsPuzzle : MonoBehaviour
     }
     public void SpotActivated(GameObject spot, GameObject other)
     {
-        if (IsInLayerMask(other.gameObject))
+        if (Utility.IsInLayerMask(other.gameObject,layersAllowedToEnterSpots))
         {
             spots.Remove(spot);
             if (spots.Count == 0)
@@ -84,17 +84,12 @@ public class SpotsPuzzle : MonoBehaviour
 
     public void SpotDeactivated(GameObject spot, GameObject other)
     {
-        if (IsInLayerMask(other.gameObject))
+        if (Utility.IsInLayerMask(other.gameObject,layersAllowedToEnterSpots))
         {
             if (!spots.Contains(spot))
             {
                 spots.Add(spot);
             }
         }
-    }
-    
-    private bool IsInLayerMask(GameObject obj)
-    {
-        return ((layersAllowedToEnterSpots.value & (1 << obj.layer)) > 0);
     }
 }

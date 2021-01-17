@@ -2038,6 +2038,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5170651169296907558, guid: 26a7fb956b893f843a02a29c19c39e00, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26a7fb956b893f843a02a29c19c39e00, type: 3}
 --- !u!1 &888196027
@@ -14154,6 +14158,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HookPuzzle
       objectReference: {fileID: 0}
+    - target: {fileID: 4718228083950632870, guid: 10966c118c03d484fb6e071d5f0ff645, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4718228083950632871, guid: 10966c118c03d484fb6e071d5f0ff645, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -14290,6 +14298,9 @@ MonoBehaviour:
   speed: 0
   restartAnimation: 0
   easing: 0
+  pushableObjectLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   startPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &1933957466330491231
 PrefabInstance:
@@ -15220,7 +15231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7355885613431573974, guid: d21366d82931cf64b9919d4c79167ef7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d21366d82931cf64b9919d4c79167ef7, type: 3}
