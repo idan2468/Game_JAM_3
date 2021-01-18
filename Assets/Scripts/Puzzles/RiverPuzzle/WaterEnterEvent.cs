@@ -21,7 +21,7 @@ public class WaterEnterEvent : MonoBehaviour
         if (other is EdgeCollider2D) return;
         if (other.CompareTag("Player"))
         {
-            other.transform.parent.position = checkpointPos.position;
+            GameManager.Instance.ReturnPlayerToCheckpoint(checkpointPos.position);
         }
     }
 }
