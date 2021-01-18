@@ -9,7 +9,8 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject _player;
 
     [Header("Killing Animation")] [SerializeField]
-    private float movingToCheckpointSpeed = 10f;
+    private bool vanishPlayerOnMovement = false;
+    [SerializeField] private float movingToCheckpointSpeed = 10f;
 
     [SerializeField] private Ease ease = Ease.InOutSine;
     private PlayerMove _playerMoveScript;
@@ -59,9 +60,23 @@ public class GameManager : Singleton<GameManager>
     {
         var dist = Vector3.Distance(_player.transform.position, checkPoint);
         DOTween.Sequence()
-            .AppendCallback(() => _playerMoveScript.CanMove = false)
+            .AppendCallback(() =>
+            {
+                _playerMoveScript.CanMove = false;
+                if (vanishPlayerOnMovement)
+                {
+                    _player.SetActive(false);
+                }
+            })
             .Append(_player.transform.DOMove(checkPoint,
                 movingToCheckpointSpeed != 0 ? dist / movingToCheckpointSpeed : movingToCheckpointSpeed))
-            .AppendCallback(() => _playerMoveScript.CanMove = true).SetEase(ease).Play();
+            .AppendCallback(() =>
+            {
+                _playerMoveScript.CanMove = true;
+                if (vanishPlayerOnMovement)
+                {
+                    _player.SetActive(true);
+                }
+            }).SetEase(ease).Play();
     }
 }

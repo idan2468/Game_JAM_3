@@ -39,7 +39,7 @@ public class ParticleCollisionEvent : MonoBehaviour
     {
         if(Utility.IsInLayerMask(other,playerLayer))
         {
-            other.transform.position = checkpointPuzzle.position;
+            GameManager.Instance.ReturnPlayerToCheckpoint(checkpointPuzzle.position);
         }
 
         if (Utility.IsInLayerMask(other, moveableObjectLayer)  && !showenSpirit)
