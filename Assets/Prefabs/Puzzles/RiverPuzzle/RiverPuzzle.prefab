@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3734797224345851519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.97, y: 1.61, z: 0}
+  m_LocalPosition: {x: -15.4, y: 1.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3734797224669180106}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 3734797224669180106}
   - component: {fileID: 3734797224669180109}
   m_Layer: 0
-  m_Name: River
+  m_Name: RiverPuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,9 +82,9 @@ MonoBehaviour:
   raftTransform: {fileID: 1597023929661382868}
   playerTransform: {fileID: 0}
   spirit: {fileID: 5910769638250515699}
-  distOffsetToEnableSpirit: 0
+  distOffsetToEnableSpirit: 2
   resetAnimation: 0
-  speedMoveX: 1
+  speedMoveX: 1.5
   maxRotationZ: 20
   rotationSpeed: 20
   endOfRiverX: 0
@@ -116,7 +116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3734797225255415675}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9, y: 0.56, z: 0}
+  m_LocalPosition: {x: 18.1, y: -0.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3734797224669180106}
@@ -134,12 +134,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2792018727618910128, guid: 5d6c302d7fafd204e8eec8cf907c9737, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2792018727618910128, guid: 5d6c302d7fafd204e8eec8cf907c9737, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7
+      value: 8.86
       objectReference: {fileID: 0}
     - target: {fileID: 2792018727618910128, guid: 5d6c302d7fafd204e8eec8cf907c9737, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.14
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: 2792018727618910128, guid: 5d6c302d7fafd204e8eec8cf907c9737, type: 3}
       propertyPath: m_LocalPosition.z
@@ -201,11 +205,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 713308209365541161, guid: fde799e95102e924da914334519c5178, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.020000458
+      value: -0.31
       objectReference: {fileID: 0}
     - target: {fileID: 713308209365541161, guid: fde799e95102e924da914334519c5178, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.50000006
+      value: -0.22
       objectReference: {fileID: 0}
     - target: {fileID: 713308209365541161, guid: fde799e95102e924da914334519c5178, type: 3}
       propertyPath: m_LocalPosition.z
@@ -271,11 +275,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7049241598307140012, guid: 0df75def638d32148ae99f995aba287c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.56
+      value: 8.63
       objectReference: {fileID: 0}
     - target: {fileID: 7049241598307140012, guid: 0df75def638d32148ae99f995aba287c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.85
+      value: 3.22
       objectReference: {fileID: 0}
     - target: {fileID: 7049241598307140012, guid: 0df75def638d32148ae99f995aba287c, type: 3}
       propertyPath: m_LocalPosition.z
