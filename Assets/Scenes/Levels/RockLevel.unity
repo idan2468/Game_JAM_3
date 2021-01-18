@@ -1195,6 +1195,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2861295050380877990, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
   m_PrefabInstance: {fileID: 389652976}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &389652978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7036234989545868660, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
+  m_PrefabInstance: {fileID: 389652976}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &390069205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1670,6 +1675,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
+      propertyPath: _clueText
+      value: 
+      objectReference: {fileID: 2146446161}
+    - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1838941023}
     - target: {fileID: 6255443635180419793, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -2080,6 +2093,11 @@ PrefabInstance:
 --- !u!224 &1524064363 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 620099273073895582, guid: 75cb0ad4200186a4fad368e76c1eafe8, type: 3}
+  m_PrefabInstance: {fileID: 1524064362}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1524064364 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 620099273073895578, guid: 75cb0ad4200186a4fad368e76c1eafe8, type: 3}
   m_PrefabInstance: {fileID: 1524064362}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1551262072
@@ -2935,6 +2953,17 @@ Transform:
   m_Father: {fileID: 812956980}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2146446161 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 620099272609330332, guid: 75cb0ad4200186a4fad368e76c1eafe8, type: 3}
+  m_PrefabInstance: {fileID: 1524064362}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2214624739672838252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3133,6 +3162,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 128239698}
     - target: {fileID: 5685524055516157745, guid: 9ed6460f5cceba14d84967cb1408a8a7, type: 3}
+      propertyPath: menuCanvas
+      value: 
+      objectReference: {fileID: 389652978}
+    - target: {fileID: 5685524055516157745, guid: 9ed6460f5cceba14d84967cb1408a8a7, type: 3}
       propertyPath: _settingsMenu
       value: 
       objectReference: {fileID: 487434250}
@@ -3147,7 +3180,7 @@ PrefabInstance:
     - target: {fileID: 5685524055516157745, guid: 9ed6460f5cceba14d84967cb1408a8a7, type: 3}
       propertyPath: gameScreenCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1524064364}
     - target: {fileID: 5685524055516157745, guid: 9ed6460f5cceba14d84967cb1408a8a7, type: 3}
       propertyPath: _blueSpiritSprite
       value: 

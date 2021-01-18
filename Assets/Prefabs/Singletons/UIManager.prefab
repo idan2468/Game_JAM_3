@@ -44,5 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pauseMenu: {fileID: 0}
-  menuBackground: {fileID: 0}
+  _endMenu: {fileID: 0}
+  menuCanvas: {fileID: 0}
+  _whiteSpiritAmount: {fileID: 0}
+  gameScreenCanvas: {fileID: 0}
   playerGO: {fileID: 0}

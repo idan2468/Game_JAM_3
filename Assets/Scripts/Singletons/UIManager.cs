@@ -6,17 +6,14 @@ using TMPro;
 
 public class UIManager : Singleton<UIManager>
 {
-    [SerializeField] private GameObject _mainMenu;
-    [SerializeField] private GameObject _settingsMenu;
-    [SerializeField] private GameObject _instrMenu;
     [SerializeField] private GameObject _pauseMenu;
     [SerializeField] private GameObject _endMenu;
-    [SerializeField] private GameObject menuBackground;
+    [SerializeField] private GameObject menuCanvas;
 
     [SerializeField] private TextMeshProUGUI _whiteSpiritAmount;
-    public GameObject gameScreenCanvas;
+    [SerializeField] private GameObject gameScreenCanvas;
 
-    public GameObject playerGO;
+    [SerializeField] private GameObject playerGO;
     private ItemCollector _playerItemCollector;
 
     // Start is called before the first frame update
@@ -32,12 +29,11 @@ public class UIManager : Singleton<UIManager>
         UpdateScore();
 
         // Pause Menu
-        if (Input.GetKey(KeyCode.Escape) && !_mainMenu.activeSelf && !_endMenu.activeSelf
-            && !_settingsMenu.activeSelf && !_instrMenu.activeSelf)
+        if (Input.GetKey(KeyCode.Escape) && !menuCanvas.activeSelf)
         {
             GameManager.Instance.StopTime();
             _pauseMenu.SetActive(true);
-            menuBackground.SetActive(true);
+            menuCanvas.SetActive(true);
         }
     }
 
@@ -52,8 +48,8 @@ public class UIManager : Singleton<UIManager>
         if (_playerItemCollector.SpiritsAmt == 3)
         {
             GameManager.Instance.StopTime();
+            menuCanvas.SetActive(true);
             _endMenu.SetActive(true);
-            menuBackground.SetActive(true);
         }
     }
 }

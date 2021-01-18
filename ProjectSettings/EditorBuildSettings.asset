@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/LevelDemo.unity
-    guid: 979f479c5e9fa814d974555af88ee116
+    path: Assets/Scenes/Levels/RockLevel.unity
+    guid: 2c993aa8f39bcb145bb4ec865e88f866
+  - enabled: 1
+    path: Assets/Scenes/Levels/WaterLevel.unity
+    guid: b3647effff174bc47910dea1be65ad4a
   m_configObjects: {}
