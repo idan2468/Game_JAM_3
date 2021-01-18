@@ -102,7 +102,7 @@ public class SpiritAnimation : MonoBehaviour
             shakeAnimation.Kill();
             CreateShakeAnimation();
             shakeAnimation.Play();
-            resetAnimation = false;
+            Utility.DisableInspectorButton(() => resetAnimation = false).Play();
         }
     }
 

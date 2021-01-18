@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelDemoPlayground.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelDemoPlayground.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AspectRatioScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AspectRatioScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CluesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CluesManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MovingInAirAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MovingInAirAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/RiverPuzzle/RiverPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/RiverPuzzle/RiverPuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpiritAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpiritAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Utility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Utility.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,17 +47,18 @@
       <option value="$PROJECT_DIR$/Assets/ParticleCollisionEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/MovingInAirAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotEnterEvent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SpiritAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" />
       <option value="$PROJECT_DIR$/Assets/HookController.cs" />
       <option value="$PROJECT_DIR$/Assets/FogMover.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/FogMover.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Utility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/WaterfallPuzzle/ParticleCollisionEvent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MovingInAirAnimation.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Utility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CluesManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SpiritAnimation.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MovingInAirAnimation.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/RiverPuzzle/RiverPuzzle.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZ4YEMI8xej9xB9eS5RmwInxe2" />

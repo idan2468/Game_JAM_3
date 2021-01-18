@@ -38,6 +38,7 @@ public class MovingInAirAnimation : MonoBehaviour
             Debug.Log("Restarting animation");
             animation.Kill();
             StartAnimation();
+            Utility.DisableInspectorButton(() => restartAnimation = false).Play();
         }
     }
 

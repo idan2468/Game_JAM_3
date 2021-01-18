@@ -17,13 +17,12 @@ public class CluesManager : MonoBehaviour
     [SerializeField] private float fadeInTime;
     [SerializeField] private float fadeOutTime;
     [SerializeField] private float displayTime;
-    [SerializeField] private bool restartAnimation;
     [SerializeField] private Ease fadeEase = Ease.InOutSine;
-    [SerializeField] private bool animationNotPlaying;
     [SerializeField] private bool playAnimation;
 
     [Header("Use Interact")] [SerializeField]
     private Transform[] interactObjects;
+
     [SerializeField] private String clueInteractText;
 
     [Header("Rock Level Start")] [SerializeField]
@@ -44,14 +43,13 @@ public class CluesManager : MonoBehaviour
     Dictionary<Transform, String> dictMap;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
-        restartAnimation = false;
         clueTextTransform = _clueText.gameObject.transform;
         xLocOfText = clueTextTransform.position.x;
         dictMap = new Dictionary<Transform, string>();
+        playAnimation = false;
         // dictMap = new Dictionary<Transform, string>()
         // {
         //     {rockStart,rockLevelText},
@@ -59,8 +57,6 @@ public class CluesManager : MonoBehaviour
         //     {windStart,windLevelText},
         // };
         UpdateMapForInteract();
-        CreateAnimation();
-        animationNotPlaying = true;
     }
 
     private void UpdateMapForInteract()
@@ -69,7 +65,7 @@ public class CluesManager : MonoBehaviour
         {
             if (interactObject != null)
             {
-                dictMap.Add(interactObject,clueInteractText);
+                dictMap.Add(interactObject, clueInteractText);
             }
         }
     }
@@ -79,7 +75,7 @@ public class CluesManager : MonoBehaviour
     {
         if (!_clueText.gameObject.activeSelf)
         {
-            SearchForClueTrigger();    
+            SearchForClueTrigger();
         }
     }
 
@@ -90,41 +86,25 @@ public class CluesManager : MonoBehaviour
         {
             if (Vector3.Distance(keyVal.Key.position, playerTransform.position) <= distFromObject)
             {
-                CreateAnimation();
                 _clueText.text = keyVal.Value;
-                animation.Play();
+                CreateAndPlayAnimation();
             }
         }
     }
-    
-    
+
+
     private void OnValidate()
     {
-        if (restartAnimation)
-        {
-            animation.Kill();
-            CreateAnimation();
-            restartAnimation = false;
-        }
-
         if (playAnimation)
         {
-            if (!animation.IsPlaying())
-            {
-                CreateAnimation();
-                _clueText.text = clueInteractText;
-                animation.Play();
-            }
-            else
-            {
-                Debug.LogWarning("Animation is playing");
-            }
-
-            playAnimation = false;
+            animation.Kill(complete: true);
+            _clueText.text = clueInteractText;
+            CreateAndPlayAnimation();
+            Utility.DisableInspectorButton(() => playAnimation = false).Play();
         }
     }
 
-    private void CreateAnimation()
+    private void CreateAndPlayAnimation()
     {
         animation = DOTween.Sequence();
         animation

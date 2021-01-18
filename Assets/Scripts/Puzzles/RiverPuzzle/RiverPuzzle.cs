@@ -56,7 +56,7 @@ public class RiverPuzzle : MonoBehaviour
             Debug.Log("Playing again animation");
         }
 
-        resetAnimation = false;
+        Utility.DisableInspectorButton(() => resetAnimation = false).Play();
     }
 
     private void CreateAnimation()

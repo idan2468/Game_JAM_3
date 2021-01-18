@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class Utility : MonoBehaviour
@@ -20,4 +21,12 @@ public class Utility : MonoBehaviour
     {
         return ((layerMask.value & (1 << obj.layer)) > 0);
     }
+    
+    public static Sequence DisableInspectorButton(TweenCallback cb)
+    {
+        return DOTween.Sequence()
+            .AppendInterval(1f)
+            .AppendCallback(cb);
+    }
+    
 }
