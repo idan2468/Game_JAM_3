@@ -5,11 +5,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CluesManager : MonoBehaviour
+public class CluesManager : Singleton<CluesManager>
 {
-    private Sequence animation;
-    private Transform clueTextTransform;
-    private float xLocOfText;
+    private Sequence _animation;
+    private Transform _clueTextTransform;
+    private float _xLocOfText;
     [Header("Params")] [SerializeField] private float distFromObject;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private TextMeshProUGUI _clueText;
@@ -46,8 +46,8 @@ public class CluesManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        clueTextTransform = _clueText.gameObject.transform;
-        xLocOfText = clueTextTransform.position.x;
+        _clueTextTransform = _clueText.gameObject.transform;
+        _xLocOfText = _clueTextTransform.position.x;
         dictMap = new Dictionary<Transform, string>();
         playAnimation = false;
         // dictMap = new Dictionary<Transform, string>()
@@ -86,8 +86,7 @@ public class CluesManager : MonoBehaviour
         {
             if (Vector3.Distance(keyVal.Key.position, playerTransform.position) <= distFromObject)
             {
-                _clueText.text = keyVal.Value;
-                CreateAndPlayAnimation();
+                PlayClue(keyVal.Value);
             }
         }
     }
@@ -97,29 +96,34 @@ public class CluesManager : MonoBehaviour
     {
         if (playAnimation)
         {
-            animation.Kill(complete: true);
-            _clueText.text = clueInteractText;
-            CreateAndPlayAnimation();
+            PlayClue(clueInteractText);
             Utility.DisableInspectorButton(() => playAnimation = false).Play();
         }
     }
 
     private void CreateAndPlayAnimation()
     {
-        animation = DOTween.Sequence();
-        animation
+        _animation = DOTween.Sequence();
+        _animation
             .AppendCallback(() => _clueText.gameObject.SetActive(true))
-            .Append(clueTextTransform.DOMoveX(xLocOfText - moveDist, 0))
+            .Append(_clueTextTransform.DOMoveX(_xLocOfText - moveDist, 0))
             .Append(_clueText.DOFade(0, 0))
-            .Append(clueTextTransform.DOMoveX(xLocOfText, fadeInTime)).SetEase(fadeEase)
+            .Append(_clueTextTransform.DOMoveX(_xLocOfText, fadeInTime)).SetEase(fadeEase)
             .Join(_clueText.DOFade(1, fadeInTime)).SetEase(fadeEase)
             .AppendInterval(displayTime)
             .Append(_clueText.DOFade(0, fadeOutTime)).SetEase(fadeEase)
             .OnComplete(() =>
             {
-                var position = clueTextTransform.position;
-                clueTextTransform.position = new Vector3(xLocOfText, position.y, position.z);
+                var position = _clueTextTransform.position;
+                _clueTextTransform.position = new Vector3(_xLocOfText, position.y, position.z);
                 _clueText.gameObject.SetActive(false);
             });
+    }
+
+    public void PlayClue(string textToShow)
+    {
+        _animation.Kill(complete: true);
+        _clueText.text = textToShow;
+        CreateAndPlayAnimation();
     }
 }

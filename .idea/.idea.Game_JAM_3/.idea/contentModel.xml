@@ -115,13 +115,16 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Animations" t="Include">
+            <e p="MovingInAirAnimation.cs" t="Include" />
+            <e p="SpiritAnimation.cs" t="Include" />
+          </e>
           <e p="CluesManager.cs" t="Include" />
           <e p="DemoLevel" t="Include">
             <e p="EndLevelTrigger.cs" t="Include" />
             <e p="ItemCollector.cs" t="Include" />
           </e>
           <e p="FootStepSFX.cs" t="Include" />
-          <e p="MovingInAirAnimation.cs" t="Include" />
           <e p="ParallaxBackground Scripts" t="Include">
             <e p="FogMover.cs" t="Include" />
             <e p="ParallaxBackground.cs" t="Include" />
@@ -158,7 +161,6 @@
             <e p="Singleton.cs" t="Include" />
             <e p="UIManager.cs" t="Include" />
           </e>
-          <e p="SpiritAnimation.cs" t="Include" />
           <e p="Utilities" t="Include">
             <e p="AspectRatioScript.cs" t="Include" />
             <e p="Utility.cs" t="Include" />
