@@ -50,12 +50,12 @@ public class CluesManager : Singleton<CluesManager>
         _xLocOfText = _clueTextTransform.position.x;
         dictMap = new Dictionary<Transform, string>();
         playAnimation = false;
-        // dictMap = new Dictionary<Transform, string>()
-        // {
-        //     {rockStart,rockLevelText},
-        //     {waterStart,waterLevelText},
-        //     {windStart,windLevelText},
-        // };
+        dictMap = new Dictionary<Transform, string>()
+         {
+             {rockStart,rockLevelText},
+             //{waterStart,waterLevelText},
+             //{windStart,windLevelText},
+         };
         UpdateMapForInteract();
     }
 

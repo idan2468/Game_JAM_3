@@ -6,7 +6,6 @@ public class SpotEnterEvent : MonoBehaviour
 {
     // Start is called before the first frame update
     private SpotsPuzzle _puzzle;
-
     void Start()
     {
         _puzzle = gameObject.transform.parent.GetComponentInParent<SpotsPuzzle>();
@@ -15,6 +14,7 @@ public class SpotEnterEvent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // TODO: CHECK DIMMING
     }
 
     private void OnTriggerEnter2D(Collider2D other)
