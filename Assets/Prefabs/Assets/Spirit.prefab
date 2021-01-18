@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7049241598307140013}
   - component: {fileID: 7049241598307140015}
   - component: {fileID: 7049241598307140014}
+  - component: {fileID: 7339867912659001152}
   m_Layer: 0
   m_Name: Spirit
   m_TagString: Untagged
@@ -97,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da593adc8b163664aa061495459cef39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeTime: 0
   duration: 3
   strength: 0.3
   resetAnimation: 0
@@ -116,6 +118,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &7339867912659001152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7049241598307140010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26f2cbdfa0a9be46b84f0aa8fc64fad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemCollector: {fileID: 0}
 --- !u!1 &7049241599675047963
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +180,7 @@ MonoBehaviour:
   m_Color: {r: 0.38847175, g: 0.9716981, b: 0.8678119, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0.092
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 9b3d6320
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0

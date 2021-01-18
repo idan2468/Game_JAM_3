@@ -3377,38 +3377,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1518169644}
     m_Modifications:
-    - target: {fileID: 2558672721109733291, guid: 45537d05f7c58504c84f6cf662d00ede, type: 3}
-      propertyPath: m_SortingOrder
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4392839556981639561, guid: 45537d05f7c58504c84f6cf662d00ede, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4392839556981639561, guid: 45537d05f7c58504c84f6cf662d00ede, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4392839556981639567, guid: 45537d05f7c58504c84f6cf662d00ede, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4392839556981639567, guid: 45537d05f7c58504c84f6cf662d00ede, type: 3}
-      propertyPath: m_TagString
-      value: Spirit
-      objectReference: {fileID: 0}
-    - target: {fileID: 6711893617569291884, guid: 45537d05f7c58504c84f6cf662d00ede, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 6711893618292533830, guid: 45537d05f7c58504c84f6cf662d00ede, type: 3}
-      propertyPath: getDownTime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6711893618292533830, guid: 45537d05f7c58504c84f6cf662d00ede, type: 3}
-      propertyPath: getDownHeight
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 6711893618292533831, guid: 45537d05f7c58504c84f6cf662d00ede, type: 3}
       propertyPath: m_RootOrder
       value: 1

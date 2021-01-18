@@ -2090,13 +2090,11 @@ MonoBehaviour:
   distFromObject: 3
   playerTransform: {fileID: 1838941023}
   _clueText: {fileID: 795531876}
-  moveDist: 2
+  moveDist: 500
   fadeInTime: 2
   fadeOutTime: 1
   displayTime: 0.5
-  restartAnimation: 0
   fadeEase: 4
-  animationNotPlaying: 0
   playAnimation: 0
   interactObjects:
   - {fileID: 1673120076}

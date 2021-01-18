@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ItemCollector : MonoBehaviour
 {
-    [SerializeField] private int _whiteSpiritAmt = 0;
+    [SerializeField] private int spiritsAmt = 0;
 
-    public int WhiteSpiritAmt
+    public int SpiritsAmt
     {
-        get { return _whiteSpiritAmt; }
-        set { _whiteSpiritAmt = value; }
+        get { return spiritsAmt; }
+        set { spiritsAmt = value; }
     }
 
     // Start is called before the first frame update

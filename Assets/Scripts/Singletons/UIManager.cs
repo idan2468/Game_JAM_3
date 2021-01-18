@@ -43,13 +43,13 @@ public class UIManager : Singleton<UIManager>
 
     private void UpdateScore()
     {
-        _whiteSpiritAmount.text = _playerItemCollector.WhiteSpiritAmt.ToString();
+        _whiteSpiritAmount.text = _playerItemCollector.SpiritsAmt.ToString();
     }
 
     public void EndLevel()
     {
         // Endgame Menu
-        if (_playerItemCollector.WhiteSpiritAmt == 3)
+        if (_playerItemCollector.SpiritsAmt == 3)
         {
             GameManager.Instance.StopTime();
             _endMenu.SetActive(true);

@@ -29,7 +29,6 @@ public class SpiritAnimation : MonoBehaviour
     [Range(1, 5)] private float intervalRandomMin = 1f;
     private float intervalRandomMax = 5f;
     [SerializeField] private bool resetAnimation = false;
-    [Header("Other")] [SerializeField] private ItemCollector _itemCollector;
 
 
     // Start is called before the first frame update
@@ -37,7 +36,6 @@ public class SpiritAnimation : MonoBehaviour
     {
         initialPos = transform.localPosition;
         initialScale = transform.localScale;
-        _itemCollector = FindObjectOfType<ItemCollector>();
         _spiritRenderer = GetComponent<SpriteRenderer>();
         spiritLight = GetComponentInChildren<Light2D>();
         CreateAnimations();
@@ -106,20 +104,10 @@ public class SpiritAnimation : MonoBehaviour
         }
     }
 
-    // Destory on collision with player
-    // public void Kill()
-    // {
-    //     animation.Kill();
-    //     MusicController.Instance.PlaySound(MusicController.SoundEffects.Score, .5f);
-    //     Destroy(gameObject);
-    // }
-
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnDestroy()
     {
-        if (other is EdgeCollider2D || !other.gameObject.CompareTag("Player")) return;
         shakeAnimation.Kill();
-        MusicController.Instance.PlaySound(MusicController.SoundEffects.Score, .5f);
-        _itemCollector.WhiteSpiritAmt++;
-        Destroy(gameObject);
     }
+
+
 }

@@ -44,9 +44,6 @@ public class GameManager : Singleton<GameManager>
         Destroy(GameManager.Instance.gameObject);
         Destroy(MusicController.Instance.gameObject);
         SceneManager.LoadScene(0);
-        //_playerScript = _player.GetComponent<PlayerMove>();
-        //_playerScript.CanMove = false; // Freeze player but not time
-        //MusicController.Instance.PlayMenuBGM();
     }    
 
     public void ExitGame()

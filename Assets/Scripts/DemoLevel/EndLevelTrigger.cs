@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EndLevelTrigger : MonoBehaviour
 {
-    public GameObject playerGO;
+    [SerializeField] private GameObject playerGO;
     private ItemCollector _playerItemCollector;
 
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class EndLevelTrigger : MonoBehaviour
         if (collision.tag.Equals("Player"))
         {
             // Endgame Menu
-            if (_playerItemCollector.WhiteSpiritAmt == 3)
+            if (_playerItemCollector.SpiritsAmt == 3)
             {
                 UIManager.Instance.EndLevel();
             }
