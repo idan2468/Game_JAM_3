@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Water
   m_Shader: {fileID: -6465566751694194690, guid: 495cfe662e1184e4c8857636b6998225, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -42,11 +42,11 @@ Material:
     m_Floats:
     - _CausticsMovement: 9
     - _CausticsPower: 9
-    - _CausticsScale: 5
+    - _CausticsScale: 9
     - _EnableExternalAlpha: 0
-    - _RefractionAmount: 0.2
+    - _RefractionAmount: 2
     m_Colors:
-    - _CausticsSpeed: {r: 0.2, g: 0.12, b: 0, a: 0}
+    - _CausticsSpeed: {r: 0.05, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}

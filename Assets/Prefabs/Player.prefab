@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7201363890250018687}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.487, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7201363891066821506}
@@ -242,6 +242,7 @@ GameObject:
   - component: {fileID: 2925913286659249823}
   - component: {fileID: 2925913286659249816}
   - component: {fileID: 936675597}
+  - component: {fileID: 936675602}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -304,7 +305,7 @@ MonoBehaviour:
   _speed: 4
   _jumpPower: 16
   _jumpVolume: 0.2
-  _canMove: 0
+  _canMove: 1
   facingLeft: 0
   groundedCheckCollider: {fileID: 0}
   _isGrounded: 0
@@ -336,7 +337,7 @@ MonoBehaviour:
   boxMask:
     serializedVersion: 2
     m_Bits: 1024
-  hight: -0.04
+  hight: -0.32
 --- !u!114 &936675597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,5 +350,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5abc7ce19d91a4d99d3c2859149eec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _whiteSpiritAmt: 0
-  _blueSpiritAmt: 0
+  spiritsAmt: 0
+--- !u!232 &936675602
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7201363891066821504}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 1
+  m_Distance: 13.964187
+  m_MaxDistanceOnly: 0
