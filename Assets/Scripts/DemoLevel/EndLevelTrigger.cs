@@ -22,7 +22,6 @@ public class EndLevelTrigger : MonoBehaviour
     {
         if (collision.tag.Equals("Player"))
         {
-            // Endgame Menu
             if (_playerItemCollector.SpiritsAmt == 3)
             {
                 UIManager.Instance.EndLevel();

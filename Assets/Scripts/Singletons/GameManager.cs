@@ -22,6 +22,12 @@ public class GameManager : Singleton<GameManager>
         _playerMoveScript = _player.GetComponent<PlayerMove>();
         _playerMoveScript.CanMove = false; // Freeze player but not time
         MusicController.Instance.PlayMenuBGM();
+
+        // TODO: REMOVE THIS FIX
+        if (SceneManager.GetActiveScene().buildIndex > 0)
+        {
+            StartTime();
+        }
     }
 
     // TODO: CHECK IF MOVE THIS TO DIFFERENT SCRIPT
@@ -44,11 +50,17 @@ public class GameManager : Singleton<GameManager>
 
     public void ResetScene()
     {
+        ResetSingletons();
+        SceneManager.LoadScene(0);
+    }
+
+    public void ResetSingletons()
+    {
         DOTween.KillAll();
         Destroy(UIManager.Instance.gameObject);
         Destroy(GameManager.Instance.gameObject);
         Destroy(MusicController.Instance.gameObject);
-        SceneManager.LoadScene(0);
+        Destroy(CluesManager.Instance.gameObject);
     }
 
     public void ExitGame()
@@ -78,5 +90,14 @@ public class GameManager : Singleton<GameManager>
                     _player.SetActive(true);
                 }
             }).SetEase(ease).Play();
+    }
+
+    public void AdvanceLevel()
+    {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        if (currentScene < (int)UIManager.GameScene.Wind)
+        {
+            SceneManager.LoadScene(currentScene + 1);
+        }
     }
 }

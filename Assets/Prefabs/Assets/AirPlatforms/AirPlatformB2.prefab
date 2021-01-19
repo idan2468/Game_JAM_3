@@ -57,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8392622098756169730, guid: 67745b4c547de0b448c5df6d6aca2a0d, type: 3}
       propertyPath: m_Name
-      value: AirPlatformBase
+      value: AirPlatformB2
       objectReference: {fileID: 0}
     - target: {fileID: 8392622098756169731, guid: 67745b4c547de0b448c5df6d6aca2a0d, type: 3}
       propertyPath: m_Size.x

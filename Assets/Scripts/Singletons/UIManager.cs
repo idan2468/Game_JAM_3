@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIManager : Singleton<UIManager>
 {
     [SerializeField] private GameObject _pauseMenu;
     [SerializeField] private GameObject _endMenu;
+    [SerializeField] private GameObject _continueMenu;
     [SerializeField] private GameObject menuCanvas;
 
     [SerializeField] private TextMeshProUGUI _whiteSpiritAmount;
@@ -15,6 +17,13 @@ public class UIManager : Singleton<UIManager>
 
     [SerializeField] private GameObject playerGO;
     private ItemCollector _playerItemCollector;
+
+    public enum GameScene
+    {
+        Rock,
+        Water,
+        Wind
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -42,14 +51,33 @@ public class UIManager : Singleton<UIManager>
         _whiteSpiritAmount.text = _playerItemCollector.SpiritsAmt.ToString();
     }
 
+    private void ContinueGame()
+    {
+        GameManager.Instance.StopTime();
+        menuCanvas.SetActive(true);
+        _continueMenu.SetActive(true);
+    }
+
+    private void EndGame()
+    {
+        GameManager.Instance.StopTime();
+        menuCanvas.SetActive(true);
+        _endMenu.SetActive(true);
+    }
+
     public void EndLevel()
     {
-        // Endgame Menu
-        if (_playerItemCollector.SpiritsAmt == 3)
+        switch(SceneManager.GetActiveScene().buildIndex)
         {
-            GameManager.Instance.StopTime();
-            menuCanvas.SetActive(true);
-            _endMenu.SetActive(true);
+            case (int)GameScene.Rock:
+                ContinueGame();
+                break;
+            case (int)GameScene.Water:
+                ContinueGame();
+                break;
+            case (int)GameScene.Wind:
+                EndGame();
+                break;
         }
     }
 }
