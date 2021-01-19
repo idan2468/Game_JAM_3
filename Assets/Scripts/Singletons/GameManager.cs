@@ -22,12 +22,7 @@ public class GameManager : Singleton<GameManager>
         _playerMoveScript = _player.GetComponent<PlayerMove>();
         _playerMoveScript.CanMove = false; // Freeze player but not time
         MusicController.Instance.PlayMenuBGM();
-
-        // TODO: REMOVE THIS FIX
-        if (SceneManager.GetActiveScene().buildIndex > 0)
-        {
-            StartTime();
-        }
+        StartTime();
     }
 
     // TODO: CHECK IF MOVE THIS TO DIFFERENT SCRIPT
