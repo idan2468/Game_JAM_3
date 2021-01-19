@@ -55,11 +55,13 @@ public class CluesManager : Singleton<CluesManager>
     [Header("Debugging")] [SerializeField] private List<Clue> allClues;
     Dictionary<Transform, String> dictMap;
     [SerializeField] private List<Clue> notToShowClues;
+    [SerializeField] private bool animationIsActive;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        animationIsActive = false;
         _clueText = GameObject.FindWithTag("ClueText").GetComponent<TextMeshProUGUI>();
         _clueText.gameObject.SetActive(false);
         _clueTextTransform = _clueText.gameObject.transform;
@@ -145,7 +147,11 @@ public class CluesManager : Singleton<CluesManager>
     {
         _animation = DOTween.Sequence();
         _animation
-            .AppendCallback(() => _clueText.gameObject.SetActive(true))
+            .AppendCallback(() =>
+            {
+                animationIsActive = true;
+                _clueText.gameObject.SetActive(true);
+            })
             .Append(_clueTextTransform.DOMoveX(_xLocOfText - moveDist, 0))
             .Append(_clueText.DOFade(0, 0))
             .Append(_clueTextTransform.DOMoveX(_xLocOfText, fadeInTime)).SetEase(fadeEase)
@@ -154,6 +160,7 @@ public class CluesManager : Singleton<CluesManager>
             .Append(_clueText.DOFade(0, fadeOutTime)).SetEase(fadeEase)
             .OnComplete(() =>
             {
+                animationIsActive = false;
                 var position = _clueTextTransform.position;
                 _clueTextTransform.position = new Vector3(_xLocOfText, position.y, position.z);
                 _clueText.gameObject.SetActive(false);

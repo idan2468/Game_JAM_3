@@ -119,7 +119,6 @@
             <e p="MovingInAirAnimation.cs" t="Include" />
             <e p="SpiritAnimation.cs" t="Include" />
           </e>
-          <e p="CluesManager.cs" t="Include" />
           <e p="DemoLevel" t="Include">
             <e p="EndLevelTrigger.cs" t="Include" />
             <e p="ItemCollector.cs" t="Include" />
@@ -157,6 +156,7 @@
             <e p="SimpleCameraController.cs" t="Include" />
           </e>
           <e p="Singletons" t="Include">
+            <e p="CluesManager.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="MusicController.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
