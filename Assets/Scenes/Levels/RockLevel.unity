@@ -408,33 +408,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1159865921}
     - target: {fileID: 3793876916571205673, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3793876916571205673, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3793876916571205673, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 1159865921}
-    - target: {fileID: 3793876916571205673, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3793876916571205673, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: ResetSingletons
-      objectReference: {fileID: 0}
-    - target: {fileID: 3793876916571205673, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
-      value: GameManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3793876916571205673, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 7036234989545463295, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -825,7 +801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
       propertyPath: distFromObject
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
       propertyPath: playerTransform
@@ -1710,6 +1686,14 @@ PrefabInstance:
     - target: {fileID: 5879030760201072724, guid: 3629548a8756e23439a942b8f3032776, type: 3}
       propertyPath: m_Name
       value: StairwayToHeaven
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556607522277547560, guid: 3629548a8756e23439a942b8f3032776, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 7591921488121541054, guid: 3629548a8756e23439a942b8f3032776, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.77
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3629548a8756e23439a942b8f3032776, type: 3}

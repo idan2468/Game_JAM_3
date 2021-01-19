@@ -7,24 +7,23 @@ using Random = UnityEngine.Random;
 
 public class PlayerMove : MonoBehaviour
 {
-    [Header("Params")]
-    [SerializeField] private LayerMask platformLayerMask;
+    [Header("Params")] [SerializeField] private LayerMask platformLayerMask;
     [SerializeField] private float _speed;
+    [SerializeField] private float _JumpSpeedX = 4f;
     [SerializeField] private float _jumpPower;
     [SerializeField] private float _jumpVolume = 0.2f;
 
 
-    [Header("Debugging")]
-    [SerializeField] private bool _canMove = false;
+    [Header("Debugging")] [SerializeField] private bool _canMove = false;
     [SerializeField] private bool facingLeft = false;
     [SerializeField] private Collider2D groundedCheckCollider;
+
     [SerializeField] private bool _isGrounded;
     // Start is called before the first frame update
 
     private PushObject _pushObject;
     private Animator _animator;
     public Rigidbody2D rb;
-
 
 
     public bool CanMove
@@ -43,11 +42,11 @@ public class PlayerMove : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
         _isGrounded = IsGrounded();
     }
+
     //todo: Move all movement handlers to FixedUpdate
     // Update is called once per frame
     void Update()
     {
-        
         if (_canMove)
         {
             _isGrounded = IsGrounded();
@@ -56,7 +55,7 @@ public class PlayerMove : MonoBehaviour
                 if (_isGrounded && !_pushObject.IsPushing)
                 {
                     rb.velocity = Vector2.up * _jumpPower;
-                    MusicController.Instance.PlaySound("Jump"+Random.Range(1,3),_jumpVolume);
+                    MusicController.Instance.PlaySound("Jump" + Random.Range(1, 3), _jumpVolume);
                 }
             }
         }
@@ -68,11 +67,12 @@ public class PlayerMove : MonoBehaviour
             _animator.SetBool("isPushing", _pushObject.IsPushing);
         }
     }
+
     private void FixedUpdate()
     {
         if (!_canMove) return;
         var dirTaken = new Vector2(Input.GetAxis("Horizontal"), 0);
-        var dirVelocity = dirTaken * _speed;
+        var dirVelocity = rb.velocity.y > 0.01f ? dirTaken * _JumpSpeedX : dirTaken * _speed;
         if (!_pushObject.IsPushing)
         {
             if (facingLeft && dirVelocity.x > 0.01f)

@@ -23,7 +23,7 @@ public class MusicController : Singleton<MusicController>
 
     private Dictionary<SoundEffects, AudioClip> sounds;
     private const string FileExt = "";
-    private float backgroundVolume = .05f;
+    private float backgroundVolume = .25f;
     private float effectsVolume = .25f;
     private AudioSource BGMaudioSource;
     private AudioSource SFXAudioSource;
@@ -33,7 +33,7 @@ public class MusicController : Singleton<MusicController>
     protected override void Awake()
     {
         effectsVolume = .25f;
-        backgroundVolume = .05f;
+        backgroundVolume = .25f;
         BGMaudioSource = gameObject.AddComponent<AudioSource>();
         SFXAudioSource = gameObject.AddComponent<AudioSource>();
         BGMaudioSource.loop = true;

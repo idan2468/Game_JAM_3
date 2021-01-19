@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="" />
+    <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MenuCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/MenuCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/RockLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/RockLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/WaterLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/WaterLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singletons/MusicController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Singletons/MusicController.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +23,7 @@
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/ParallaxBackground.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotLightEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -27,7 +35,6 @@
       <option value="$PROJECT_DIR$/Assets/PushableObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/SceneLoader.cs" />
       <option value="$PROJECT_DIR$/Assets/FootStepSFX.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/MusicController.cs" />
       <option value="$PROJECT_DIR$/Assets/SpotEnterEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PushableObject.cs" />
@@ -39,7 +46,6 @@
       <option value="$PROJECT_DIR$/Assets/ParticleCollisionEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/MovingInAirAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotEnterEvent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" />
       <option value="$PROJECT_DIR$/Assets/HookController.cs" />
       <option value="$PROJECT_DIR$/Assets/FogMover.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/FogMover.cs" />
@@ -61,6 +67,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/CluesManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/CluesManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/MusicController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZ4YEMI8xej9xB9eS5RmwInxe2" />

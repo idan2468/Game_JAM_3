@@ -1150,7 +1150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553466265}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21, y: 0.84, z: -76.15093}
+  m_LocalPosition: {x: -21, y: 0.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1191,7 +1191,7 @@ Transform:
   - {fileID: 106704326}
   - {fileID: 1803448165}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &835345012
 PrefabInstance:
@@ -1301,6 +1301,10 @@ PrefabInstance:
     - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
       propertyPath: fadeOutTime
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
+      propertyPath: distFromObject
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
       propertyPath: waterLevelText
@@ -1547,6 +1551,10 @@ PrefabInstance:
     - target: {fileID: 7201363891066821506, guid: bc2e25c8e3713ff45af3e0ea2aea83ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7201363891066821507, guid: bc2e25c8e3713ff45af3e0ea2aea83ec, type: 3}
+      propertyPath: _JumpSpeedX
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc2e25c8e3713ff45af3e0ea2aea83ec, type: 3}
@@ -1828,6 +1836,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1518169644}
     m_Modifications:
+    - target: {fileID: 1548080261907941247, guid: e79a4693e47cf324fb8576219a7eed4b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.68
+      objectReference: {fileID: 0}
     - target: {fileID: 3496636431816169312, guid: e79a4693e47cf324fb8576219a7eed4b, type: 3}
       propertyPath: m_Name
       value: RiverPuzzle
@@ -1907,7 +1919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7169439560056839597, guid: 4cbdccd8a81eb1644bac5d930de5039a, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7169439560056839597, guid: 4cbdccd8a81eb1644bac5d930de5039a, type: 3}
       propertyPath: m_LocalPosition.x
