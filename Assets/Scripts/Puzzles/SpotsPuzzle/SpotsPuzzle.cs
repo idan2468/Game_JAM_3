@@ -73,7 +73,10 @@ public class SpotsPuzzle : MonoBehaviour
                 _animation.Append(_spirit.transform.DOMoveY(_spirit.transform.position.y - getDownHeight, getDownTime));
                 _animation.OnComplete(() =>
                 {
-                    _spiritAnimation.enabled = true;
+                    if(_spiritAnimation != null)
+                    {
+                        _spiritAnimation.enabled = true;
+                    }
                     _spotsContainer.SetActive(false);
                 });
                 _animation.SetEase(Ease.InOutSine);
