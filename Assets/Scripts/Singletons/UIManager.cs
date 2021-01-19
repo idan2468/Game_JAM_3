@@ -20,7 +20,7 @@ public class UIManager : Singleton<UIManager>
     void Start()
     {
         _playerItemCollector = playerGO.GetComponent<ItemCollector>();
-        _whiteSpiritAmount = gameScreenCanvas.transform.Find("WhiteSpiritIcon").transform.Find("WhiteAmount").gameObject.GetComponent<TextMeshProUGUI>();
+        _whiteSpiritAmount = GameObject.FindWithTag("SpiritAmt").GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame

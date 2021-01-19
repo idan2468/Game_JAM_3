@@ -1,9 +1,37 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+
+[Serializable]
+public class Clue
+{
+    [SerializeField] private Transform objPos;
+    [SerializeField] private String clueText;
+
+    public String ClueText
+    {
+        get => clueText;
+        set { clueText = value; }
+    }
+
+    public Transform ObjPos
+    {
+        get => objPos;
+        set { objPos = value; }
+    }
+
+    public Clue(Transform objPos, String clueText)
+    {
+        this.objPos = objPos;
+        this.clueText = clueText;
+    }
+}
+
 
 public class CluesManager : Singleton<CluesManager>
 {
@@ -19,55 +47,46 @@ public class CluesManager : Singleton<CluesManager>
     [SerializeField] private float displayTime;
     [SerializeField] private Ease fadeEase = Ease.InOutSine;
     [SerializeField] private bool playAnimation;
+    [SerializeField] private float delayForShowingAgainClue = 5f;
 
-    [Header("Use Interact")] [SerializeField]
-    private Transform[] interactObjects;
-
-    [SerializeField] private String clueInteractText;
-
-    [Header("Rock Level Start")] [SerializeField]
-    private Transform rockStart;
-
-    [SerializeField] private String rockLevelText;
-
-    [Header("Water Level Start")] [SerializeField]
-    private Transform waterStart;
-
-    [SerializeField] private String waterLevelText;
-
-    [Header("Wind Level Start")] [SerializeField]
-    private Transform windStart;
-
-    [SerializeField] private String windLevelText;
-
+    [Header("Clues")] [SerializeField] private List<Clue> cluesRock;
+    [SerializeField] private List<Clue> cluesWater;
+    [SerializeField] private List<Clue> cluesAir;
+    [Header("Debugging")] [SerializeField] private List<Clue> allClues;
     Dictionary<Transform, String> dictMap;
+    [SerializeField] private List<Clue> notToShowClues;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        _clueText = GameObject.FindWithTag("ClueText").GetComponent<TextMeshProUGUI>();
+        _clueText.gameObject.SetActive(false);
         _clueTextTransform = _clueText.gameObject.transform;
         _xLocOfText = _clueTextTransform.position.x;
-        dictMap = new Dictionary<Transform, string>();
         playAnimation = false;
-        dictMap = new Dictionary<Transform, string>()
-         {
-             {rockStart,rockLevelText},
-             //{waterStart,waterLevelText},
-             //{windStart,windLevelText},
-         };
-        UpdateMapForInteract();
+        MergeAllCluesList();
     }
 
-    private void UpdateMapForInteract()
+    private void MergeAllCluesList()
     {
-        foreach (Transform interactObject in interactObjects)
+        allClues = new List<Clue>();
+        if (cluesRock != null)
         {
-            if (interactObject != null)
-            {
-                dictMap.Add(interactObject, clueInteractText);
-            }
+            allClues.AddRange(cluesRock);
         }
+
+        if (cluesWater != null)
+        {
+            allClues.AddRange(cluesWater);
+        }
+
+        if (cluesAir != null)
+        {
+            allClues.AddRange(cluesAir);
+        }
+
+        allClues.RemoveAll((clue) => clue.ObjPos == null);
     }
 
     // Update is called once per frame
@@ -82,13 +101,26 @@ public class CluesManager : Singleton<CluesManager>
 
     private void SearchForClueTrigger()
     {
-        foreach (var keyVal in dictMap)
+        foreach (var clue in allClues)
         {
-            if (Vector3.Distance(keyVal.Key.position, playerTransform.position) <= distFromObject)
+            if (!notToShowClues.Contains(clue))
             {
-                PlayClue(keyVal.Value);
+                var objPos = clue.ObjPos.position;
+                var clueText = clue.ClueText;
+                if (Vector3.Distance(objPos, playerTransform.position) <= distFromObject)
+                {
+                    PlayClue(clueText);
+                    StartCoroutine(DelayForNextShow(clue));
+                }
             }
         }
+    }
+
+    private IEnumerator DelayForNextShow(Clue clue)
+    {
+        notToShowClues.Add(clue);
+        yield return new WaitForSeconds(delayForShowingAgainClue);
+        notToShowClues.Remove(clue);
     }
 
 
@@ -96,7 +128,15 @@ public class CluesManager : Singleton<CluesManager>
     {
         if (playAnimation)
         {
-            PlayClue(clueInteractText);
+            if (allClues.Count > 0)
+            {
+                PlayClue(allClues[0].ClueText);
+            }
+            else
+            {
+                Debug.LogWarning("No Clues");
+            }
+
             Utility.DisableInspectorButton(() => playAnimation = false).Play();
         }
     }

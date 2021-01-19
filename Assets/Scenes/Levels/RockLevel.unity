@@ -465,7 +465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7187467377658831132, guid: 83dc70c68065670479c997ec5e31b7a2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.049999237
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7187467377658831132, guid: 83dc70c68065670479c997ec5e31b7a2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -722,7 +722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7036234989545868660, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7036234989545868664, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
       propertyPath: m_Pivot.x
@@ -1848,6 +1848,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1673120076}
     - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
+      propertyPath: fadeOutTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
       propertyPath: playAnimation
       value: 0
       objectReference: {fileID: 0}
@@ -1857,12 +1861,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
       propertyPath: distFromObject
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 1838941023}
+    - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
+      propertyPath: clues.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
+      propertyPath: cluesRock.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
+      propertyPath: delayForShowingAgainClue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
+      propertyPath: cluesRock.Array.data[0].objPos
+      value: 
+      objectReference: {fileID: 1673120076}
+    - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
+      propertyPath: cluesRock.Array.data[1].objPos
+      value: 
+      objectReference: {fileID: 1724122024}
+    - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
+      propertyPath: cluesRock.Array.data[0].clueText
+      value: Use E To Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
+      propertyPath: cluesRock.Array.data[1].clueText
+      value: Misty Mountain Hop
+      objectReference: {fileID: 0}
     - target: {fileID: 6255443635180419793, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -2196,26 +2228,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1891026788}
     m_Modifications:
-    - target: {fileID: 620099272609330332, guid: 75cb0ad4200186a4fad368e76c1eafe8, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 0a6ec6cbd586b9f4980e2118321352aa, type: 2}
-    - target: {fileID: 620099272609330332, guid: 75cb0ad4200186a4fad368e76c1eafe8, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0.007843138
-      objectReference: {fileID: 0}
-    - target: {fileID: 620099272609330332, guid: 75cb0ad4200186a4fad368e76c1eafe8, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0.007843138
-      objectReference: {fileID: 0}
-    - target: {fileID: 620099272609330332, guid: 75cb0ad4200186a4fad368e76c1eafe8, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0.2784314
-      objectReference: {fileID: 0}
-    - target: {fileID: 620099272609330332, guid: 75cb0ad4200186a4fad368e76c1eafe8, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 620099273073895578, guid: 75cb0ad4200186a4fad368e76c1eafe8, type: 3}
       propertyPath: m_Name
       value: GameScreenCanvas
@@ -2483,6 +2495,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7036234991447825410, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
   m_PrefabInstance: {fileID: 389652976}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1670032960 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6711893617569291885, guid: 45537d05f7c58504c84f6cf662d00ede, type: 3}
+  m_PrefabInstance: {fileID: 7942906150089162170}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1670032962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670032960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54a8eb149d8e44587108ec4ba933ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minOpacity: 0
+  maxOpacity: 1
+  fadeTime: 1
+  ease: 4
+  resetAnimation: 0
 --- !u!4 &1673120076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7678091250360347709, guid: 53db49fdd52f2ed438d98c5f152ae0e8, type: 3}
@@ -2563,6 +2597,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1891026788}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1724122023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1724122024}
+  m_Layer: 0
+  m_Name: LevelStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1724122024
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724122023}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.9, y: 1.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1736496796
 PrefabInstance:
@@ -2799,6 +2863,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7201363891066821506, guid: bc2e25c8e3713ff45af3e0ea2aea83ec, type: 3}
   m_PrefabInstance: {fileID: 1551262072}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1839151368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8409305838394404680, guid: 45537d05f7c58504c84f6cf662d00ede, type: 3}
+  m_PrefabInstance: {fileID: 7942906150089162170}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1839151370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839151368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54a8eb149d8e44587108ec4ba933ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minOpacity: 0
+  maxOpacity: 1
+  fadeTime: 1
+  ease: 4
+  resetAnimation: 0
 --- !u!1001 &1853768216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2969,6 +3055,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1455029233}
     m_Modifications:
+    - target: {fileID: 1750944307805317338, guid: b54d8028942c124479875cb48c71aaba, type: 3}
+      propertyPath: easing
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750944307805317338, guid: b54d8028942c124479875cb48c71aaba, type: 3}
+      propertyPath: pushableObjectLayerMask.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 4093049738590087957, guid: b54d8028942c124479875cb48c71aaba, type: 3}
       propertyPath: m_Name
       value: AirPlatform (2)
