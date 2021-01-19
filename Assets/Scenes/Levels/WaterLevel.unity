@@ -719,7 +719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7036234989892627110, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7036234989912583668, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1121,6 +1121,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a2f968d32d494b9ccff7334aaaf3a, type: 3}
+--- !u!1 &465948619 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1523992491323532609, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
+  m_PrefabInstance: {fileID: 389652976}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &553466265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,6 +2094,10 @@ PrefabInstance:
       propertyPath: menuCanvas
       value: 
       objectReference: {fileID: 565987304}
+    - target: {fileID: 5685524055516157745, guid: 9ed6460f5cceba14d84967cb1408a8a7, type: 3}
+      propertyPath: _continueMenu
+      value: 
+      objectReference: {fileID: 465948619}
     - target: {fileID: 5685524055516157745, guid: 9ed6460f5cceba14d84967cb1408a8a7, type: 3}
       propertyPath: gameScreenCanvas
       value: 

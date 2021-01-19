@@ -320,7 +320,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 543374747
   m_SortingLayer: 1
-  m_SortingOrder: 30
+  m_SortingOrder: 101
 --- !u!114 &2925913286659249816
 MonoBehaviour:
   m_ObjectHideFlags: 0

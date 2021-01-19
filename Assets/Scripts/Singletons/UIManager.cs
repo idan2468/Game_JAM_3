@@ -73,7 +73,8 @@ public class UIManager : Singleton<UIManager>
                 ContinueGame();
                 break;
             case (int)GameScene.Water:
-                ContinueGame();
+                //ContinueGame();
+                EndGame();
                 break;
             case (int)GameScene.Wind:
                 EndGame();
