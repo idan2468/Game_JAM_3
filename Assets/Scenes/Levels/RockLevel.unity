@@ -952,6 +952,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3873828384920862933, guid: 703295b07db36c94ea3d6106383563cd, type: 3}
   m_PrefabInstance: {fileID: 3873828384128561877}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1413207225 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1523992491323532609, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
+  m_PrefabInstance: {fileID: 389652976}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1460380774 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2941394932191536458, guid: 4cbdccd8a81eb1644bac5d930de5039a, type: 3}
@@ -1816,6 +1821,10 @@ PrefabInstance:
       propertyPath: menuCanvas
       value: 
       objectReference: {fileID: 389652978}
+    - target: {fileID: 5685524055516157745, guid: 9ed6460f5cceba14d84967cb1408a8a7, type: 3}
+      propertyPath: _continueMenu
+      value: 
+      objectReference: {fileID: 1413207225}
     - target: {fileID: 5685524055516157745, guid: 9ed6460f5cceba14d84967cb1408a8a7, type: 3}
       propertyPath: _settingsMenu
       value: 
