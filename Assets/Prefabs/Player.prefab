@@ -303,6 +303,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1280
   _speed: 4
+  _JumpSpeedX: 4
   _jumpPower: 16
   _jumpVolume: 0.2
   _canMove: 1
@@ -320,7 +321,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 543374747
   m_SortingLayer: 1
-  m_SortingOrder: 101
+  m_SortingOrder: 100
 --- !u!114 &2925913286659249816
 MonoBehaviour:
   m_ObjectHideFlags: 0
