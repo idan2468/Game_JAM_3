@@ -89,6 +89,7 @@ public class GameManager : Singleton<GameManager>
 
     public void AdvanceLevel()
     {
+        ResetSingletons();
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         if (currentScene < (int)UIManager.GameScene.Wind)
         {

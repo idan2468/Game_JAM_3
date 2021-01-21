@@ -13,7 +13,8 @@ public class FadeInAnimation : MonoBehaviour
     [SerializeField] private Ease ease = Ease.InOutSine;
     void Start()
     {
-        background = GameObject.FindWithTag("Background").GetComponent<Image>();
+        background = GetComponent<Image>();
+        // background = GameObject.FindWithTag("Background").GetComponent<Image>();
     }
 
     // Update is called once per frame
