@@ -12,10 +12,16 @@ public class SpotsPuzzle : MonoBehaviour
     [SerializeField] private List<GameObject> spots;
     [SerializeField] private SpiritAnimation _spiritAnimation;
     [SerializeField] private Sequence _animation;
+    [SerializeField] private Coroutine triggerWithDelay;
     [Header("Params")] [SerializeField] private LayerMask layersAllowedToEnterSpots;
     [SerializeField] private float getDownTime = 1f;
     [SerializeField] private float getDownHeight = 3.5f;
     [SerializeField] private float delayTime = 1f;
+    private Action eventToTrigger;
+    public Action EventToTrigger
+    {
+        set => eventToTrigger = value;
+    }
 
     void Start()
     {
@@ -24,70 +30,55 @@ public class SpotsPuzzle : MonoBehaviour
             spots.Add(child.gameObject);
         }
 
+        eventToTrigger = GetSpotDownAnimation;
         _spiritAnimation = _spirit.GetComponent<SpiritAnimation>();
         _spirit.SetActive(false);
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    private void GetSpotDownAnimation()
     {
+        _spiritAnimation.enabled = false;
+        _animation = DOTween.Sequence();
+        _animation.AppendCallback(() => _spirit.SetActive(true));
+        _animation.Append(_spirit.transform.DOMoveY(_spirit.transform.position.y - getDownHeight, getDownTime));
+        _animation.OnComplete(() =>
+        {
+            if (_spiritAnimation != null)
+            {
+                _spiritAnimation.enabled = true;
+            }
+
+            _spotsContainer.SetActive(false);
+        });
+        _animation.SetEase(Ease.InOutSine);
+        _animation.Play();
     }
 
-    IEnumerator SpotActivateWithDelay(GameObject spot, GameObject other)
+    private IEnumerator TriggerWithDelay()
     {
         yield return new WaitForSeconds(delayTime);
-        if (Utility.IsInLayerMask(other.gameObject,layersAllowedToEnterSpots))
+        if (spots.Count == 0)
         {
-            spots.Remove(spot);
-            if (spots.Count == 0)
-            {
-                _spiritAnimation.enabled = false;
-                _animation = DOTween.Sequence();
-                _animation.AppendInterval(delayTime);
-                _animation.AppendCallback(() => _spirit.SetActive(true));
-                _animation.Append(_spirit.transform.DOMoveY(_spirit.transform.position.y - getDownHeight, getDownTime));
-                _animation.OnComplete(() => { _spiritAnimation.enabled = true; });
-                _animation.Play();
-                _spotsContainer.SetActive(false);
-            }
+            eventToTrigger();
+            // GetSpotDownAnimation();
         }
     }
     public void SpotActivated(GameObject spot, GameObject other)
     {
-        if (Utility.IsInLayerMask(other.gameObject,layersAllowedToEnterSpots))
+        if (Utility.IsInLayerMask(other.gameObject, layersAllowedToEnterSpots))
         {
             spots.Remove(spot);
             if (spots.Count == 0)
             {
-                _spiritAnimation.enabled = false;
-                _animation = DOTween.Sequence();
-                _animation.AppendInterval(delayTime);
-                _animation.AppendCallback(() =>
-                {
-                    if (spots.Count != 0)
-                    {
-                        _animation.Kill();
-                    }
-                });
-                _animation.AppendCallback(() => _spirit.SetActive(true));
-                _animation.Append(_spirit.transform.DOMoveY(_spirit.transform.position.y - getDownHeight, getDownTime));
-                _animation.OnComplete(() =>
-                {
-                    if(_spiritAnimation != null)
-                    {
-                        _spiritAnimation.enabled = true;
-                    }
-                    _spotsContainer.SetActive(false);
-                });
-                _animation.SetEase(Ease.InOutSine);
-                _animation.Play();
+                triggerWithDelay = StartCoroutine(TriggerWithDelay());
             }
         }
     }
 
     public void SpotDeactivated(GameObject spot, GameObject other)
     {
-        if (Utility.IsInLayerMask(other.gameObject,layersAllowedToEnterSpots))
+        StopCoroutine(triggerWithDelay);
+        if (Utility.IsInLayerMask(other.gameObject, layersAllowedToEnterSpots))
         {
             if (!spots.Contains(spot))
             {
