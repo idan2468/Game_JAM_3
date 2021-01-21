@@ -45,7 +45,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pauseMenu: {fileID: 0}
   _endMenu: {fileID: 0}
+  _continueMenu: {fileID: 0}
   menuCanvas: {fileID: 0}
+  background: {fileID: 0}
+  backgroundOpacity: 0
+  backgroundFadeTime: 0.5
+  fadeEase: 4
   _whiteSpiritAmount: {fileID: 0}
   gameScreenCanvas: {fileID: 0}
   playerGO: {fileID: 0}

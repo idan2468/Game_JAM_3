@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -11,6 +12,11 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private GameObject _endMenu;
     [SerializeField] private GameObject _continueMenu;
     [SerializeField] private GameObject menuCanvas;
+    [SerializeField] private Image background;
+    [SerializeField] private float backgroundOpacity;
+    [SerializeField] private float backgroundFadeTime = 1f;
+    [SerializeField] private Ease fadeEase = Ease.InOutSine;
+
 
     [SerializeField] private TextMeshProUGUI _whiteSpiritAmount;
     [SerializeField] private GameObject gameScreenCanvas;
@@ -30,6 +36,8 @@ public class UIManager : Singleton<UIManager>
     {
         _playerItemCollector = playerGO.GetComponent<ItemCollector>();
         _whiteSpiritAmount = GameObject.FindWithTag("SpiritAmt").GetComponent<TextMeshProUGUI>();
+        background = GameObject.FindWithTag("Background").GetComponent<Image>();
+        backgroundOpacity = background.color.a;
     }
 
     // Update is called once per frame
@@ -40,10 +48,25 @@ public class UIManager : Singleton<UIManager>
         // Pause Menu
         if (Input.GetKey(KeyCode.Escape) && !menuCanvas.activeSelf)
         {
-            GameManager.Instance.StopTime();
-            _pauseMenu.SetActive(true);
-            menuCanvas.SetActive(true);
+            EnterPauseMenu();
         }
+    }
+
+    private void EnterPauseMenu()
+    {
+        _pauseMenu.SetActive(true);
+        menuCanvas.SetActive(true);
+        FadeInBackground(() => GameManager.Instance.StopTime());
+    }
+
+    public void ExitPauseMenu()
+    {
+        GameManager.Instance.StartTime();
+        FadeOutBackground(() =>
+        {
+            _pauseMenu.SetActive(false);
+            menuCanvas.SetActive(false);
+        });
     }
 
     private void UpdateScore()
@@ -51,31 +74,40 @@ public class UIManager : Singleton<UIManager>
         _whiteSpiritAmount.text = _playerItemCollector.SpiritsAmt.ToString();
     }
 
-    private void ContinueGame()
+    private void ContinueToNextLevel()
     {
-        GameManager.Instance.StopTime();
         menuCanvas.SetActive(true);
         _continueMenu.SetActive(true);
+        FadeInBackground(() => GameManager.Instance.StopTime());
+    }
+
+    private void FadeInBackground(TweenCallback callback)
+    {
+        background.DOFade(backgroundOpacity, backgroundFadeTime).From(0).SetEase(fadeEase).OnComplete(callback);
+    }
+    private void FadeOutBackground(TweenCallback callback)
+    {
+        background.DOFade(0, backgroundFadeTime).From(backgroundOpacity).SetEase(fadeEase).OnComplete(callback);
     }
 
     private void EndGame()
     {
-        GameManager.Instance.StopTime();
         menuCanvas.SetActive(true);
         _endMenu.SetActive(true);
+        FadeInBackground(() => GameManager.Instance.StopTime());
     }
 
     public void EndLevel()
     {
-        switch(SceneManager.GetActiveScene().buildIndex)
+        switch (SceneManager.GetActiveScene().buildIndex)
         {
-            case (int)GameScene.Rock:
-                ContinueGame();
+            case (int) GameScene.Rock:
+                ContinueToNextLevel();
                 break;
-            case (int)GameScene.Water:
+            case (int) GameScene.Water:
                 EndGame();
                 break;
-            case (int)GameScene.Wind:
+            case (int) GameScene.Wind:
                 EndGame();
                 break;
         }
