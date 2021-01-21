@@ -10,7 +10,7 @@ public class MovingInAirAnimation : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private bool restartAnimation;
     [SerializeField] private Ease easing = Ease.InOutSine;
-    [SerializeField] private LayerMask pushableObjectLayerMask;
+    // [SerializeField] private LayerMask pushableObjectLayerMask;
     [Header("Debugging")]
     [SerializeField] private Vector3 startPos;
     private Tween animation;
@@ -54,21 +54,21 @@ public class MovingInAirAnimation : MonoBehaviour
     {
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (Utility.IsInLayerMask(other.gameObject, pushableObjectLayerMask))
-        {
-            
-            other.gameObject.transform.parent = gameObject.transform;
-        }
-        
-    }
-
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        if (Utility.IsInLayerMask(other.gameObject, pushableObjectLayerMask))
-        {
-            other.gameObject.transform.parent = transform.parent;
-        }
-    }
+    // private void OnCollisionEnter2D(Collision2D other)
+    // {
+    //     if (Utility.IsInLayerMask(other.gameObject, pushableObjectLayerMask))
+    //     {
+    //         
+    //         other.gameObject.transform.parent = gameObject.transform;
+    //     }
+    //     
+    // }
+    //
+    // private void OnCollisionExit2D(Collision2D other)
+    // {
+    //     if (Utility.IsInLayerMask(other.gameObject, pushableObjectLayerMask))
+    //     {
+    //         other.gameObject.transform.parent = transform.parent;
+    //     }
+    // }
 }

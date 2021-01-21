@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8392622098756169731}
   - component: {fileID: 8392622098756169734}
   - component: {fileID: 6123031589739099085}
+  - component: {fileID: -8660574778168723121}
   m_Layer: 8
   m_Name: _BaseAirPlatformB1
   m_TagString: Untagged
@@ -146,7 +147,19 @@ MonoBehaviour:
   speed: 0.3
   restartAnimation: 0
   easing: 0
-  pushableObjectLayerMask:
-    serializedVersion: 2
-    m_Bits: 1024
   startPos: {x: 0, y: 0, z: 0}
+--- !u!114 &-8660574778168723121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8392622098756169730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172dc425276e3d44d92ce822db7f3310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsOnTopOfStone:
+    serializedVersion: 2
+    m_Bits: 3072

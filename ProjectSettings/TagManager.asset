@@ -8,6 +8,7 @@ TagManager:
   - ClueText
   - SpiritAmt
   - Background
+  - Puzzle
   layers:
   - Default
   - TransparentFX

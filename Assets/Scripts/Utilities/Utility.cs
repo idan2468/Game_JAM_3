@@ -29,4 +29,14 @@ public class Utility : MonoBehaviour
             .AppendCallback(cb);
     }
     
+    public static GameObject FindParentPuzzleGameObject(GameObject gameObject)
+    {
+        var currObj = gameObject.transform;
+        while (!currObj.CompareTag("Puzzle") && currObj != null)
+        {
+            currObj = currObj.parent;
+        }
+        return currObj.gameObject;
+    }
+    
 }
