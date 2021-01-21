@@ -59,6 +59,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6711893618292533831}
   - component: {fileID: 6711893618292533830}
+  - component: {fileID: 7942906150089162173}
   m_Layer: 0
   m_Name: SpotPuzzle
   m_TagString: Untagged
@@ -97,15 +98,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spotsContainer: {fileID: 6711893617554189770}
-  _spirit: {fileID: 4392839556981639567}
   spots: []
-  _spiritAnimation: {fileID: 0}
   layersAllowedToEnterSpots:
     serializedVersion: 2
     m_Bits: 1024
+  delayTime: 1
+--- !u!114 &7942906150089162173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6711893618292533832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 124327b01b093074ca00b1aa34502b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spiritAnimation: {fileID: 0}
+  _puzzle: {fileID: 0}
+  _spirit: {fileID: 4392839556981639567}
   getDownTime: 2
   getDownHeight: 8
-  delayTime: 1
 --- !u!114 &1839151370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7049241598307140012, guid: 0df75def638d32148ae99f995aba287c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7049241598307140012, guid: 0df75def638d32148ae99f995aba287c, type: 3}
       propertyPath: m_LocalPosition.z

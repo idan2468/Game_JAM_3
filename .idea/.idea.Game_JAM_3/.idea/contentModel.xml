@@ -144,6 +144,7 @@
               <e p="WaterEnterEvent.cs" t="Include" />
             </e>
             <e p="SpotsPuzzle" t="Include">
+              <e p="SpotDownAnimation.cs" t="Include" />
               <e p="SpotEnterEvent.cs" t="Include" />
               <e p="SpotLightEffect.cs" t="Include" />
               <e p="SpotsPuzzle.cs" t="Include" />
