@@ -53,7 +53,7 @@ public class GameManager : Singleton<GameManager>
     {
         DOTween.KillAll();
         Destroy(UIManager.Instance.gameObject);
-        Destroy(GameManager.Instance.gameObject);
+        Destroy(gameObject);
         Destroy(MusicController.Instance.gameObject);
         Destroy(CluesManager.Instance.gameObject);
     }
