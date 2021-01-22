@@ -23,13 +23,19 @@ public class FogMover : MonoBehaviour
         bounds = OrthographicBounds();
         if (bounds.min.x < _renderer.bounds.min.x + offset)
         {
-            gameObject.transform.position = new Vector3(transform.position.x - _distToMove, transform.position.y,
-                transform.position.z);
+            gameObject.transform.position += Vector3.left * _distToMove;
         }
         if (bounds.max.x  > _renderer.bounds.max.x - offset)
         {
-            gameObject.transform.position = new Vector3(transform.position.x + _distToMove, transform.position.y,
-                transform.position.z);
+            gameObject.transform.position += Vector3.right * _distToMove;
+        }
+        if (bounds.min.y < _renderer.bounds.min.y + offset)
+        {
+            gameObject.transform.position += Vector3.down * _distToMove;
+        }
+        if (bounds.max.y  > _renderer.bounds.max.y - offset)
+        {
+            gameObject.transform.position += Vector3.up * _distToMove;
         }
     }
     
