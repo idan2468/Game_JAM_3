@@ -1,4 +1,5 @@
 ﻿using System;
+using Cinemachine;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,17 +7,20 @@ using UnityEngine.SceneManagement;
 public class GameManager : Singleton<GameManager>
 {
     // TODO: LOOK INTO SAVING THE GAME
-    [SerializeField] private GameObject _player;
+    [Header("Params")] [SerializeField] private GameObject _player;
+
 
     [Header("Killing Animation")] [SerializeField]
     private bool vanishPlayerOnMovement = false;
-    [SerializeField] private float movingToCheckpointSpeed = 10f;
 
+    [SerializeField] private float movingToCheckpointSpeed = 10f;
     [SerializeField] private Ease ease = Ease.InOutSine;
-    private PlayerMove _playerMoveScript;
-    private PlayerMove _playerItemScript;
-    private Animator _animator;
-    
+    [Header("Debugging")] [SerializeField] private float blendTime = 1.5f;
+    [SerializeField] private PlayerMove _playerMoveScript;
+    [SerializeField] private PlayerMove _playerItemScript;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private CinemachineStateDrivenCamera _stateMachine;
+
     public enum VirtualCamera
     {
         Main,
@@ -28,6 +32,8 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
+        _stateMachine = FindObjectOfType<CinemachineStateDrivenCamera>();
+        blendTime = _stateMachine != null ? _stateMachine.m_DefaultBlend.m_Time : blendTime;
         _playerMoveScript = _player.GetComponent<PlayerMove>();
         _playerMoveScript.CanMove = false; // Freeze player but not time
         MusicController.Instance.PlayMenuBGM();
@@ -102,14 +108,15 @@ public class GameManager : Singleton<GameManager>
     {
         ResetSingletons();
         int currentScene = SceneManager.GetActiveScene().buildIndex;
-        if (currentScene < (int)UIManager.GameScene.Wind)
+        if (currentScene < (int) UIManager.GameScene.Wind)
         {
             SceneManager.LoadScene(currentScene + 1);
         }
     }
 
-    public void ChangeVirtualCamera(VirtualCamera virtualCamera)
+    public float ChangeVirtualCamera(VirtualCamera virtualCamera)
     {
-        _animator.SetTrigger(Enum.GetName(typeof(VirtualCamera),virtualCamera));
+        _animator.SetTrigger(Enum.GetName(typeof(VirtualCamera), virtualCamera));
+        return blendTime;
     }
 }

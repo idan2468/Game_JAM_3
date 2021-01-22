@@ -918,7 +918,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6324916045124294937}
   - component: {fileID: 6324916045124294938}
-  - component: {fileID: 6324916045124294939}
   m_Layer: 0
   m_Name: StateMachineCamera
   m_TagString: Untagged
@@ -1008,22 +1007,3 @@ MonoBehaviour:
     m_ParentHash: -651353016
   - m_Hash: 2033058382
     m_ParentHash: -651353016
---- !u!95 &6324916045124294939
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6324916045124294932}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 98e61448955dac64f8bc5a1f2a50cafa, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
