@@ -14,7 +14,7 @@ public class SpotEnterEvent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // TODO: CHECK DIMMING
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
