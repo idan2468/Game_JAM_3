@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestPuzzlesWaterLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestPuzzlesWaterLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestPuzzlesWaterLevel.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestPuzzlesWaterLevel.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singletons/MusicController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Singletons/MusicController.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +21,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ChangeCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2348FB5E-CC9E-4E68-9F37-F7D7FADAEA9A/8d/c3d51e89/Sequence.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PushObject.cs" root0="FORCE_HIGHLIGHTING" />
@@ -64,16 +71,18 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/CluesManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/MusicController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotDownAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Animations/FadeInAnimation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/UIManager.cs" />
       <option value="$PROJECT_DIR$/Assets/HookPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MakeChildEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Animations/MovingInAirAnimation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Utility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Utility.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/Singleton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/ChangeCamera.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZ4YEMI8xej9xB9eS5RmwInxe2" />

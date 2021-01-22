@@ -7,11 +7,12 @@ using UnityEngine;
 public class SpotsPuzzle : MonoBehaviour
 {
     // Start is called before the first frame update
-    [Header("Debugging")] [SerializeField] private GameObject _spotsContainer;
+    [Header("Debugging")] 
     [SerializeField] private List<GameObject> spots;
     [SerializeField] private Coroutine triggerWithDelay;
     [Header("Params")] [SerializeField] private LayerMask layersAllowedToEnterSpots;
     [SerializeField] private float delayTime = 1f;
+    [SerializeField] private GameObject _spotsContainer;
     private Action eventToTrigger;
     public Action EventToTrigger
     {
@@ -24,30 +25,7 @@ public class SpotsPuzzle : MonoBehaviour
         {
             spots.Add(child.gameObject);
         }
-
-        // eventToTrigger = GetSpotDownAnimation;
-        // _spiritAnimation = _spirit.GetComponent<SpiritAnimation>();
-        // _spirit.SetActive(false);
     }
-    
-    // private void GetSpotDownAnimation()
-    // {
-    //     _spiritAnimation.enabled = false;
-    //     _animation = DOTween.Sequence();
-    //     _animation.AppendCallback(() => _spirit.SetActive(true));
-    //     _animation.Append(_spirit.transform.DOMoveY(_spirit.transform.position.y - getDownHeight, getDownTime));
-    //     _animation.OnComplete(() =>
-    //     {
-    //         if (_spiritAnimation != null)
-    //         {
-    //             _spiritAnimation.enabled = true;
-    //         }
-    //
-    //         _spotsContainer.SetActive(false);
-    //     });
-    //     _animation.SetEase(Ease.InOutSine);
-    //     _animation.Play();
-    // }
 
     private IEnumerator TriggerWithDelay()
     {
@@ -55,7 +33,6 @@ public class SpotsPuzzle : MonoBehaviour
         if (spots.Count == 0)
         {
             eventToTrigger();
-            // GetSpotDownAnimation();
         }
     }
     public void SpotActivated(GameObject spot, GameObject other)

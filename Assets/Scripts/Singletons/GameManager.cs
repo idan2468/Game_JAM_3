@@ -15,6 +15,15 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private Ease ease = Ease.InOutSine;
     private PlayerMove _playerMoveScript;
     private PlayerMove _playerItemScript;
+    private Animator _animator;
+    
+    public enum VirtualCamera
+    {
+        Main,
+        Waterfall,
+        Hook,
+        River
+    }
 
 
     private void Start()
@@ -22,6 +31,7 @@ public class GameManager : Singleton<GameManager>
         _playerMoveScript = _player.GetComponent<PlayerMove>();
         _playerMoveScript.CanMove = false; // Freeze player but not time
         MusicController.Instance.PlayMenuBGM();
+        _animator = GetComponent<Animator>();
         StartTime();
     }
 
@@ -95,5 +105,10 @@ public class GameManager : Singleton<GameManager>
         {
             SceneManager.LoadScene(currentScene + 1);
         }
+    }
+
+    public void ChangeVirtualCamera(VirtualCamera virtualCamera)
+    {
+        _animator.SetTrigger(Enum.GetName(typeof(VirtualCamera),virtualCamera));
     }
 }
