@@ -37,7 +37,7 @@ public class HookPuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_spirit == null) StopReset();
+
     }
 
     private void MoveRockAnimation()
@@ -57,6 +57,7 @@ public class HookPuzzle : MonoBehaviour
                 GameManager.Instance.PlayerCanMove = true;
             })
             .SetEase(ease);
+        StopReset();
     }
 
     private void ResetPuzzle()
@@ -66,7 +67,7 @@ public class HookPuzzle : MonoBehaviour
             _resetObjects[i].position = _resetCoordinates[i];
         }
     }
-    public void StopReset()
+    private void StopReset()
     {
         _checkpointScript.Reset = false;
     }

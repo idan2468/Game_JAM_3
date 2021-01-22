@@ -4516,13 +4516,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4111f1d6b15a731439991311bea610aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingRock: {fileID: 0}
+  movingRock: {fileID: 1407729043}
   timeInHookCamera: 0
   ease: 4
   _spotsPuzzle: {fileID: 0}
   _checkpoint: {fileID: 589465644}
   _resetObjects: []
   _resetCoordinates: []
+  _spirit: {fileID: 7049241598043190642}
 --- !u!114 &6030984433598856409
 MonoBehaviour:
   m_ObjectHideFlags: 0
