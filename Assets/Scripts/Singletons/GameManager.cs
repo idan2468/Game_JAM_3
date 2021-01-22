@@ -89,6 +89,7 @@ public class GameManager : Singleton<GameManager>
                 movingToCheckpointSpeed != 0 ? dist / movingToCheckpointSpeed : movingToCheckpointSpeed))
             .AppendCallback(() =>
             {
+                _playerMoveScript.IsFacingLeft = false;
                 _playerMoveScript.CanMove = true;
                 if (vanishPlayerOnMovement)
                 {

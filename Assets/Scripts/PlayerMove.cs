@@ -32,7 +32,15 @@ public class PlayerMove : MonoBehaviour
         set { _canMove = value; }
     }
 
-    public bool IsFacingLeft => facingLeft;
+    public bool IsFacingLeft
+    {
+        get => facingLeft;
+        set
+        {
+            facingLeft = value;
+            transform.rotation = !facingLeft ?  Quaternion.Euler(0, 0, 0) : Quaternion.Euler(0, 180, 0);
+        }
+    }
 
     void Start()
     {

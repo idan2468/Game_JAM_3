@@ -126,7 +126,6 @@
             <e p="ItemCollector.cs" t="Include" />
           </e>
           <e p="FootStepSFX.cs" t="Include" />
-          <e p="HookPuzzle.cs" t="Include" />
           <e p="MakeChildEvent.cs" t="Include" />
           <e p="ParallaxBackground Scripts" t="Include">
             <e p="FogMover.cs" t="Include" />
@@ -142,6 +141,7 @@
             </e>
             <e p="HookPuzzle" t="Include">
               <e p="HookController.cs" t="Include" />
+              <e p="HookPuzzle.cs" t="Include" />
             </e>
             <e p="RiverPuzzle" t="Include">
               <e p="RiverPuzzle.cs" t="Include" />
@@ -154,6 +154,7 @@
             </e>
             <e p="WaterfallPuzzle" t="Include">
               <e p="ParticleCollisionEvent.cs" t="Include" />
+              <e p="WaterfallPuzzle.cs" t="Include" />
             </e>
           </e>
           <e p="SampleScripts" t="Include">
