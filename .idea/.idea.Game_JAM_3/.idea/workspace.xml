@@ -5,8 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestPuzzlesWaterLevel 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestPuzzlesWaterLevel 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookPuzzle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/WaterfallPuzzle/WaterfallPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/WaterfallPuzzle/WaterfallPuzzle.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +33,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/ParallaxCamera.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/ParallaxBackground.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/ParallaxLayer.cs" />
       <option value="$PROJECT_DIR$/Assets/PushableObject.cs" />
@@ -74,13 +75,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/Singleton.cs" />
       <option value="$PROJECT_DIR$/Assets/ChangeCamera.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Utility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/FogMover.cs" />
       <option value="$PROJECT_DIR$/Assets/AnchorPlace.cs" />
       <option value="$PROJECT_DIR$/Assets/WorldSpaceAnchor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Animations/MoveAirPlatformHorizontal.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/WaterfallPuzzle/WaterfallPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookPuzzle.cs" />
     </changedPaths>
   </component>

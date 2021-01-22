@@ -5,8 +5,7 @@ using DG.Tweening;
 
 public class WaterfallPuzzle : MonoBehaviour
 {
-    [Header("Debugging")] 
-    [SerializeField] private SpotsPuzzle _spotsPuzzle;
+    [Header("Debugging")] [SerializeField] private SpotsPuzzle _spotsPuzzle;
     [SerializeField] private GameObject _waterfallRock;
     [SerializeField] private Sequence _fadeInSeq;
     [SerializeField] private SpriteRenderer _spriteRenderer;
@@ -26,7 +25,6 @@ public class WaterfallPuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     private void DropWaterfallRock()
@@ -34,10 +32,16 @@ public class WaterfallPuzzle : MonoBehaviour
         _fadeInSeq = DOTween.Sequence();
         _fadeInSeq.AppendCallback(() => _spotsPuzzle.TurnOffPuzzle());
         _fadeInSeq.AppendCallback(() => _waterfallRock.SetActive(true));
-        _fadeInSeq.AppendCallback(() => GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Waterfall));
-        _fadeInSeq.AppendInterval(2f);
+        _fadeInSeq.AppendCallback(() =>
+        {
+            GameManager.Instance.PlayerCanMove = false;
+            GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Waterfall);
+        });
+        _fadeInSeq.AppendInterval(GameManager.Instance.CameraBlendTime);
         _fadeInSeq.Append(_spriteRenderer.DOFade(1, _fadeInTime).From(0));
         _fadeInSeq.AppendCallback(() => GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Main));
+        _fadeInSeq.AppendInterval(GameManager.Instance.CameraBlendTime);
+        _fadeInSeq.AppendCallback(() => GameManager.Instance.PlayerCanMove = true);
         _fadeInSeq.SetEase(_ease);
     }
 }

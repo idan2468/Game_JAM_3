@@ -7,27 +7,22 @@ public class HookPuzzle : MonoBehaviour
 {
     [Header("Params")] [SerializeField] private MoveAirPlatformHorizontal movingRock;
     [SerializeField] private float timeInHookCamera;
-
+    [SerializeField] private CheckpointEnterEvent _checkpointScript;
     [SerializeField] private Ease ease = Ease.InOutSine;
+    [SerializeField] private Transform objectsToResetContainer;
     [Header("Debugging")] [SerializeField] private SpotsPuzzle _spotsPuzzle;
     [SerializeField] private Sequence _animation;
-    [SerializeField] private GameObject _checkpoint;
     [SerializeField] private List<Transform> _resetObjects;
     [SerializeField] private List<Vector3> _resetCoordinates;
-    [SerializeField] private GameObject _spirit;
-    private CheckpointEnterEvent _checkpointScript;
 
     // Start is called before the first frame update
     void Start()
     {
         _spotsPuzzle = GetComponent<SpotsPuzzle>();
         _spotsPuzzle.EventToTrigger = MoveRockAnimation;
-        _checkpointScript = _checkpoint.GetComponent<CheckpointEnterEvent>();
         _checkpointScript.EventToTrigger = ResetPuzzle;
 
-        // Save coordinates of stones
-        var objectsToReset = transform.Find("MoveableRocks");
-        foreach(Transform childTransform in objectsToReset)
+        foreach (Transform childTransform in objectsToResetContainer)
         {
             _resetObjects.Add(childTransform);
             _resetCoordinates.Add(childTransform.position);
@@ -37,7 +32,6 @@ public class HookPuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
 
     private void MoveRockAnimation()
@@ -50,13 +44,11 @@ public class HookPuzzle : MonoBehaviour
         });
         _animation.AppendInterval(GameManager.Instance.CameraBlendTime);
         _animation.AppendCallback(() => movingRock.enabled = true);
-        _animation.AppendInterval(timeInHookCamera);
-        _animation.AppendCallback(() =>
-            {
-                GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Main);
-                GameManager.Instance.PlayerCanMove = true;
-            })
-            .SetEase(ease);
+        _animation.AppendInterval(timeInHookCamera + GameManager.Instance.CameraBlendTime);
+        _animation.AppendCallback(() => GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Main));
+        _animation.AppendInterval(GameManager.Instance.CameraBlendTime);
+        _animation.AppendCallback(() => GameManager.Instance.PlayerCanMove = true);
+        _animation.SetEase(ease);
         StopReset();
     }
 
@@ -66,7 +58,19 @@ public class HookPuzzle : MonoBehaviour
         {
             _resetObjects[i].position = _resetCoordinates[i];
         }
+
+        _animation = DOTween.Sequence();
+        _animation.AppendCallback(() =>
+            {
+                GameManager.Instance.PlayerCanMove = false;
+                GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Hook);
+            })
+            .AppendInterval(GameManager.Instance.CameraBlendTime + timeInHookCamera)
+            .AppendCallback(() => GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Main))
+            .AppendInterval(GameManager.Instance.CameraBlendTime)
+            .AppendCallback(() => GameManager.Instance.PlayerCanMove = true);
     }
+
     private void StopReset()
     {
         _checkpointScript.Reset = false;

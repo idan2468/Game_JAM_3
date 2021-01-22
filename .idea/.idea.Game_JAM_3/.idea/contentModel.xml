@@ -137,6 +137,7 @@
           <e p="PushableObject.cs" t="Include" />
           <e p="PushObject.cs" t="Include" />
           <e p="Puzzles" t="Include">
+            <e p="CheckpointEnterEvent.cs" t="Include" />
             <e p="FlyHigh" t="Include">
               <e p="FlyHighEffect.cs" t="Include" />
             </e>

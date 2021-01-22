@@ -29,7 +29,11 @@ public class PlayerMove : MonoBehaviour
     public bool CanMove
     {
         get { return _canMove; }
-        set { _canMove = value; }
+        set
+        {
+            _canMove = value;
+            rb.constraints = _canMove ? RigidbodyConstraints2D.FreezeRotation : RigidbodyConstraints2D.FreezePosition;
+        }
     }
 
     public bool IsFacingLeft
@@ -38,7 +42,7 @@ public class PlayerMove : MonoBehaviour
         set
         {
             facingLeft = value;
-            transform.rotation = !facingLeft ?  Quaternion.Euler(0, 0, 0) : Quaternion.Euler(0, 180, 0);
+            transform.rotation = !facingLeft ? Quaternion.Euler(0, 0, 0) : Quaternion.Euler(0, 180, 0);
         }
     }
 
@@ -55,18 +59,18 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_canMove)
+        // if (_canMove)
+        // {
+        _isGrounded = IsGrounded();
+        if (Input.GetButtonDown("Jump"))
         {
-            _isGrounded = IsGrounded();
-            if (Input.GetButtonDown("Jump"))
+            if (_isGrounded && !_pushObject.IsPushing)
             {
-                if (_isGrounded && !_pushObject.IsPushing)
-                {
-                    rb.velocity = Vector2.up * _jumpPower;
-                    MusicController.Instance.PlaySound("Jump" + Random.Range(1, 3), _jumpVolume);
-                }
+                rb.velocity = Vector2.up * _jumpPower;
+                MusicController.Instance.PlaySound("Jump" + Random.Range(1, 3), _jumpVolume);
             }
         }
+        // }
 
         if (_animator)
         {
@@ -78,19 +82,14 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!_canMove) return;
+        // if (!_canMove) return;
         var dirTaken = new Vector2(Input.GetAxis("Horizontal"), 0);
         var dirVelocity = rb.velocity.y > 0.01f ? dirTaken * _JumpSpeedX : dirTaken * _speed;
         if (!_pushObject.IsPushing)
         {
-            if (facingLeft && dirVelocity.x > 0.01f)
+            if ((facingLeft && dirVelocity.x > 0.01f) || (!facingLeft && dirVelocity.x < -0.01f))
             {
-                transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
-
-            if (!facingLeft && dirVelocity.x < -0.01f)
-            {
-                transform.rotation = Quaternion.Euler(0, 180, 0);
+                IsFacingLeft = !IsFacingLeft;
             }
         }
 
