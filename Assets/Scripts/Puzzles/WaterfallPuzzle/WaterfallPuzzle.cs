@@ -8,14 +8,16 @@ public class WaterfallPuzzle : MonoBehaviour
     [Header("Debugging")] 
     [SerializeField] private SpotsPuzzle _spotsPuzzle;
     [SerializeField] private GameObject _waterfallRock;
-    [SerializeField] private Tween _animation;
+    [SerializeField] private Sequence _fadeInSeq;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private float _fadeInTime = 2f;
+    [SerializeField] private Ease _ease = Ease.InOutSine;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        //_fadeInSeq = DOTween.Sequence();
         _spotsPuzzle = GetComponent<SpotsPuzzle>();
         _spriteRenderer = _waterfallRock.GetComponent<SpriteRenderer>();
         _spotsPuzzle.EventToTrigger = DropWaterfallRock;
@@ -29,7 +31,13 @@ public class WaterfallPuzzle : MonoBehaviour
 
     private void DropWaterfallRock()
     {
-        _waterfallRock.SetActive(true);
-        _animation = _spriteRenderer.DOFade(1, _fadeInTime).From(0);
+        _fadeInSeq = DOTween.Sequence();
+        _fadeInSeq.AppendCallback(() => _spotsPuzzle.TurnOffPuzzle());
+        _fadeInSeq.AppendCallback(() => _waterfallRock.SetActive(true));
+        _fadeInSeq.AppendCallback(() => GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Waterfall));
+        _fadeInSeq.AppendInterval(2f);
+        _fadeInSeq.Append(_spriteRenderer.DOFade(1, _fadeInTime).From(0));
+        _fadeInSeq.AppendCallback(() => GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Main));
+        _fadeInSeq.SetEase(_ease);
     }
 }
