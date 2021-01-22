@@ -1093,7 +1093,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3656933328466433697, guid: 9ae50b38324d20e4997b02a14a9a5ada, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.6173744
+      value: -7.6038017
       objectReference: {fileID: 0}
     - target: {fileID: 3656933328466433697, guid: 9ae50b38324d20e4997b02a14a9a5ada, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1117,7 +1117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3781228039508856144, guid: 9ae50b38324d20e4997b02a14a9a5ada, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.505684
+      value: -20.505695
       objectReference: {fileID: 0}
     - target: {fileID: 3781228039508856144, guid: 9ae50b38324d20e4997b02a14a9a5ada, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1129,7 +1129,7 @@ PrefabInstance:
       objectReference: {fileID: 1838941023}
     - target: {fileID: 3781228040414453999, guid: 9ae50b38324d20e4997b02a14a9a5ada, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 48.010025
+      value: 48.010014
       objectReference: {fileID: 0}
     - target: {fileID: 3781228040414453999, guid: 9ae50b38324d20e4997b02a14a9a5ada, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4517,11 +4517,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingRock: {fileID: 1407729043}
-  timeInHookCamera: 0
+  timeInHookCamera: 2
   _checkpointScript: {fileID: 589465647}
   ease: 4
   objectsToResetContainer: {fileID: 1200002874}
-  hookCameraTime: 0
   _spotsPuzzle: {fileID: 0}
   _resetObjects: []
   _resetCoordinates: []
