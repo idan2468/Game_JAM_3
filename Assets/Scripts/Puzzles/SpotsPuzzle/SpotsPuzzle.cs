@@ -49,7 +49,10 @@ public class SpotsPuzzle : MonoBehaviour
 
     public void SpotDeactivated(GameObject spot, GameObject other)
     {
-        StopCoroutine(triggerWithDelay);
+        if(triggerWithDelay != null)
+        {
+            StopCoroutine(triggerWithDelay);
+        }
         if (Utility.IsInLayerMask(other.gameObject, layersAllowedToEnterSpots))
         {
             if (!spots.Contains(spot))
