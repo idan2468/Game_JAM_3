@@ -73,6 +73,6 @@ public class HookPuzzle : MonoBehaviour
 
     private void StopReset()
     {
-        _checkpointScript.Reset = false;
+        _checkpointScript.TriggerCheckpointEvent = false;
     }
 }

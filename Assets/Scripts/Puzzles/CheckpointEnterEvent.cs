@@ -6,11 +6,11 @@ using UnityEngine;
 public class CheckpointEnterEvent : MonoBehaviour
 {
     private Action eventToTrigger;
-    [SerializeField] private bool _reset = true;
-    public bool Reset
+    [SerializeField] private bool triggerCheckpointEvent = true;
+    public bool TriggerCheckpointEvent
     {
-        get { return _reset; }
-        set { _reset = value; }
+        get => triggerCheckpointEvent;
+        set => triggerCheckpointEvent = value;
     }
 
     public Action EventToTrigger
@@ -33,6 +33,6 @@ public class CheckpointEnterEvent : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other is EdgeCollider2D || !other.gameObject.CompareTag("Player")) return;
-        if (_reset) eventToTrigger();
+        if (triggerCheckpointEvent) eventToTrigger();
     }
 }
