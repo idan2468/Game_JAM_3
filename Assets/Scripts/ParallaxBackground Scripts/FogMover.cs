@@ -20,7 +20,7 @@ public class FogMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bounds = OrthographicBounds();
+        bounds = Utility.OrthographicBounds();
         if (bounds.min.x < _renderer.bounds.min.x + offset)
         {
             gameObject.transform.position += Vector3.left * _distToMove;
@@ -37,14 +37,5 @@ public class FogMover : MonoBehaviour
         {
             gameObject.transform.position += Vector3.up * _distToMove;
         }
-    }
-    
-    public static Bounds OrthographicBounds()
-    {
-        float cameraHeight = Camera.main.orthographicSize * 2;
-        Bounds bounds = new Bounds(
-            Camera.main.transform.position,
-            new Vector3(cameraHeight * Camera.main.aspect, cameraHeight, 0));
-        return bounds;
     }
 }

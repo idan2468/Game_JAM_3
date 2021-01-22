@@ -38,5 +38,12 @@ public class Utility : MonoBehaviour
         }
         return currObj.gameObject;
     }
-    
+    public static Bounds OrthographicBounds()
+    {
+        float cameraHeight = Camera.main.orthographicSize * 2;
+        Bounds bounds = new Bounds(
+            Camera.main.transform.position,
+            new Vector3(cameraHeight * Camera.main.aspect, cameraHeight, 0));
+        return bounds;
+    }
 }
