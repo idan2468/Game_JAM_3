@@ -14,6 +14,7 @@ public class HookPuzzle : MonoBehaviour
     [SerializeField] private GameObject _checkpoint;
     [SerializeField] private List<Transform> _resetObjects;
     [SerializeField] private List<Vector3> _resetCoordinates;
+    [SerializeField] private GameObject _spirit;
     private CheckpointEnterEvent _checkpointScript;
 
     // Start is called before the first frame update
@@ -36,6 +37,7 @@ public class HookPuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_spirit == null) StopReset();
     }
 
     private void MoveRockAnimation()
