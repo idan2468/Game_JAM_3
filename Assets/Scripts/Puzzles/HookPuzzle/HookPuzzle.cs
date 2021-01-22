@@ -11,13 +11,26 @@ public class HookPuzzle : MonoBehaviour
     [SerializeField] private Ease ease = Ease.InOutSine;
     [Header("Debugging")] [SerializeField] private SpotsPuzzle _spotsPuzzle;
     [SerializeField] private Sequence _animation;
-
+    [SerializeField] private GameObject _checkpoint;
+    [SerializeField] private List<Transform> _resetObjects;
+    [SerializeField] private List<Vector3> _resetCoordinates;
+    private CheckpointEnterEvent _checkpointScript;
 
     // Start is called before the first frame update
     void Start()
     {
         _spotsPuzzle = GetComponent<SpotsPuzzle>();
         _spotsPuzzle.EventToTrigger = MoveRockAnimation;
+        _checkpointScript = _checkpoint.GetComponent<CheckpointEnterEvent>();
+        _checkpointScript.EventToTrigger = ResetPuzzle;
+
+        // Save coordinates of stones
+        var objectsToReset = transform.Find("MoveableRocks");
+        foreach(Transform childTransform in objectsToReset)
+        {
+            _resetObjects.Add(childTransform);
+            _resetCoordinates.Add(childTransform.position);
+        }
     }
 
     // Update is called once per frame
@@ -42,5 +55,17 @@ public class HookPuzzle : MonoBehaviour
                 GameManager.Instance.PlayerCanMove = true;
             })
             .SetEase(ease);
+    }
+
+    private void ResetPuzzle()
+    {
+        for (int i = 0; i < _resetObjects.Count; ++i)
+        {
+            _resetObjects[i].position = _resetCoordinates[i];
+        }
+    }
+    public void StopReset()
+    {
+        _checkpointScript.Reset = false;
     }
 }

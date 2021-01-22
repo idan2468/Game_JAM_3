@@ -19,13 +19,14 @@ public class AspectRatioScript : MonoBehaviour
     }
 
     // TODO: MOVE FROM UPDATE TO START
+    // TODO: CHECK EFFECT ON STATIC HOOK (WATER LEVEL) CAMERA
     void Calculate()
     {
         float windowAspect = (float)Screen.width / (float)Screen.height;
         float targetAspect = targetWidth / targetHeight;
         float scaleHeight = windowAspect / targetAspect;
 
-        var camera = GetComponent<Camera>().gameObject.GetComponentInChildren<Cinemachine.CinemachineVirtualCamera>();
+        var camera = GetComponent<Cinemachine.CinemachineVirtualCamera>();
 
         if (windowAspect < targetAspect)
         {
