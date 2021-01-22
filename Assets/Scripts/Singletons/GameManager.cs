@@ -20,6 +20,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private PlayerMove _playerItemScript;
     [SerializeField] private Animator _animator;
     [SerializeField] private CinemachineStateDrivenCamera _stateMachine;
+    public float CameraBlendTime => blendTime;
 
     public enum VirtualCamera
     {
@@ -27,6 +28,12 @@ public class GameManager : Singleton<GameManager>
         Waterfall,
         Hook,
         River
+    }
+
+    public bool PlayerCanMove
+    {
+        get => _playerMoveScript.CanMove;
+        set => _playerMoveScript.CanMove = value;
     }
 
 
@@ -114,9 +121,8 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    public float ChangeVirtualCamera(VirtualCamera virtualCamera)
+    public void ChangeVirtualCamera(VirtualCamera virtualCamera)
     {
         _animator.SetTrigger(Enum.GetName(typeof(VirtualCamera), virtualCamera));
-        return blendTime;
     }
 }

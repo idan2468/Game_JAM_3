@@ -5,17 +5,13 @@ using UnityEngine;
 
 public class HookPuzzle : MonoBehaviour
 {
-    [Header("Params")]
-    [SerializeField] private Transform thirdHook;
-
-    [SerializeField] private float dist = 3f;
-
-    [SerializeField] private float speed = 3f;
-
-    [SerializeField] private Tween _animation;
+    [Header("Params")] [SerializeField] private MoveAirPlatformHorizontal movingRock;
+    [SerializeField] private float timeInHookCamera;
 
     [SerializeField] private Ease ease = Ease.InOutSine;
     [Header("Debugging")] [SerializeField] private SpotsPuzzle _spotsPuzzle;
+    [SerializeField] private Sequence _animation;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,8 +27,20 @@ public class HookPuzzle : MonoBehaviour
 
     private void MoveRockAnimation()
     {
-        _animation = thirdHook.DOMoveX(thirdHook.position.x - dist, dist / speed)
-            .SetLoops(-1, LoopType.Yoyo)
+        _animation = DOTween.Sequence();
+        _animation.AppendCallback(() =>
+        {
+            GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Hook);
+            GameManager.Instance.PlayerCanMove = false;
+        });
+        _animation.AppendInterval(GameManager.Instance.CameraBlendTime);
+        _animation.AppendCallback(() => movingRock.enabled = true);
+        _animation.AppendInterval(timeInHookCamera);
+        _animation.AppendCallback(() =>
+            {
+                GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Main);
+                GameManager.Instance.PlayerCanMove = true;
+            })
             .SetEase(ease);
     }
 }

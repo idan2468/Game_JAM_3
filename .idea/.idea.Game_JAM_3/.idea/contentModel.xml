@@ -8,7 +8,6 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="AnchorPlace.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
@@ -117,6 +116,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Animations" t="Include">
+            <e p="MoveAirPlatformHorizontal.cs" t="Include" />
             <e p="MovingInAirAnimation.cs" t="Include" />
             <e p="SpiritAnimation.cs" t="Include" />
             <e p="SpotDownAnimation.cs" t="Include" />
@@ -172,9 +172,9 @@
           <e p="Utilities" t="Include">
             <e p="AspectRatioScript.cs" t="Include" />
             <e p="Utility.cs" t="Include" />
+            <e p="WorldSpaceAnchor.cs" t="Include" />
           </e>
         </e>
-        <e p="WorldSpaceAnchor.cs" t="Include" />
       </e>
       <e p="Game_JAM_3.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

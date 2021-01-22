@@ -4,8 +4,9 @@
     <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/FogMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/FogMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Utility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Utility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestPuzzlesWaterLevel 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestPuzzlesWaterLevel 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookPuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +18,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ChangeCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animations/MoveAirPlatformHorizontal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2348FB5E-CC9E-4E68-9F37-F7D7FADAEA9A/8d/c3d51e89/Sequence.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PushObject.cs" root0="FORCE_HIGHLIGHTING" />
@@ -30,8 +31,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/SpiritAnimation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UIManger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/ParallaxCamera.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/ParallaxBackground.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/ParallaxLayer.cs" />
@@ -76,10 +75,13 @@
       <option value="$PROJECT_DIR$/Assets/ChangeCamera.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Utility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/FogMover.cs" />
       <option value="$PROJECT_DIR$/Assets/AnchorPlace.cs" />
+      <option value="$PROJECT_DIR$/Assets/WorldSpaceAnchor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Animations/MoveAirPlatformHorizontal.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookPuzzle.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZ4YEMI8xej9xB9eS5RmwInxe2" />
