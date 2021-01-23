@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Cinemachine;
 using DG.Tweening;
 using UnityEngine;
@@ -45,7 +46,7 @@ public class GameManager : Singleton<GameManager>
         _playerMoveScript.CanMove = false; // Freeze player but not time
         MusicController.Instance.PlayMenuBGM();
         _animator = GetComponent<Animator>();
-        StartTime();
+        // StartTime();
     }
 
     // TODO: CHECK IF MOVE THIS TO DIFFERENT SCRIPT
@@ -124,5 +125,16 @@ public class GameManager : Singleton<GameManager>
     public void ChangeVirtualCamera(VirtualCamera virtualCamera)
     {
         _animator.SetTrigger(Enum.GetName(typeof(VirtualCamera), virtualCamera));
+    }
+
+    public void FreezePlayer()
+    {
+        _playerMoveScript.CanMove = false;
+        _playerMoveScript.Rb.constraints = RigidbodyConstraints2D.FreezeAll;
+    }
+    public void UnfreezePlayer()
+    {
+        _playerMoveScript.CanMove = true;
+        _playerMoveScript.Rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 }

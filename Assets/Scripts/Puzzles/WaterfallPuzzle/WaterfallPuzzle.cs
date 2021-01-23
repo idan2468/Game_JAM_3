@@ -34,14 +34,14 @@ public class WaterfallPuzzle : MonoBehaviour
         _fadeInSeq.AppendCallback(() => _waterfallRock.SetActive(true));
         _fadeInSeq.AppendCallback(() =>
         {
-            GameManager.Instance.PlayerCanMove = false;
+            GameManager.Instance.FreezePlayer();
             GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Waterfall);
         });
         _fadeInSeq.AppendInterval(GameManager.Instance.CameraBlendTime);
         _fadeInSeq.Append(_spriteRenderer.DOFade(1, _fadeInTime).From(0));
         _fadeInSeq.AppendCallback(() => GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Main));
         _fadeInSeq.AppendInterval(GameManager.Instance.CameraBlendTime);
-        _fadeInSeq.AppendCallback(() => GameManager.Instance.PlayerCanMove = true);
+        _fadeInSeq.AppendCallback(() => GameManager.Instance.UnfreezePlayer());
         _fadeInSeq.SetEase(_ease);
     }
 }

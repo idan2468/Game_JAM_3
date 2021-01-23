@@ -40,14 +40,14 @@ public class HookPuzzle : MonoBehaviour
         _animation.AppendCallback(() =>
         {
             GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Hook);
-            GameManager.Instance.PlayerCanMove = false;
+            GameManager.Instance.FreezePlayer();
         });
         _animation.AppendInterval(GameManager.Instance.CameraBlendTime);
         _animation.AppendCallback(() => movingRock.enabled = true);
         _animation.AppendInterval(timeInHookCamera + GameManager.Instance.CameraBlendTime);
         _animation.AppendCallback(() => GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Main));
         _animation.AppendInterval(GameManager.Instance.CameraBlendTime);
-        _animation.AppendCallback(() => GameManager.Instance.PlayerCanMove = true);
+        _animation.AppendCallback(() => GameManager.Instance.UnfreezePlayer());
         _animation.SetEase(ease);
         StopReset();
     }
@@ -62,13 +62,13 @@ public class HookPuzzle : MonoBehaviour
         _animation = DOTween.Sequence();
         _animation.AppendCallback(() =>
             {
-                GameManager.Instance.PlayerCanMove = false;
+                GameManager.Instance.FreezePlayer();
                 GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Hook);
             })
             .AppendInterval(GameManager.Instance.CameraBlendTime + timeInHookCamera)
             .AppendCallback(() => GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Main))
             .AppendInterval(GameManager.Instance.CameraBlendTime)
-            .AppendCallback(() => GameManager.Instance.PlayerCanMove = true);
+            .AppendCallback(() => GameManager.Instance.UnfreezePlayer());
     }
 
     private void StopReset()

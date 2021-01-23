@@ -21,20 +21,18 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private bool _isGrounded;
     // Start is called before the first frame update
 
-    private PushObject _pushObject;
-    private Animator _animator;
-    public Rigidbody2D rb;
+    [SerializeField] private PushObject _pushObject;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private Rigidbody2D rb;
 
 
     public bool CanMove
     {
-        get { return _canMove; }
-        set
-        {
-            _canMove = value;
-            rb.constraints = _canMove ? RigidbodyConstraints2D.FreezeRotation : RigidbodyConstraints2D.FreezePosition;
-        }
+        get => _canMove;
+        set => _canMove = value;
     }
+
+    public Rigidbody2D Rb => rb;
 
     public bool IsFacingLeft
     {
@@ -59,18 +57,18 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (_canMove)
-        // {
-        _isGrounded = IsGrounded();
-        if (Input.GetButtonDown("Jump"))
+        if (_canMove)
         {
-            if (_isGrounded && !_pushObject.IsPushing)
+            _isGrounded = IsGrounded();
+            if (Input.GetButtonDown("Jump"))
             {
-                rb.velocity = Vector2.up * _jumpPower;
-                MusicController.Instance.PlaySound("Jump" + Random.Range(1, 3), _jumpVolume);
+                if (_isGrounded && !_pushObject.IsPushing)
+                {
+                    rb.velocity = Vector2.up * _jumpPower;
+                    MusicController.Instance.PlaySound("Jump" + Random.Range(1, 3), _jumpVolume);
+                }
             }
         }
-        // }
 
         if (_animator)
         {
@@ -82,7 +80,7 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // if (!_canMove) return;
+        if (!_canMove) return;
         var dirTaken = new Vector2(Input.GetAxis("Horizontal"), 0);
         var dirVelocity = rb.velocity.y > 0.01f ? dirTaken * _JumpSpeedX : dirTaken * _speed;
         if (!_pushObject.IsPushing)
