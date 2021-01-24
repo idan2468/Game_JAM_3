@@ -1977,14 +1977,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1518169644}
     m_Modifications:
-    - target: {fileID: 3514007079845821888, guid: d1a43ece80d36454f84c9853d954d047, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5843329465381391343, guid: d1a43ece80d36454f84c9853d954d047, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 5843329466842445074, guid: d1a43ece80d36454f84c9853d954d047, type: 3}
       propertyPath: m_RootOrder
       value: 2
