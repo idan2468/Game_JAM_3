@@ -7,37 +7,6 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-// [Serializable]
-// public class LevelSpirits
-// {
-//     [SerializeField] private UIManager.GameScene scene;
-//     [SerializeField] private Image fullSpirit;
-//     [SerializeField] private Image emptySpirit;
-//     public UIManager.GameScene Scene
-//     {
-//         get => scene;
-//         set => scene = value;
-//     }
-//
-//     public Image FullSpirit
-//     {
-//         get => fullSpirit;
-//         set => fullSpirit = value;
-//     }
-//     
-//     public Image EmptySpirit
-//     {
-//         get => emptySpirit;
-//         set => emptySpirit = value;
-//     }
-//
-//     public LevelSpirits(UIManager.GameScene scene, Image emptySpirit,Image fullSpirit)
-//     {
-//         this.scene = scene;
-//         this.fullSpirit = fullSpirit;
-//         this.emptySpirit = emptySpirit;
-//     }
-// }
 public class UIManager : Singleton<UIManager>
 {
     [Header("General refs")] [SerializeField]

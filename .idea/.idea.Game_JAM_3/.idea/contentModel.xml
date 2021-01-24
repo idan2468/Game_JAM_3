@@ -122,10 +122,7 @@
             <e p="SpotDownAnimation.cs" t="Include" />
           </e>
           <e p="ChangeCamera.cs" t="Include" />
-          <e p="DemoLevel" t="Include">
-            <e p="EndLevelTrigger.cs" t="Include" />
-            <e p="ItemCollector.cs" t="Include" />
-          </e>
+          <e p="EndLevelTrigger.cs" t="Include" />
           <e p="FootStepSFX.cs" t="Include" />
           <e p="MakeChildEvent.cs" t="Include" />
           <e p="ParallaxBackground Scripts" t="Include">

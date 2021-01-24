@@ -22,7 +22,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private CinemachineStateDrivenCamera _stateMachine;
     public float CameraBlendTime => blendTime;
 
-    [SerializeField] private int collectedSpirits; 
+    [SerializeField] private int collectedSpirits;
 
     public enum VirtualCamera
     {
@@ -53,7 +53,8 @@ public class GameManager : Singleton<GameManager>
         _playerMoveScript.CanMove = false; // Freeze player but not time
         MusicController.Instance.PlayMenuBGM();
         _animator = GetComponent<Animator>();
-        // StartTime();
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+            StartTime();
     }
 
     // TODO: CHECK IF MOVE THIS TO DIFFERENT SCRIPT
@@ -139,6 +140,7 @@ public class GameManager : Singleton<GameManager>
         _playerMoveScript.CanMove = false;
         _playerMoveScript.Rb.constraints = RigidbodyConstraints2D.FreezeAll;
     }
+
     public void UnfreezePlayer()
     {
         _playerMoveScript.CanMove = true;
