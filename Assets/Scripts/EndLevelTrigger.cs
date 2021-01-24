@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class EndLevelTrigger : MonoBehaviour
 {
-    [SerializeField] private GameObject playerGO;
-    private ItemCollector _playerItemCollector;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        _playerItemCollector = playerGO.GetComponent<ItemCollector>();
     }
 
     // Update is called once per frame
@@ -22,7 +20,7 @@ public class EndLevelTrigger : MonoBehaviour
     {
         if (collision.tag.Equals("Player"))
         {
-            if (_playerItemCollector.SpiritsAmt == 3)
+            if (GameManager.Instance.CollectedSpirits == 3)
             {
                 UIManager.Instance.EndLevel();
             }

@@ -241,7 +241,6 @@ GameObject:
   - component: {fileID: 7201363891066821507}
   - component: {fileID: 2925913286659249823}
   - component: {fileID: 2925913286659249816}
-  - component: {fileID: 936675597}
   - component: {fileID: 936675602}
   m_Layer: 11
   m_Name: Player
@@ -310,6 +309,8 @@ MonoBehaviour:
   facingLeft: 0
   groundedCheckCollider: {fileID: 0}
   _isGrounded: 0
+  _pushObject: {fileID: 0}
+  _animator: {fileID: 0}
   rb: {fileID: 0}
 --- !u!210 &2925913286659249823
 SortingGroup:
@@ -339,19 +340,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   hight: -0.32
---- !u!114 &936675597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7201363891066821504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb5abc7ce19d91a4d99d3c2859149eec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spiritsAmt: 0
 --- !u!232 &936675602
 DistanceJoint2D:
   m_ObjectHideFlags: 0

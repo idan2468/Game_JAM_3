@@ -47,10 +47,22 @@ MonoBehaviour:
   _endMenu: {fileID: 0}
   _continueMenu: {fileID: 0}
   menuCanvas: {fileID: 0}
+  playerGO: {fileID: 0}
   background: {fileID: 0}
   backgroundOpacity: 0
   backgroundFadeTime: 0.5
   fadeEase: 4
-  _whiteSpiritAmount: {fileID: 0}
-  gameScreenCanvas: {fileID: 0}
-  playerGO: {fileID: 0}
+  fadeTime: 1
+  UISpiritEase: 4
+  emptySpirits:
+  - {fileID: 21300000, guid: 2d3632dc60ba3a342af229fd230271af, type: 3}
+  - {fileID: 21300000, guid: 2d3632dc60ba3a342af229fd230271af, type: 3}
+  - {fileID: 21300000, guid: 2d3632dc60ba3a342af229fd230271af, type: 3}
+  fullSpirits:
+  - {fileID: 21300000, guid: 9d4f87002854c084d948248be75fe277, type: 3}
+  - {fileID: 21300000, guid: 9d4f87002854c084d948248be75fe277, type: 3}
+  - {fileID: 21300000, guid: 9d4f87002854c084d948248be75fe277, type: 3}
+  currEmptySpirit: {fileID: 0}
+  currFullSpirit: {fileID: 0}
+  uiImagesObjectsContainer: {fileID: 2974311656753714301, guid: b7dccf57824c52740830d8313d996149, type: 3}
+  _spiritsImages: []

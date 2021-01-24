@@ -9,6 +9,7 @@ TagManager:
   - SpiritAmt
   - Background
   - Puzzle
+  - UISpirits
   layers:
   - Default
   - TransparentFX

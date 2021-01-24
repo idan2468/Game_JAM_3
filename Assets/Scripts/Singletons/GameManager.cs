@@ -18,10 +18,11 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private Ease ease = Ease.InOutSine;
     [Header("Debugging")] [SerializeField] private float blendTime = 1.5f;
     [SerializeField] private PlayerMove _playerMoveScript;
-    [SerializeField] private PlayerMove _playerItemScript;
     [SerializeField] private Animator _animator;
     [SerializeField] private CinemachineStateDrivenCamera _stateMachine;
     public float CameraBlendTime => blendTime;
+
+    [SerializeField] private int collectedSpirits; 
 
     public enum VirtualCamera
     {
@@ -29,6 +30,12 @@ public class GameManager : Singleton<GameManager>
         Waterfall,
         Hook,
         River
+    }
+
+    public int CollectedSpirits
+    {
+        get => collectedSpirits;
+        set => collectedSpirits = value;
     }
 
     public bool PlayerCanMove
