@@ -31,6 +31,7 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private Ease UISpiritEase = Ease.InOutSine;
     [SerializeField] private List<Sprite> emptySpirits;
     [SerializeField] private List<Sprite> fullSpirits;
+    [Header("UI Spirits - Debugging")]
     [SerializeField] private Sprite currEmptySpirit;
     [SerializeField] private Sprite currFullSpirit;
     [SerializeField] private Transform uiImagesObjectsContainer;
