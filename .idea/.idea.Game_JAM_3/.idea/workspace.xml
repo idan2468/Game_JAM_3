@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Camera/CameraStates.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Camera/CameraStates.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AirTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AirTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/RockLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/RockLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AirCheckpoints/AirCheckpointScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AirCheckpoints/AirCheckpointScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/RiverPuzzle/WaterEnterEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/RiverPuzzle/WaterEnterEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singletons/MusicController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Singletons/MusicController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,13 +45,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/RiverPuzzle/RiverPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/SpiritCollectEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Animations/SpiritAnimation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/RiverPuzzle/WaterEnterEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/WaterfallPuzzle/ParticleCollisionEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/SpotLightEffect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TextShow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CluesManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/CluesManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/MusicController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotDownAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Animations/FadeInAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/HookPuzzle.cs" />
@@ -62,7 +58,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/Singleton.cs" />
       <option value="$PROJECT_DIR$/Assets/ChangeCamera.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Utility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/FogMover.cs" />
       <option value="$PROJECT_DIR$/Assets/AnchorPlace.cs" />
@@ -80,6 +75,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotLightEffect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/CheckpointEnterEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AirCheckpoints/AirCheckpointScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/MusicController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/RiverPuzzle/WaterEnterEvent.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZ4YEMI8xej9xB9eS5RmwInxe2" />
@@ -139,7 +137,7 @@
       <workItem from="1610555405055" duration="6921000" />
       <workItem from="1610694890590" duration="9358000" />
       <workItem from="1610706159243" duration="35552000" />
-      <workItem from="1611502077320" duration="8662000" />
+      <workItem from="1611502077320" duration="10205000" />
     </task>
     <servers />
   </component>

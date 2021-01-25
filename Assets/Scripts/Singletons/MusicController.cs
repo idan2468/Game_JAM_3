@@ -18,7 +18,9 @@ public class MusicController : Singleton<MusicController>
         Step2,
         Step3,
         Jump1,
-        Jump2
+        Jump2,
+        DropToWater,
+        SuccessPuzzle
     }
 
     private Dictionary<SoundEffects, AudioClip> sounds;

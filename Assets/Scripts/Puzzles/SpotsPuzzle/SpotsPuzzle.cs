@@ -14,6 +14,8 @@ public class SpotsPuzzle : MonoBehaviour
     [SerializeField] private float delayTime = 1f;
     [SerializeField] private GameObject _spotsContainer;
     private Action eventToTrigger;
+    [SerializeField] private float puzzleSuccessVolume = 1f;
+
     public Action EventToTrigger
     {
         set => eventToTrigger = value;
@@ -32,6 +34,7 @@ public class SpotsPuzzle : MonoBehaviour
         yield return new WaitForSeconds(delayTime);
         if (spots.Count == 0)
         {
+            MusicController.Instance.PlaySound(MusicController.SoundEffects.SuccessPuzzle,puzzleSuccessVolume);
             eventToTrigger();
         }
     }
