@@ -2,28 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/BlueSpirit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/BlueSpirit.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Hook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Hook.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Skybox_Mat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Skybox_Mat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Square.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Square.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/Water.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/Water.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/WaterMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/WaterMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/WaterRenderTexture.renderTexture" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/WaterRenderTexture.renderTexture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/WaterSample.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/WaterSample.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/WhiteSpirit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/WhiteSpirit.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/PlayerController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Camera/CameraStates.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Camera/CameraStates.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/Water.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Assets/AirPlatforms/_BaseAirPlatformB1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Assets/AirPlatforms/_BaseAirPlatformB1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Assets/Temple.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Assets/Temple.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/GameScreenCanvas (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/GameScreenCanvas (1).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Water.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/VFX/Water.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/RockLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/RockLevel.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/WaterLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/WaterLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/Water.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/Water.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EndLevelTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EndLevelTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Objects/temple.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Objects/temple.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Objects/temple.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Objects/temple.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +35,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2348FB5E-CC9E-4E68-9F37-F7D7FADAEA9A/9b/980f6c3c/DOTweenComponent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animations/MoveAirPlatformHorizontal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2348FB5E-CC9E-4E68-9F37-F7D7FADAEA9A/8d/c3d51e89/Sequence.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SelectButton.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/FootStepSFX.cs" />
-      <option value="$PROJECT_DIR$/Assets/SpotEnterEvent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PushableObject.cs" />
       <option value="$PROJECT_DIR$/Assets/FlyHighEffect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PushObject.cs" />
@@ -95,7 +86,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/MusicController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/RiverPuzzle/WaterEnterEvent.cs" />
+      <option value="$PROJECT_DIR$/Assets/TriggerZoomEnterEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EndLevelTrigger.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SelectButton.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZ4YEMI8xej9xB9eS5RmwInxe2" />
@@ -131,10 +125,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="35804">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="35804" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -155,7 +149,7 @@
       <workItem from="1610555405055" duration="6921000" />
       <workItem from="1610694890590" duration="9358000" />
       <workItem from="1610706159243" duration="35552000" />
-      <workItem from="1611502077320" duration="11084000" />
+      <workItem from="1611502077320" duration="14841000" />
     </task>
     <servers />
   </component>
@@ -206,6 +200,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs</url>
+          <line>138</line>
+          <properties documentPath="G:\Unity\Game_JAM_3\Assets\Scripts\Singletons\GameManager.cs" initialLine="138" containingFunctionPresentation="method 'ChangeVirtualCamera'">
+            <startOffsets>
+              <option value="3910" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3983" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

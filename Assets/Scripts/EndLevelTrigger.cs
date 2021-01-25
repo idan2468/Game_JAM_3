@@ -24,6 +24,10 @@ public class EndLevelTrigger : MonoBehaviour
             {
                 UIManager.Instance.EndLevel();
             }
+            else
+            {
+                CluesManager.Instance.PlayClue("Almost There...");
+            }
         }
     }
 }

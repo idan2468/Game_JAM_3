@@ -234,6 +234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6001019409961089384}
+  - component: {fileID: 1501502240}
   m_Layer: 5
   m_Name: Spirits
   m_TagString: UISpirits
@@ -260,9 +261,26 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000026703, y: -86}
+  m_AnchoredPosition: {x: -0.000026703, y: -141}
   m_SizeDelta: {x: 429.97772, y: 142.49445}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1501502240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8271624063771235362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43155827adcadfc4bbfc44f3c93d2956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementDist: 5
+  speed: 5
+  restartAnimation: 0
+  easing: 4
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &8596960099930103752
 GameObject:
   m_ObjectHideFlags: 0

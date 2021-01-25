@@ -146,7 +146,7 @@ MonoBehaviour:
   movementDist: 0.3
   speed: 0.3
   restartAnimation: 0
-  easing: 0
+  easing: 4
   startPos: {x: 0, y: 0, z: 0}
 --- !u!114 &-8660574778168723121
 MonoBehaviour:

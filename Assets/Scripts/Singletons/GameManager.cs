@@ -57,6 +57,7 @@ public class GameManager : Singleton<GameManager>
         _playerMoveScript.CanMove = false; // Freeze player but not time
         MusicController.Instance.PlayMenuBGM();
         _animator = GetComponent<Animator>();
+        _animator.SetLayerWeight(SceneManager.GetActiveScene().buildIndex,2f);
         if (SceneManager.GetActiveScene().buildIndex != 0)
             StartTime();
     }
