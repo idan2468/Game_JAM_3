@@ -6,7 +6,9 @@ public class FootStepSFX : MonoBehaviour
 {
     // Start is called before the first frame update
     private string[] steps = {"Step1", "Step2", "Step3"};
+    private string[] drags = { "Drag1", "Drag2", "Drag3" };
     [SerializeField] private float stepSound = 0.2f;
+    [SerializeField] private float dragSound = 1f;
 
     void Start()
     {
@@ -26,5 +28,16 @@ public class FootStepSFX : MonoBehaviour
         }
 
         MusicController.Instance.PlaySound(step, stepSound);
+    }
+
+    public void PlayDrag(int stepNum = -1)
+    {
+        var drag = drags[Random.Range(0, drags.Length)];
+        if (stepNum >= 1 && stepNum <= drags.Length)
+        {
+            drag = drags[stepNum - 1];
+        }
+
+        MusicController.Instance.PlaySound(drag, dragSound);
     }
 }

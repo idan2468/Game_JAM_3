@@ -20,6 +20,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private PlayerMove _playerMoveScript;
     [SerializeField] private Animator _animator;
     [SerializeField] private CinemachineStateDrivenCamera _stateMachine;
+    [SerializeField] private float _playerWhooshVolume = 1f;
 
     public float CameraBlendTime => blendTime;
 
@@ -121,6 +122,7 @@ public class GameManager : Singleton<GameManager>
                     _player.SetActive(true);
                 }
             }).SetEase(ease).Play();
+        MusicController.Instance.PlaySound(MusicController.SoundEffects.CheckpointWhoosh, _playerWhooshVolume);
     }
 
     public void AdvanceLevel()

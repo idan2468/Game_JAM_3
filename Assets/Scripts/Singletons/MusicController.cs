@@ -20,7 +20,13 @@ public class MusicController : Singleton<MusicController>
         Jump1,
         Jump2,
         DropToWater,
-        SuccessPuzzle
+        SuccessPuzzle,
+        Drag1,
+        Drag2,
+        Drag3,
+        RockSplash,
+        CheckpointWhoosh,
+        Waterfall
     }
 
     private Dictionary<SoundEffects, AudioClip> sounds;

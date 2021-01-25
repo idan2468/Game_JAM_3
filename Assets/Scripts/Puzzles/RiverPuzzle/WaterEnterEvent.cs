@@ -6,11 +6,14 @@ public class WaterEnterEvent : MonoBehaviour
 {
     [SerializeField] private Transform checkpointPos;
 
+    [SerializeField] private LayerMask _moveableRockLayer;
     [SerializeField] private float waterDropVolume = 1f;
+    [SerializeField] private float rockDropVolume = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -25,6 +28,10 @@ public class WaterEnterEvent : MonoBehaviour
         {
             MusicController.Instance.PlaySound(MusicController.SoundEffects.DropToWater, waterDropVolume);
             GameManager.Instance.ReturnPlayerToCheckpoint(checkpointPos.position);
+        }
+        else if (Utility.IsInLayerMask(other.gameObject, _moveableRockLayer))
+        {
+            MusicController.Instance.PlaySound(MusicController.SoundEffects.RockSplash, rockDropVolume);
         }
     }
 }

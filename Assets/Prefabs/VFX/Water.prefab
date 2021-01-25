@@ -154,6 +154,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpointPos: {fileID: 0}
+  _moveableRockLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  waterDropVolume: 1
+  rockDropVolume: 1
 --- !u!68 &5517137547086800622
 EdgeCollider2D:
   m_ObjectHideFlags: 0
