@@ -20,6 +20,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private PlayerMove _playerMoveScript;
     [SerializeField] private Animator _animator;
     [SerializeField] private CinemachineStateDrivenCamera _stateMachine;
+
     public float CameraBlendTime => blendTime;
 
     [SerializeField] private int collectedSpirits;
@@ -68,7 +69,6 @@ public class GameManager : Singleton<GameManager>
         _playerMoveScript.CanMove = false;
     }
 
-    // TODO: CHECK IF MOVE THIS TO DIFFERENT SCRIPT
     public void StartTime()
     {
         Time.timeScale = 1;
