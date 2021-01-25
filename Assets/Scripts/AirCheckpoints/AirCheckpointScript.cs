@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class AirCheckpointScript : MonoBehaviour
 {
-    public GameObject airFallCollider;
     [SerializeField] private AirFallScript _airFallColliderScript;
 
     // Start is called before the first frame update
     void Start()
     {
-        _airFallColliderScript = airFallCollider.GetComponent<AirFallScript>();
     }
 
     // Update is called once per frame

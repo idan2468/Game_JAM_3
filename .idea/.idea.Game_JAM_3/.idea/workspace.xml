@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/CheckpointEnterEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/CheckpointEnterEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Camera/CameraStates.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Camera/CameraStates.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Camera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AirTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AirTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/RockLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/RockLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AirCheckpoints/AirCheckpointScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AirCheckpoints/AirCheckpointScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +29,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/SceneLoader.cs" />
       <option value="$PROJECT_DIR$/Assets/FootStepSFX.cs" />
       <option value="$PROJECT_DIR$/Assets/SpotEnterEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle.cs" />
@@ -75,6 +79,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotEnterEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotLightEffect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/CheckpointEnterEvent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AirCheckpoints/AirCheckpointScript.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZ4YEMI8xej9xB9eS5RmwInxe2" />
@@ -134,7 +139,7 @@
       <workItem from="1610555405055" duration="6921000" />
       <workItem from="1610694890590" duration="9358000" />
       <workItem from="1610706159243" duration="35552000" />
-      <workItem from="1611502077320" duration="7774000" />
+      <workItem from="1611502077320" duration="8662000" />
     </task>
     <servers />
   </component>
