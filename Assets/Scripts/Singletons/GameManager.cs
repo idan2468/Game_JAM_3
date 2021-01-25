@@ -30,7 +30,10 @@ public class GameManager : Singleton<GameManager>
         Main,
         Waterfall,
         Hook,
-        River
+        River,
+        StairwayToHeaven,
+        Spots,
+        BlockingBigRock
     }
 
     public int CollectedSpirits
