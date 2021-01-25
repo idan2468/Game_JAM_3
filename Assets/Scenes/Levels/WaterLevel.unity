@@ -1131,7 +1131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3656933328466433697, guid: 9ae50b38324d20e4997b02a14a9a5ada, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.4000006
+      value: 3.3999996
       objectReference: {fileID: 0}
     - target: {fileID: 3781228039508856144, guid: 9ae50b38324d20e4997b02a14a9a5ada, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1390,6 +1390,14 @@ PrefabInstance:
     - target: {fileID: 1611327920934859849, guid: ea99c92ae5dec1a4c80df4f1ad37814c, type: 3}
       propertyPath: waterDropVolume
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611327920934859849, guid: ea99c92ae5dec1a4c80df4f1ad37814c, type: 3}
+      propertyPath: _moveableRockLayer.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934534956477369022, guid: ea99c92ae5dec1a4c80df4f1ad37814c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3424212792583912013, guid: ea99c92ae5dec1a4c80df4f1ad37814c, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[8].x
@@ -2057,6 +2065,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1518169644}
     m_Modifications:
+    - target: {fileID: 239295540488021769, guid: e79a4693e47cf324fb8576219a7eed4b, type: 3}
+      propertyPath: _moveableRockLayer.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 239295541038299166, guid: e79a4693e47cf324fb8576219a7eed4b, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[8].x
       value: -1.5871322
@@ -2175,7 +2187,7 @@ PrefabInstance:
       objectReference: {fileID: 1838941023}
     - target: {fileID: 3496636431816169318, guid: e79a4693e47cf324fb8576219a7eed4b, type: 3}
       propertyPath: distOffsetToEnableSpirit
-      value: 0.7
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 4218623078741960973, guid: e79a4693e47cf324fb8576219a7eed4b, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[9].x

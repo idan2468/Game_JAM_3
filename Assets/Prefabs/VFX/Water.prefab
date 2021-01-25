@@ -44,7 +44,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 543374747
   m_SortingLayer: 1
-  m_SortingOrder: 99
+  m_SortingOrder: 100
 --- !u!1 &5517137547086800608
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,9 +116,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 543374747
+  m_SortingLayer: 1
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: b35f61b9b0f2a194d864f5492485c363, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.49019608}
   m_FlipX: 0
@@ -154,7 +154,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpointPos: {fileID: 0}
+  _moveableRockLayer:
+    serializedVersion: 2
+    m_Bits: 0
   waterDropVolume: 0.5
+  rockDropVolume: 1
 --- !u!68 &5517137547086800622
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -248,7 +252,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 543374747
   m_SortingLayer: 1
-  m_SortingOrder: 45
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 1c9ba0d0229e9b14db93bd55b3dd7555, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -368,7 +372,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 543374747
   m_SortingLayer: 1
-  m_SortingOrder: 45
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 1c9ba0d0229e9b14db93bd55b3dd7555, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
