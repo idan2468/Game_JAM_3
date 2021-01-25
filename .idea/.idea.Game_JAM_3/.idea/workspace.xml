@@ -2,7 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BlueSpirit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BlueSpirit.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Hook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Hook.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Skybox_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Skybox_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Square.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Square.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/Water.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/Water.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/WaterMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/WaterMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/WaterRenderTexture.renderTexture" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/WaterRenderTexture.renderTexture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/WaterSample.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/WaterSample.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/WhiteSpirit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/WhiteSpirit.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/WaterLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/WaterLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/Water.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/Water.prefab.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +155,7 @@
       <workItem from="1610555405055" duration="6921000" />
       <workItem from="1610694890590" duration="9358000" />
       <workItem from="1610706159243" duration="35552000" />
-      <workItem from="1611502077320" duration="10490000" />
+      <workItem from="1611502077320" duration="11084000" />
     </task>
     <servers />
   </component>
