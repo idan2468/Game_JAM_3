@@ -12,15 +12,21 @@ public class SpotLightEffect : MonoBehaviour
 
     [Header("Params")] [SerializeField] [Range(0, 1)]
     private float minOpacity;
-
     [SerializeField] [Range(0, 1)] private float maxOpacity = 1f;
     [SerializeField] private float fadeTime = 1f;
     [SerializeField] private Ease ease = Ease.InOutSine;
     [SerializeField] private bool resetAnimation;
+    [SerializeField] private float fadeTimeOnActivateAndDeactivate = 2f;
+    public Tween Animation => _animation;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        SetLightEffect();
+    }
+
+    private void SetLightEffect()
+    {
         _animation = spriteRenderer.DOFade(minOpacity, fadeTime).From(maxOpacity).SetLoops(-1, LoopType.Yoyo)
             .SetEase(ease);
     }
@@ -35,8 +41,7 @@ public class SpotLightEffect : MonoBehaviour
         if (resetAnimation)
         {
             _animation.Kill();
-            _animation = spriteRenderer.DOFade(minOpacity, fadeTime).From(maxOpacity).SetLoops(-1, LoopType.Yoyo)
-                .SetEase(ease);
+            SetLightEffect();
             Utility.DisableInspectorButton(() => resetAnimation = false);
         }
     }
@@ -44,5 +49,26 @@ public class SpotLightEffect : MonoBehaviour
     private void OnDisable()
     {
         _animation.Kill();
+    }
+
+    public void FadeOutLight()
+    {
+        if (_animation.IsActive())
+        {
+            _animation.Kill();
+        }
+
+        _animation = spriteRenderer.DOFade(0, fadeTimeOnActivateAndDeactivate)
+            .SetEase(ease);
+    }
+
+    public void FadeInLight()
+    {
+        if (_animation.IsActive())
+        {
+            _animation.Kill();
+        }
+        _animation = spriteRenderer.DOFade(maxOpacity, fadeTimeOnActivateAndDeactivate)
+            .SetEase(ease).OnComplete(SetLightEffect);
     }
 }
