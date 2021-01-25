@@ -6,7 +6,8 @@ using UnityEngine;
 public class CheckpointEnterEvent : MonoBehaviour
 {
     private Action eventToTrigger;
-    [SerializeField] private bool triggerCheckpointEvent = true;
+    [SerializeField] private bool triggerCheckpointEvent = false;
+
     public bool TriggerCheckpointEvent
     {
         get => triggerCheckpointEvent;
@@ -15,19 +16,21 @@ public class CheckpointEnterEvent : MonoBehaviour
 
     public Action EventToTrigger
     {
-        set => eventToTrigger = value;
+        set
+        {
+            triggerCheckpointEvent = true;
+            eventToTrigger = value;
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D other)

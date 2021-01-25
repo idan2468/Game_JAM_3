@@ -115,6 +115,10 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="AirCheckpoints" t="Include">
+            <e p="AirCheckpointScript.cs" t="Include" />
+            <e p="AirFallScript.cs" t="Include" />
+          </e>
           <e p="Animations" t="Include">
             <e p="MoveAirPlatformHorizontal.cs" t="Include" />
             <e p="MovingInAirAnimation.cs" t="Include" />
