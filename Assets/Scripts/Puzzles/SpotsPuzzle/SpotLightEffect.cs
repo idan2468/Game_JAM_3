@@ -12,11 +12,11 @@ public class SpotLightEffect : MonoBehaviour
 
     [Header("Params")] [SerializeField] [Range(0, 1)]
     private float minOpacity;
-
     [SerializeField] [Range(0, 1)] private float maxOpacity = 1f;
     [SerializeField] private float fadeTime = 1f;
     [SerializeField] private Ease ease = Ease.InOutSine;
     [SerializeField] private bool resetAnimation;
+    [SerializeField] private float fadeTimeOnActivateAndDeactivate = 2f;
     public Tween Animation => _animation;
 
     void Start()
@@ -58,7 +58,7 @@ public class SpotLightEffect : MonoBehaviour
             _animation.Kill();
         }
 
-        _animation = spriteRenderer.DOFade(0, fadeTime)
+        _animation = spriteRenderer.DOFade(0, fadeTimeOnActivateAndDeactivate)
             .SetEase(ease);
     }
 
@@ -68,7 +68,7 @@ public class SpotLightEffect : MonoBehaviour
         {
             _animation.Kill();
         }
-        _animation = spriteRenderer.DOFade(maxOpacity, fadeTime)
+        _animation = spriteRenderer.DOFade(maxOpacity, fadeTimeOnActivateAndDeactivate)
             .SetEase(ease).OnComplete(SetLightEffect);
     }
 }
