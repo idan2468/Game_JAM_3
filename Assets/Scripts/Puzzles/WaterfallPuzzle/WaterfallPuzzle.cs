@@ -15,7 +15,7 @@ public class WaterfallPuzzle : MonoBehaviour
     [SerializeField] private GameObject _playerGO;
     [SerializeField] private GameObject _waterfallPlatform;
     [SerializeField] private float _playerWaterfallDistance = 10f;
-
+    [SerializeField] private Sequence waterfallSound;
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +24,23 @@ public class WaterfallPuzzle : MonoBehaviour
         _spotsPuzzle = GetComponent<SpotsPuzzle>();
         _spriteRenderer = _waterfallRock.GetComponent<SpriteRenderer>();
         _spotsPuzzle.EventToTrigger = DropWaterfallRock;
-        PlayWaterfallSound();
+        // PlayWaterfallSound();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Mathf.Abs(_playerGO.transform.position.x - _waterfallPlatform.transform.position.x) <
+            _playerWaterfallDistance && !waterfallSound.IsActive())
+        {
+            PlayWaterfallSound();
+        }
+
+        if (Mathf.Abs(_playerGO.transform.position.x - _waterfallPlatform.transform.position.x) >=
+            _playerWaterfallDistance && waterfallSound.IsActive())
+        {
+            waterfallSound.Kill();
+        }
     }
 
     private void DropWaterfallRock()
@@ -52,11 +63,11 @@ public class WaterfallPuzzle : MonoBehaviour
 
     private void PlayWaterfallSound()
     {
-        DOTween.Sequence()
+        waterfallSound = DOTween.Sequence()
             .AppendCallback(() =>
             {
-                if (Mathf.Abs(_playerGO.transform.position.x - _waterfallPlatform.transform.position.x) < _playerWaterfallDistance) 
-                    MusicController.Instance.PlaySound(MusicController.SoundEffects.Waterfall, _waterfallVolume);
+                // if (Mathf.Abs(_playerGO.transform.position.x - _waterfallPlatform.transform.position.x) < _playerWaterfallDistance) 
+                MusicController.Instance.PlaySound(MusicController.SoundEffects.Waterfall, _waterfallVolume);
             })
             .AppendInterval(2f)
             .SetLoops(-1)

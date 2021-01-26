@@ -114,16 +114,19 @@ public class GameManager : Singleton<GameManager>
             })
             .Append(_player.transform.DOMove(checkPoint,
                 movingToCheckpointSpeed != 0 ? dist / movingToCheckpointSpeed : movingToCheckpointSpeed))
+            .AppendCallback(()=> MusicController.Instance.PlaySound(MusicController.SoundEffects.CheckpointWhoosh, _playerWhooshVolume))
+            .AppendInterval(0.5f)
             .AppendCallback(() =>
             {
                 _playerMoveScript.IsFacingLeft = false;
                 _playerMoveScript.CanMove = true;
+                // MusicController.Instance.PlaySound(MusicController.SoundEffects.CheckpointWhoosh, _playerWhooshVolume);
                 if (vanishPlayerOnMovement)
                 {
                     _player.SetActive(true);
                 }
             }).SetEase(ease).Play();
-        MusicController.Instance.PlaySound(MusicController.SoundEffects.CheckpointWhoosh, _playerWhooshVolume);
+       
     }
 
     public void AdvanceLevel()
