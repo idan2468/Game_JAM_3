@@ -49,7 +49,8 @@ public class UIManager : Singleton<UIManager>
     void Start()
     {
         // _whiteSpiritAmount = GameObject.FindWithTag("SpiritAmt").GetComponent<TextMeshProUGUI>();
-        background = GameObject.FindWithTag("Background")?.GetComponent<Image>();
+        if(background == null)
+            background = GameObject.FindWithTag("Background")?.GetComponent<Image>();
         if (background != null)
             backgroundOpacity = background.color.a;
         SetSpiritsImages();
@@ -77,7 +78,7 @@ public class UIManager : Singleton<UIManager>
         // UpdateScore();
 
         // Pause Menu
-        if (Input.GetKey(KeyCode.Escape) && !menuCanvas.activeSelf && SceneManager.GetActiveScene().buildIndex == 0)
+        if (Input.GetKey(KeyCode.Escape) && !menuCanvas.activeSelf)
         {
             EnterPauseMenu();
         }

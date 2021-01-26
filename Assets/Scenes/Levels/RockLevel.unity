@@ -1461,7 +1461,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8596960100539499464, guid: 9559580bb4f086f4ca70a666ac0a9bbc, type: 3}
       propertyPath: m_Name
-      value: GameScreenCanvas (1)
+      value: GameScreenCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 8596960100539499468, guid: 9559580bb4f086f4ca70a666ac0a9bbc, type: 3}
       propertyPath: m_Pivot.x
