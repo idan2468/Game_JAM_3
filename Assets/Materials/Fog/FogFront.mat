@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fog_Mat
+  m_Name: FogFront
   m_Shader: {fileID: -6465566751694194690, guid: 3cffd441b6455494096ee2b06a424afc, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
@@ -37,11 +37,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _FogSize: 100
+    - _FogSize: 50
     m_Colors:
-    - Color_EACF0FD8: {r: 1.318817, g: 0.92925185, b: 0.5396868, a: 0.43529412}
+    - Color_EACF0FD8: {r: 1.3041189, g: 0.8876203, b: 0.47112152, a: 0.2}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _FogSpeed: {r: 0.01, g: 0, b: 0, a: 0}
+    - _FogSpeed: {r: 0.05, g: 0, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
