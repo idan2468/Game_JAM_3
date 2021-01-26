@@ -184,7 +184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 962907591715295485, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
       propertyPath: m_Name
-      value: WaterfallPuzzle (1)
+      value: WaterfallPuzzle
       objectReference: {fileID: 0}
     - target: {fileID: 6927250059181188285, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
       propertyPath: m_IsActive
@@ -194,6 +194,14 @@ PrefabInstance:
       propertyPath: minOpacity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7730909952200221057, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
+      propertyPath: _playerGO
+      value: 
+      objectReference: {fileID: 936675596}
+    - target: {fileID: 7730909952200221057, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
+      propertyPath: _waterfallPlatform
+      value: 
+      objectReference: {fileID: 422892906}
     - target: {fileID: 7730909953134478109, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.24
@@ -967,6 +975,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a2f968d32d494b9ccff7334aaaf3a, type: 3}
+--- !u!1 &422892906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2415821149216150678, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
+  m_PrefabInstance: {fileID: 70309550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &465948619 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1523992491323532609, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
