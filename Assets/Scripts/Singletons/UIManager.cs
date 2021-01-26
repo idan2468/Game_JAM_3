@@ -77,7 +77,7 @@ public class UIManager : Singleton<UIManager>
         // UpdateScore();
 
         // Pause Menu
-        if (Input.GetKey(KeyCode.Escape) && !menuCanvas.activeSelf)
+        if (Input.GetKey(KeyCode.Escape) && !menuCanvas.activeSelf && SceneManager.GetActiveScene().buildIndex == 0)
         {
             EnterPauseMenu();
         }
