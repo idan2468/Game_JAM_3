@@ -12,11 +12,14 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _JumpSpeedX = 4f;
     [SerializeField] private float _jumpPower;
     [SerializeField] private float _jumpVolume = 0.2f;
+    [SerializeField] private float isGroundedCastRadius = .2f;
+    [SerializeField] private Transform isGroundedCastCenter;
 
 
     [Header("Debugging")] [SerializeField] private bool _canMove = false;
     [SerializeField] private bool facingLeft = false;
     [SerializeField] private Collider2D groundedCheckCollider;
+    [SerializeField] private bool jump;
 
     [SerializeField] private bool _isGrounded;
     // Start is called before the first frame update
@@ -24,10 +27,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private PushObject _pushObject;
     [SerializeField] private Animator _animator;
     [SerializeField] private Rigidbody2D rb;
-
-
-    [SerializeField] private float isGroundedCastRadius = .2f;
-    [SerializeField] private Transform isGroundedCastCenter;
+    [SerializeField] private float dirToMove;
 
 
     public bool CanMove
@@ -56,28 +56,23 @@ public class PlayerMove : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
         _isGrounded = IsGrounded();
     }
-
-    //todo: Move all movement handlers to FixedUpdate
+    
     // Update is called once per frame
     void Update()
     {
         if (_canMove)
         {
-            _isGrounded = IsGrounded();
+            dirToMove = Input.GetAxis("Horizontal");
             if (Input.GetButtonDown("Jump"))
             {
-                if (_isGrounded && !_pushObject.IsPushing)
-                {
-                    rb.velocity = Vector2.up * _jumpPower;
-                    MusicController.Instance.PlaySound("Jump" + Random.Range(1, 3), _jumpVolume);
-                }
+                jump = true;
             }
         }
 
         if (_animator)
         {
+            // if using dirToMove - the player will not play "walk" animation when not touching the controller
             _animator.SetFloat("speed", Mathf.Abs(rb.velocity.x));
-            _animator.SetBool("isGrounded", IsGrounded());
             _animator.SetBool("isPushing", _pushObject.IsPushing);
         }
     }
@@ -85,30 +80,41 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         if (!_canMove) return;
-        var dirTaken = new Vector2(Input.GetAxis("Horizontal"), 0);
-        var dirVelocity = rb.velocity.y > 0.01f ? dirTaken * _JumpSpeedX : dirTaken * _speed;
+        var isGroundedNew = IsGrounded();
+        if (isGroundedNew != _isGrounded)
+        {
+            _isGrounded = isGroundedNew;
+            _animator.SetBool("isGrounded", _isGrounded);
+        }
+
+        var velocity = new Vector2(0, rb.velocity.y);
+        if (jump && _isGrounded && !_pushObject.IsPushing)
+        {
+            velocity += Vector2.up * _jumpPower;
+            MusicController.Instance.PlaySound("Jump" + Random.Range(1, 3), _jumpVolume);
+        }
+
+        jump = false;
+        var dirTaken = Vector2.right * dirToMove;
+        velocity = !IsGrounded() ? velocity + dirTaken * _JumpSpeedX : velocity + dirTaken * _speed;
         if (!_pushObject.IsPushing)
         {
-            if ((facingLeft && dirVelocity.x > 0.01f) || (!facingLeft && dirVelocity.x < -0.01f))
+            if ((facingLeft && velocity.x > 0.01f) || (!facingLeft && velocity.x < -0.01f))
             {
                 IsFacingLeft = !IsFacingLeft;
             }
         }
 
-        rb.velocity = new Vector2(dirVelocity.x, rb.velocity.y);
-        if (dirVelocity != Vector2.zero && !_pushObject.IsPushing)
-        {
-            facingLeft = dirVelocity.x < 0;
-        }
+        rb.velocity = velocity;
     }
 
     public bool IsGrounded()
     {
         var colliders =
             Physics2D.OverlapCircleAll(isGroundedCastCenter.position, isGroundedCastRadius, platformLayerMask);
-        foreach (var hitCollider in colliders)
+        foreach (var colliderHit in colliders)
         {
-            if (hitCollider.gameObject != gameObject)
+            if (colliderHit.gameObject != gameObject)
             {
                 return true;
             }
