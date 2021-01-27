@@ -104,21 +104,23 @@ public class PlayerMove : MonoBehaviour
 
     public bool IsGrounded()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(isGroundedCastCenter.position, isGroundedCastRadius, platformLayerMask);
-        for (int i = 0; i < colliders.Length; i++)
+        var colliders =
+            Physics2D.OverlapCircleAll(isGroundedCastCenter.position, isGroundedCastRadius, platformLayerMask);
+        foreach (var hitCollider in colliders)
         {
-            if (colliders[i].gameObject != gameObject)
+            if (hitCollider.gameObject != gameObject)
             {
                 return true;
             }
         }
+
         return false;
     }
 
     private void OnDrawGizmos()
     {
-        if(isGroundedCastCenter == null) return;
+        if (isGroundedCastCenter == null) return;
         Gizmos.color = Color.black;
-        Gizmos.DrawSphere(isGroundedCastCenter.position,isGroundedCastRadius);
+        Gizmos.DrawSphere(isGroundedCastCenter.position, isGroundedCastRadius);
     }
 }
