@@ -18,7 +18,6 @@ public class PlayerMove : MonoBehaviour
 
     [Header("Debugging")] [SerializeField] private bool _canMove = false;
     [SerializeField] private bool facingLeft = false;
-    [SerializeField] private Collider2D groundedCheckCollider;
     [SerializeField] private bool jump;
 
     [SerializeField] private bool _isGrounded;
@@ -51,7 +50,6 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        groundedCheckCollider = GetComponentInChildren<EdgeCollider2D>();
         _pushObject = GetComponent<PushObject>();
         _animator = GetComponentInChildren<Animator>();
         _isGrounded = IsGrounded();
