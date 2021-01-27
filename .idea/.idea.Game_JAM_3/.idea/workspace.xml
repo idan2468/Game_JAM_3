@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MakeChildEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MakeChildEvent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,8 +76,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/WaterfallPuzzle/WaterfallPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/RiverPuzzle/RiverPuzzle.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MakeChildEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MakeChildEvent.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZ4YEMI8xej9xB9eS5RmwInxe2" />
