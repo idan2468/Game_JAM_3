@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,6 @@
       <option value="$PROJECT_DIR$/Assets/AnchorPlace.cs" />
       <option value="$PROJECT_DIR$/Assets/WorldSpaceAnchor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Animations/MoveAirPlatformHorizontal.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DemoLevel/ItemCollector.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SpiritCollectEvent.cs" />
@@ -76,6 +76,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/UIManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/WaterfallPuzzle/WaterfallPuzzle.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZ4YEMI8xej9xB9eS5RmwInxe2" />
@@ -176,13 +177,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs</url>
-          <line>31</line>
+          <line>34</line>
           <properties documentPath="G:\Unity\Game_JAM_3\Assets\Scripts\PlayerMove.cs" initialLine="33" containingFunctionPresentation="property 'CanMove'">
             <startOffsets>
-              <option value="979" />
+              <option value="1038" />
             </startOffsets>
             <endOffsets>
-              <option value="996" />
+              <option value="1055" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="24" />

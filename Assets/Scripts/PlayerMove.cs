@@ -25,6 +25,9 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private Rigidbody2D rb;
 
+    [SerializeField]
+    private Vector2 velocityToApply;
+
 
     public bool CanMove
     {
@@ -59,12 +62,14 @@ public class PlayerMove : MonoBehaviour
     {
         if (_canMove)
         {
+            velocityToApply = new Vector2(Input.GetAxis("Horizontal"), 0);
             _isGrounded = IsGrounded();
             if (Input.GetButtonDown("Jump"))
             {
                 if (_isGrounded && !_pushObject.IsPushing)
                 {
-                    rb.velocity = Vector2.up * _jumpPower;
+                    velocityToApply += Vector2.up * _jumpPower;
+                    // rb.velocity = Vector2.up * _jumpPower;
                     MusicController.Instance.PlaySound("Jump" + Random.Range(1, 3), _jumpVolume);
                 }
             }
@@ -81,8 +86,8 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         if (!_canMove) return;
-        var dirTaken = new Vector2(Input.GetAxis("Horizontal"), 0);
-        var dirVelocity = rb.velocity.y > 0.01f ? dirTaken * _JumpSpeedX : dirTaken * _speed;
+        // var dirTaken = new Vector2(Input.GetAxis("Horizontal"), 0);
+        var dirVelocity = rb.velocity.y > 0.01f ? velocityToApply * _JumpSpeedX : velocityToApply * _speed;
         if (!_pushObject.IsPushing)
         {
             if ((facingLeft && dirVelocity.x > 0.01f) || (!facingLeft && dirVelocity.x < -0.01f))
