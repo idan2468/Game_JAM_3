@@ -26,6 +26,10 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
 
 
+    [SerializeField] private float isGroundedCastRadius = .2f;
+    [SerializeField] private Transform isGroundedCastCenter;
+
+
     public bool CanMove
     {
         get => _canMove;
@@ -100,6 +104,21 @@ public class PlayerMove : MonoBehaviour
 
     public bool IsGrounded()
     {
-        return groundedCheckCollider.IsTouchingLayers(platformLayerMask);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(isGroundedCastCenter.position, isGroundedCastRadius, platformLayerMask);
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].gameObject != gameObject)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void OnDrawGizmos()
+    {
+        if(isGroundedCastCenter == null) return;
+        Gizmos.color = Color.black;
+        Gizmos.DrawSphere(isGroundedCastCenter.position,isGroundedCastRadius);
     }
 }
