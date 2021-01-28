@@ -34,7 +34,10 @@ public class GameManager : Singleton<GameManager>
         River,
         StairwayToHeaven,
         Spots,
-        BlockingBigRock
+        BlockingBigRock,
+        SequenceElements,
+        HooksInTheSky,
+        RoadToNowhere
     }
 
     public int CollectedSpirits
@@ -91,7 +94,7 @@ public class GameManager : Singleton<GameManager>
         DOTween.KillAll();
         Destroy(UIManager.Instance.gameObject);
         Destroy(GameManager.Instance.gameObject);
-        Destroy(MusicController.Instance.gameObject);
+        // Destroy(MusicController.Instance.gameObject);
         Destroy(CluesManager.Instance.gameObject);
     }
 
@@ -147,7 +150,7 @@ public class GameManager : Singleton<GameManager>
     public void FreezePlayer()
     {
         _playerMoveScript.CanMove = false;
-        _playerMoveScript.Rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        _playerMoveScript.Rb.constraints = RigidbodyConstraints2D.FreezePositionX;
     }
 
     public void UnfreezePlayer()

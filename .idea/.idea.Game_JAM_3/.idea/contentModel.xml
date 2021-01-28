@@ -8,6 +8,8 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="EnableNextHookEvent.cs" t="Include" />
+        <e p="HooksInTheSky.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
@@ -115,9 +117,12 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="AirCheckpoints" t="Include">
-            <e p="AirCheckpointScript.cs" t="Include" />
-            <e p="AirFallScript.cs" t="Include" />
+          <e p="AirLevel" t="Include">
+            <e p="AirCheckpoints" t="Include">
+              <e p="AirCheckpointScript.cs" t="Include" />
+              <e p="AirFallScript.cs" t="Include" />
+            </e>
+            <e p="StartAirLevelAnimation.cs" t="Include" />
           </e>
           <e p="Animations" t="Include">
             <e p="MoveAirPlatformHorizontal.cs" t="Include" />
@@ -125,18 +130,19 @@
             <e p="SpiritAnimation.cs" t="Include" />
             <e p="SpotDownAnimation.cs" t="Include" />
           </e>
-          <e p="ChangeCamera.cs" t="Include" />
           <e p="EndLevelTrigger.cs" t="Include" />
-          <e p="FootStepSFX.cs" t="Include" />
           <e p="MakeChildEvent.cs" t="Include" />
           <e p="ParallaxBackground Scripts" t="Include">
             <e p="FogMover.cs" t="Include" />
             <e p="ParallaxBackground.cs" t="Include" />
             <e p="ParallaxLayer.cs" t="Include" />
           </e>
-          <e p="PlayerMove.cs" t="Include" />
+          <e p="Player" t="Include">
+            <e p="FootStepSFX.cs" t="Include" />
+            <e p="PlayerMove.cs" t="Include" />
+            <e p="PushObject.cs" t="Include" />
+          </e>
           <e p="PushableObject.cs" t="Include" />
-          <e p="PushObject.cs" t="Include" />
           <e p="Puzzles" t="Include">
             <e p="CheckpointEnterEvent.cs" t="Include" />
             <e p="FlyHigh" t="Include">
@@ -149,6 +155,9 @@
             <e p="RiverPuzzle" t="Include">
               <e p="RiverPuzzle.cs" t="Include" />
               <e p="WaterEnterEvent.cs" t="Include" />
+            </e>
+            <e p="RoadToNowhere" t="Include">
+              <e p="RoadToNowherePuzzle.cs" t="Include" />
             </e>
             <e p="SpotsPuzzle" t="Include">
               <e p="SpotEnterEvent.cs" t="Include" />
