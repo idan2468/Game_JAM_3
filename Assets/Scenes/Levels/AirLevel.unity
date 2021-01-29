@@ -1445,6 +1445,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoadToNowhere
       objectReference: {fileID: 0}
+    - target: {fileID: 4065156801691532636, guid: e0f1ef764e452054f92e1dbe3806dd5e, type: 3}
+      propertyPath: m_TagString
+      value: Puzzle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0f1ef764e452054f92e1dbe3806dd5e, type: 3}
 --- !u!4 &1454852315 stripped

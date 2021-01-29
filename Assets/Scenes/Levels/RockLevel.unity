@@ -1498,6 +1498,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairwayToHeavenBigRock
       objectReference: {fileID: 0}
+    - target: {fileID: 3873828384920863530, guid: 703295b07db36c94ea3d6106383563cd, type: 3}
+      propertyPath: m_TagString
+      value: Puzzle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 703295b07db36c94ea3d6106383563cd, type: 3}
 --- !u!224 &4117671051612678615 stripped
@@ -1669,6 +1673,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StairwayToHeaven
       objectReference: {fileID: 0}
+    - target: {fileID: 5879030760201072724, guid: 3629548a8756e23439a942b8f3032776, type: 3}
+      propertyPath: m_TagString
+      value: Puzzle
+      objectReference: {fileID: 0}
     - target: {fileID: 6556607522277547560, guid: 3629548a8756e23439a942b8f3032776, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.94
@@ -1741,6 +1749,10 @@ PrefabInstance:
     - target: {fileID: 6711893618292533832, guid: 45537d05f7c58504c84f6cf662d00ede, type: 3}
       propertyPath: m_Name
       value: SpotPuzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711893618292533832, guid: 45537d05f7c58504c84f6cf662d00ede, type: 3}
+      propertyPath: m_TagString
+      value: Puzzle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45537d05f7c58504c84f6cf662d00ede, type: 3}
