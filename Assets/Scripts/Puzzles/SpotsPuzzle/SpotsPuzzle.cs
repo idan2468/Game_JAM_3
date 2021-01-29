@@ -26,6 +26,8 @@ public class SpotsPuzzle : MonoBehaviour
         set => eventToTrigger = value;
     }
 
+    public bool IsBySequence => bySequence; 
+
     void Start()
     {
         foreach (Transform child in _spotsContainer.transform)
