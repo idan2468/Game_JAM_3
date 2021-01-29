@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 3496636431816169318}
   m_Layer: 0
   m_Name: RiverPuzzle
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -377,6 +377,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5517137547086800609, guid: b6b49cb76bb00be469e37cab41db62f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 16.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517137547086800611, guid: b6b49cb76bb00be469e37cab41db62f6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0145c72741582d94a851a184f96627cb, type: 2}
+    - target: {fileID: 5517137547086800622, guid: b6b49cb76bb00be469e37cab41db62f6, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5517137547426114006, guid: b6b49cb76bb00be469e37cab41db62f6, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[9].x
       value: -1.1611482
@@ -397,6 +409,10 @@ PrefabInstance:
       propertyPath: checkpointPos
       value: 
       objectReference: {fileID: 3496636432144740821}
+    - target: {fileID: 8451398387093202898, guid: b6b49cb76bb00be469e37cab41db62f6, type: 3}
+      propertyPath: _moveableRockLayer.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 8451398387614120133, guid: b6b49cb76bb00be469e37cab41db62f6, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[8].x
       value: -1.5871322
