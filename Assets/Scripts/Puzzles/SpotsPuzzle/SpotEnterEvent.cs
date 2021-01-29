@@ -32,7 +32,10 @@ public class SpotEnterEvent : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log("Exit");
-        _puzzle.SpotDeactivated(gameObject, other.gameObject);
+        if (!_puzzle.bySequence)
+        {
+            _puzzle.SpotDeactivated(gameObject, other.gameObject);
+        }
         if (fadeOutLightsOnEnter)
             _lightEffect.FadeInLight();
     }

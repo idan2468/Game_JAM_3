@@ -10,9 +10,13 @@ public class SpotsPuzzle : MonoBehaviour
     [Header("Debugging")] 
     [SerializeField] private List<GameObject> spots;
     [SerializeField] private Coroutine triggerWithDelay;
+    [SerializeField] private int _spotIndex = 0;
+    [SerializeField] private List<GameObject> _spotsCopy; // Save activated spot for possible reset
+
     [Header("Params")] [SerializeField] private LayerMask layersAllowedToEnterSpots;
     [SerializeField] private float delayTime = 1f;
     [SerializeField] private GameObject _spotsContainer;
+    public bool bySequence = false;
     private Action eventToTrigger;
     [SerializeField] private float puzzleSuccessVolume = 1f;
 
@@ -26,6 +30,7 @@ public class SpotsPuzzle : MonoBehaviour
         foreach (Transform child in _spotsContainer.transform)
         {
             spots.Add(child.gameObject);
+            if (bySequence) _spotsCopy.Add(child.gameObject);
         }
     }
 
@@ -42,6 +47,25 @@ public class SpotsPuzzle : MonoBehaviour
     {
         if (Utility.IsInLayerMask(other.gameObject, layersAllowedToEnterSpots))
         {
+            if (bySequence)
+            {
+                // If wrong spot in sequence reset
+                if (spot != _spotsCopy[_spotIndex])
+                {
+                    for (int i = 0; i < _spotIndex; ++i)
+                    {
+                        SpotDeactivated(_spotsCopy[i], other);
+                    }
+                    _spotIndex = 0;
+                    return;
+                }
+                else
+                {
+                    _spotIndex++;
+                    // TODO: VISUAL CUE FOR CRACK IN SPIRIT ROCK
+                }
+            }
+
             spots.Remove(spot);
             if (spots.Count == 0)
             {
