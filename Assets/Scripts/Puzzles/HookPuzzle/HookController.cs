@@ -24,6 +24,12 @@ public class HookController : MonoBehaviour
     [SerializeField] private Animator _playerAnimator;
     [SerializeField] private BoxCollider2D catchCollider;
     [SerializeField] private float diffAngle = 90f;
+    [SerializeField] private bool canJumpFromHook = true;
+    public bool CanJumpFromHook
+    {
+        get => canJumpFromHook;
+        set => canJumpFromHook = value;
+    }
 
 
     // Start is called before the first frame update
@@ -38,7 +44,7 @@ public class HookController : MonoBehaviour
     {
         if (playerHooked)
         {
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButtonDown("Jump") && canJumpFromHook)
             {
                 DisconnectPlayerFromHook();
                 return;

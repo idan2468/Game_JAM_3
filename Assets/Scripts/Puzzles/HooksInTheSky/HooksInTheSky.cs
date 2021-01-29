@@ -19,7 +19,7 @@ public class HooksInTheSky : MonoBehaviour
     {
     }
 
-    public void FadeHook(List<SpriteRenderer> hookSprites, Transform hookToEnable)
+    public void FadeHook(List<SpriteRenderer> hookSprites, Transform hookToEnable,HookController currHookController)
     {
         animation = DOTween.Sequence();
         foreach (var sprite in hookSprites)
@@ -29,6 +29,7 @@ public class HooksInTheSky : MonoBehaviour
         animation.AppendCallback(() =>
         {
             GameManager.Instance.PlayerCanMove = false;
+            currHookController.CanJumpFromHook = false;
             hookToEnable.gameObject.SetActive(true);
         });
         foreach (var sprite in hookSprites)
@@ -36,7 +37,11 @@ public class HooksInTheSky : MonoBehaviour
             animation.Join(sprite.DOFade(1, fadeTime));
         }
 
-        animation.AppendCallback(() => GameManager.Instance.PlayerCanMove = true);
+        animation.AppendCallback(() =>
+        {
+            GameManager.Instance.PlayerCanMove = true;
+            currHookController.CanJumpFromHook = true;
+        });
         animation.SetEase(ease);
     }
 }

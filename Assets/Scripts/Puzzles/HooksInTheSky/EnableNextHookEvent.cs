@@ -34,7 +34,8 @@ public class EnableNextHookEvent : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (wasTriggered || !other.CompareTag("Player")) return;
-        _hooksInTheSky.FadeHook(hookSprites, nextHook);
+        _hooksInTheSky.FadeHook(hookSprites, nextHook,
+            gameObject.transform.parent.GetComponentInChildren<HookController>());
         wasTriggered = true;
     }
 }

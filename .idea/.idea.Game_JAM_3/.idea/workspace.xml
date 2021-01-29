@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/ParallaxLayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/ParallaxLayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HooksInTheSky/EnableNextHookEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HooksInTheSky/EnableNextHookEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HooksInTheSky/HooksInTheSky.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HooksInTheSky/HooksInTheSky.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +28,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/FogMover.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SpiritAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MovingInAirAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/SpiritCollectEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Animations/SpiritAnimation.cs" />
@@ -39,7 +39,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Animations/FadeInAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/HookPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Animations/MovingInAirAnimation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/Singleton.cs" />
       <option value="$PROJECT_DIR$/Assets/ChangeCamera.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Utility.cs" />
@@ -77,6 +76,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/FlyHigh/FlyHighEffect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AirLevel/StartAirLevelAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/ParallaxLayer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/HooksInTheSky/EnableNextHookEvent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/HooksInTheSky/HooksInTheSky.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZ4YEMI8xej9xB9eS5RmwInxe2" />
