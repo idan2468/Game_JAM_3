@@ -2,47 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Camera/CameraStates.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Camera/CameraStates.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Fog/AirFogFront.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Fog/AirFogFront.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Fog/AirForBack.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Fog/AirForBack.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Fog/ForBack.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Fog/ForBack.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Sand/Ground033_1K_Normal.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Sand/Ground033_1K_Normal.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Sand/Sand.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Sand/Sand.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Sand/Sand.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Sand/Sand.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/Hook/HookPuzzle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/Hook/HookPuzzle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/Hook/HookPuzzle.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/Hook/HookPuzzle.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/Hook/_Old/HookPuzzle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/Hook/_Old/HookPuzzle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/Hook/_Old/HookPuzzle.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/Hook/_Old/HookPuzzle.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/HookPuzzle.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/HookPuzzle.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterfallPuzzle.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterfallPuzzle.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterfallPuzzle/WaterfallPuzzle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterfallPuzzle/WaterfallPuzzle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterfallPuzzle/WaterfallPuzzle.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterfallPuzzle/WaterfallPuzzle.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterfallPuzzle/_Old/WaterfallPuzzle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterfallPuzzle/_Old/WaterfallPuzzle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterfallPuzzle/_Old/WaterfallPuzzle.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterfallPuzzle/_Old/WaterfallPuzzle.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Sand.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Sand.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/WaterLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/WaterLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AirCheckpoints.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AirCheckpoints/AirCheckpointScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AirCheckpoints/AirCheckpointScript.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AirCheckpoints/AirFallScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AirCheckpoints/AirFallScript.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChangeCamera.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChangeCamera.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FootStepSFX.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FootStepSFX.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PushObject.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PushObject.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/FlyHigh/FlyHighEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/FlyHigh/FlyHighEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AirLevel/StartAirLevelAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AirLevel/StartAirLevelAnimation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +13,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/HooksInTheSky.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animations/MoveAirPlatformHorizontal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2348FB5E-CC9E-4E68-9F37-F7D7FADAEA9A/8d/c3d51e89/Sequence.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/ParallaxBackground.cs" root0="FORCE_HIGHLIGHTING" />
@@ -61,7 +20,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2348FB5E-CC9E-4E68-9F37-F7D7FADAEA9A/fc/3585da20/TweenManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotLightEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2348FB5E-CC9E-4E68-9F37-F7D7FADAEA9A/9b/980f6c3c/DOTweenComponent.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/EnableNextHookEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SelectButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@8.2.0/Editor/Drawing/Manipulators/WindowDraggable.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -113,11 +71,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/FlyHigh/FlyHighEffect.cs" />
       <option value="$PROJECT_DIR$/Assets/StartAirLevelAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StartAirLevelAnimation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AirLevel/StartAirLevelAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" />
       <option value="$PROJECT_DIR$/Assets/HooksInTheSky.cs" />
       <option value="$PROJECT_DIR$/Assets/EnableNextHookEvent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AirLevel/StartAirLevelAnimation.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZ4YEMI8xej9xB9eS5RmwInxe2" />

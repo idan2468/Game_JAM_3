@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class StartAirLevelAnimation : MonoBehaviour
 {
+    private Sequence _animation;
     [Header("Params")] [SerializeField] private float fadeTime;
     [SerializeField] private Material fogBackMaterial;
     [SerializeField] private Material fogFrontMaterial;
@@ -15,7 +16,6 @@ public class StartAirLevelAnimation : MonoBehaviour
     [SerializeField] private float yOffsetFromCamera = -2f;
     [SerializeField] private Collider2D fallCollider;
     [Header("Debugging")]
-    [SerializeField] private Sequence _animation;
     [SerializeField] private bool animationWasTriggered;
     [SerializeField] private float fogBackAlpha;
     [SerializeField] private float fogFrontAlpha;

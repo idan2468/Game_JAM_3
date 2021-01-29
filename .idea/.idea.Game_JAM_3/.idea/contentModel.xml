@@ -8,8 +8,6 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="EnableNextHookEvent.cs" t="Include" />
-        <e p="HooksInTheSky.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
@@ -151,6 +149,10 @@
             <e p="HookPuzzle" t="Include">
               <e p="HookController.cs" t="Include" />
               <e p="HookPuzzle.cs" t="Include" />
+            </e>
+            <e p="HooksInTheSky" t="Include">
+              <e p="EnableNextHookEvent.cs" t="Include" />
+              <e p="HooksInTheSky.cs" t="Include" />
             </e>
             <e p="RiverPuzzle" t="Include">
               <e p="RiverPuzzle.cs" t="Include" />
