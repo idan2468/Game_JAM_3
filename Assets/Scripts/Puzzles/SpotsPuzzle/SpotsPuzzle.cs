@@ -7,6 +7,7 @@ using UnityEngine;
 public class SpotsPuzzle : MonoBehaviour
 {
     // Start is called before the first frame update
+    //todo: Change names of spots and spotsCopy to something more accurate
     [Header("Debugging")] 
     [SerializeField] private List<GameObject> spots;
     [SerializeField] private Coroutine triggerWithDelay;
@@ -16,7 +17,7 @@ public class SpotsPuzzle : MonoBehaviour
     [Header("Params")] [SerializeField] private LayerMask layersAllowedToEnterSpots;
     [SerializeField] private float delayTime = 1f;
     [SerializeField] private GameObject _spotsContainer;
-    public bool bySequence = false;
+    [SerializeField] private bool bySequence = false;
     private Action eventToTrigger;
     [SerializeField] private float puzzleSuccessVolume = 1f;
 

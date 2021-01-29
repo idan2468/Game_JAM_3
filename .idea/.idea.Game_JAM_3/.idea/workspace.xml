@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Water/Water.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Water/Water.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Water/Water.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Water/Water.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/WaterExperimental/Water.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterLevel/Hook/HookPuzzle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterLevel/Hook/HookPuzzle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterLevel/Hook/HookPuzzle.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterLevel/Hook/HookPuzzle.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterLevel/Hook/_Old/HookPuzzle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterLevel/Hook/_Old/HookPuzzle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterLevel/Hook/_Old/HookPuzzle.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterLevel/Hook/_Old/HookPuzzle.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterLevel/RiverPuzzle/RiverPuzzle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/WaterLevel/RiverPuzzle/RiverPuzzle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Water.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/VFX/Water.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/WaterLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/WaterLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HooksInTheSky/EnableNextHookEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HooksInTheSky/EnableNextHookEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HooksInTheSky/HooksInTheSky.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/HooksInTheSky/HooksInTheSky.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/Water Animation/water1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/Water Animation/water1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/Water Animation/water2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/Water Animation/water2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/Water Animation/water3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/Water Animation/water3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/Water Animation/water4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/Water Animation/water4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/Water Animation/water5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/Water Animation/water5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/Water Animation/water6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/Water Animation/water6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/Water Animation/water7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/Water Animation/water7.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/texture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/VFX/Water/texture.png.meta" beforeDir="false" />
-    </list>
+    <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +13,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animations/MoveAirPlatformHorizontal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2348FB5E-CC9E-4E68-9F37-F7D7FADAEA9A/8d/c3d51e89/Sequence.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/FinalPuzzle/FinalPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/ParallaxBackground.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2348FB5E-CC9E-4E68-9F37-F7D7FADAEA9A/e5/ae53bdc9/Tween.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2348FB5E-CC9E-4E68-9F37-F7D7FADAEA9A/fc/3585da20/TweenManager.cs" root0="SKIP_HIGHLIGHTING" />
