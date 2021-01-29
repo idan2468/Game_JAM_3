@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="" />
+    <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singletons/CluesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Singletons/CluesManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +36,6 @@
       <option value="$PROJECT_DIR$/Assets/SpotLightEffect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TextShow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CluesManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/CluesManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotDownAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Animations/FadeInAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/HookPuzzle.cs" />
@@ -74,6 +76,7 @@
       <option value="$PROJECT_DIR$/Assets/HooksInTheSky.cs" />
       <option value="$PROJECT_DIR$/Assets/EnableNextHookEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AirLevel/StartAirLevelAnimation.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/CluesManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZ4YEMI8xej9xB9eS5RmwInxe2" />

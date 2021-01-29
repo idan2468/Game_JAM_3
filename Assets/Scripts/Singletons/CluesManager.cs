@@ -122,6 +122,11 @@ public class CluesManager : Singleton<CluesManager>
     {
         notToShowClues.Add(clue);
         yield return new WaitForSeconds(delayForShowingAgainClue);
+        while (Vector3.Distance(clue.ObjPos.transform.position, playerTransform.position) <= distFromObject)
+        {
+            yield return new WaitForSeconds(delayForShowingAgainClue);
+        }
+
         notToShowClues.Remove(clue);
     }
 
