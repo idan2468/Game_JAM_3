@@ -31,7 +31,7 @@ public class FlyHighEffect : MonoBehaviour
         if (!other.CompareTag("Player")) return;
         if (rbPlayer == null)
         {
-            rbPlayer = other.gameObject.GetComponent<Rigidbody2D>();
+            rbPlayer = other.gameObject.transform.parent.GetComponent<Rigidbody2D>();
         }
         orgForceY = forceY;
         rbPlayer.velocity = new Vector2(rbPlayer.velocity.x,startSpeedYOnEnter);
