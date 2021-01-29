@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7678091250360347709}
   - component: {fileID: 7678091250360347710}
   - component: {fileID: 7678091250360347711}
-  - component: {fileID: 7678091250360347704}
   - component: {fileID: 7678091250360347708}
   - component: {fileID: 7678091250360347699}
+  - component: {fileID: 6023939726554669489}
   m_Layer: 10
   m_Name: _BaseMoveableRock
   m_TagString: Untagged
@@ -107,32 +107,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &7678091250360347704
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7678091250360347705}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4733334, y: 2.3733332}
-    newSize: {x: 0.25, y: 0.25}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.4733334, y: 2.3733332}
-  m_EdgeRadius: 0
 --- !u!255 &7678091250360347708
 FixedJoint2D:
   m_ObjectHideFlags: 0
@@ -167,3 +141,34 @@ MonoBehaviour:
   imovableMass: 0
   beingPushed: 0
   mode: 0
+--- !u!60 &6023939726554669489
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7678091250360347705}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4733334, y: 2.3733332}
+    newSize: {x: 0.25, y: 0.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.64506423, y: 1.0539035}
+      - {x: -0.5566667, y: 1.0541356}
+      - {x: -0.73, y: -0.62}
+      - {x: -0.7366667, y: -0.68666667}
+      - {x: -0.72235966, y: -1.1722108}
+      - {x: 0.74045545, y: -1.1819078}

@@ -1,20 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4891143875406313690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822818008089186037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172dc425276e3d44d92ce822db7f3310, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsOnTopOfStone:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1001 &9156849158270172919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80,11 +65,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8392622098756169731, guid: 67745b4c547de0b448c5df6d6aca2a0d, type: 3}
       propertyPath: m_Size.x
-      value: 3.13
+      value: 5.3
       objectReference: {fileID: 0}
     - target: {fileID: 8392622098756169731, guid: 67745b4c547de0b448c5df6d6aca2a0d, type: 3}
       propertyPath: m_Size.y
-      value: 0.88
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 8392622098756169731, guid: 67745b4c547de0b448c5df6d6aca2a0d, type: 3}
       propertyPath: m_UsedByEffector
@@ -100,8 +85,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67745b4c547de0b448c5df6d6aca2a0d, type: 3}
---- !u!1 &822818008089186037 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8392622098756169730, guid: 67745b4c547de0b448c5df6d6aca2a0d, type: 3}
-  m_PrefabInstance: {fileID: 9156849158270172919}
-  m_PrefabAsset: {fileID: 0}
