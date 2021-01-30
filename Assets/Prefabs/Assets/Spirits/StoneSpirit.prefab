@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7049241598307140014}
   - component: {fileID: 7339867912659001152}
   m_Layer: 0
-  m_Name: Spirit
+  m_Name: StoneSpirit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 543374747
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: edd039fde0f956c4999ae4d604db0958, type: 3}
-  m_Color: {r: 0.57295626, g: 0.9433962, b: 0.9254332, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 8a0606359332a444fa4a21591b5d3758, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -130,7 +130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26f2cbdfa0a9be46b84f0aa8fc64fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemCollector: {fileID: 0}
 --- !u!1 &7049241599675047963
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,9 +176,9 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.38847175, g: 0.9716981, b: 0.8678119, a: 1}
-  m_Intensity: 1
-  m_LightVolumeOpacity: 0.3
+  m_Color: {r: 0.745283, g: 0.33843836, b: 0.21358238, a: 1}
+  m_Intensity: 0.5
+  m_LightVolumeOpacity: 0.199
   m_ApplyToSortingLayers: 9b3d6320
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0

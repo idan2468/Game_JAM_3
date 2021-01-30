@@ -55,13 +55,13 @@ MonoBehaviour:
   fadeTime: 1
   UISpiritEase: 4
   emptySpirits:
-  - {fileID: 21300000, guid: 2d3632dc60ba3a342af229fd230271af, type: 3}
-  - {fileID: 21300000, guid: 2d3632dc60ba3a342af229fd230271af, type: 3}
-  - {fileID: 21300000, guid: 2d3632dc60ba3a342af229fd230271af, type: 3}
+  - {fileID: 21300000, guid: aa9be03a54baa6f46aa3adf02a4239b0, type: 3}
+  - {fileID: 21300000, guid: 81301216ed157d549b7869baf13c7339, type: 3}
+  - {fileID: 21300000, guid: b763c642e1ad7ec4086e5591139d7571, type: 3}
   fullSpirits:
-  - {fileID: 21300000, guid: 9d4f87002854c084d948248be75fe277, type: 3}
-  - {fileID: 21300000, guid: 9d4f87002854c084d948248be75fe277, type: 3}
-  - {fileID: 21300000, guid: 9d4f87002854c084d948248be75fe277, type: 3}
+  - {fileID: 21300000, guid: 8a0606359332a444fa4a21591b5d3758, type: 3}
+  - {fileID: 21300000, guid: 0cb93b8a9189f474dabd75b1e775917d, type: 3}
+  - {fileID: 21300000, guid: d69519814ffba274384a33076a749288, type: 3}
   currEmptySpirit: {fileID: 0}
   currFullSpirit: {fileID: 0}
   uiImagesObjectsContainer: {fileID: 2974311656753714301, guid: b7dccf57824c52740830d8313d996149, type: 3}
