@@ -144,7 +144,7 @@ public class UIManager : Singleton<UIManager>
                 ContinueToNextLevel();
                 break;
             case (int) GameScene.Water:
-                EndGame();
+                ContinueToNextLevel();
                 break;
             case (int) GameScene.Wind:
                 EndGame();
