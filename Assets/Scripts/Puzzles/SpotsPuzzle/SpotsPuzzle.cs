@@ -50,7 +50,7 @@ public class SpotsPuzzle : MonoBehaviour
     {
         if (Utility.IsInLayerMask(other.gameObject, layersAllowedToEnterSpots))
         {
-            if (bySequence)
+            if (bySequence && _spotIndex < _spotsCopy.Count)
             {
                 // If wrong spot in sequence reset
                 if (spot != _spotsCopy[_spotIndex])
@@ -58,13 +58,15 @@ public class SpotsPuzzle : MonoBehaviour
                     for (int i = 0; i < _spotIndex; ++i)
                     {
                         SpotDeactivated(_spotsCopy[i], other);
+                        _spotsCopy[i].GetComponent<SpotLightEffect>().FadeInLight();
                     }
                     _spotIndex = 0;
-                    return;
+                    //return;
                 }
                 else
                 {
                     _spotIndex++;
+                    spot.GetComponent<SpotLightEffect>().FadeOutLight();
                     // TODO: VISUAL CUE FOR CRACK IN SPIRIT ROCK
                 }
             }
@@ -85,11 +87,19 @@ public class SpotsPuzzle : MonoBehaviour
         }
         if (Utility.IsInLayerMask(other.gameObject, layersAllowedToEnterSpots))
         {
+            if (_spotIndex >= 1 && _spotIndex <= _spotsCopy.Count && 
+                IsBySequence && spot == _spotsCopy[_spotIndex - 1]) return;
             if (!spots.Contains(spot))
             {
                 spots.Add(spot);
             }
         }
+
+        //if (_spotIndex < _spotsCopy.Count && spot == _spotsCopy[_spotIndex])
+        ////if (spot == _spotsCopy[_spotIndex])
+        //{
+        //    spot.GetComponent<SpotLightEffect>().FadeOutLight();
+        //}
     }
 
     public void TurnOffPuzzle()
