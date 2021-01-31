@@ -58,6 +58,7 @@ public class SpotsPuzzle : MonoBehaviour
                     for (int i = 0; i < _spotIndex; ++i)
                     {
                         SpotDeactivated(_spotsCopy[i], other);
+                        _spotsCopy[i].GetComponent<SpotLightEffect>().FadeInLight();
                     }
                     _spotIndex = 0;
                     return;
@@ -65,6 +66,7 @@ public class SpotsPuzzle : MonoBehaviour
                 else
                 {
                     _spotIndex++;
+                    spot.GetComponent<SpotLightEffect>().FadeOutLight();
                     // TODO: VISUAL CUE FOR CRACK IN SPIRIT ROCK
                 }
             }
