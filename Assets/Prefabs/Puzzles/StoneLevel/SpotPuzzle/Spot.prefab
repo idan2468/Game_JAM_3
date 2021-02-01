@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54a8eb149d8e44587108ec4ba933ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minOpacity: 0.2
+  minOpacity: 0.5
   maxOpacity: 1
   fadeTime: 2
   ease: 4
   resetAnimation: 0
+  fadeTimeOnActivateAndDeactivate: 2
 --- !u!1001 &7289819840332653902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26,7 +27,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1042903133428327252, guid: aefdf24635010e5468dce1dcec1dba81, type: 3}
       propertyPath: m_Name
-      value: Spot1
+      value: Spot
       objectReference: {fileID: 0}
     - target: {fileID: 1042903133428327253, guid: aefdf24635010e5468dce1dcec1dba81, type: 3}
       propertyPath: m_RootOrder
@@ -83,6 +84,10 @@ PrefabInstance:
     - target: {fileID: 1042903133428327253, guid: aefdf24635010e5468dce1dcec1dba81, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2558672721109733291, guid: aefdf24635010e5468dce1dcec1dba81, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aefdf24635010e5468dce1dcec1dba81, type: 3}
