@@ -178,6 +178,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterfallPuzzle
       objectReference: {fileID: 0}
+    - target: {fileID: 3305970233570157169, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 3305970233570157169, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 3305970233570157169, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
+      propertyPath: m_Color.r
+      value: 0.42352942
+      objectReference: {fileID: 0}
     - target: {fileID: 7730909952200221057, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
       propertyPath: _playerGO
       value: 
