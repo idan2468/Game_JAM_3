@@ -14,7 +14,7 @@ public class FinalPuzzle : MonoBehaviour
     void Start()
     {
         _spotsPuzzle = GetComponent<SpotsPuzzle>();
-        _spotsPuzzle.EventToTrigger = CrackSpiritRock;
+        _spotsPuzzle.EventToTrigger = CompletePuzzle;
         _spotsPuzzle.EventResetPuzzle = FailPuzzle;
     }
 
@@ -24,9 +24,9 @@ public class FinalPuzzle : MonoBehaviour
         
     }
 
-    private void CrackSpiritRock()
+    private void CompletePuzzle()
     {
-
+        _spotsPuzzle.TurnOffPuzzle();
     }
 
     private void FailPuzzle()

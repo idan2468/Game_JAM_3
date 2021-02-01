@@ -11,8 +11,9 @@ public class SpotsPuzzle : MonoBehaviour
     [Header("Debugging")] 
     [SerializeField] private List<GameObject> spots;
     [SerializeField] private Coroutine triggerWithDelay;
-    [SerializeField] private int _spotIndex = 0;
-    [SerializeField] private List<GameObject> _spotsCopy; // Save activated spot for possible reset
+    [SerializeField] private int _spotSequenceIndex = 0;
+    [SerializeField] private List<GameObject> _spotsInSequence; // Save activated spot for possible reset
+    [SerializeField] private List<SpotLightEffect> _spotScripts;
 
     [Header("Params")] [SerializeField] private LayerMask layersAllowedToEnterSpots;
     [SerializeField] private float delayTime = 1f;
@@ -39,7 +40,8 @@ public class SpotsPuzzle : MonoBehaviour
         foreach (Transform child in _spotsContainer.transform)
         {
             spots.Add(child.gameObject);
-            if (bySequence) _spotsCopy.Add(child.gameObject);
+            _spotScripts.Add(child.GetComponent<SpotLightEffect>());
+            if (bySequence) _spotsInSequence.Add(child.gameObject);
         }
     }
 
@@ -59,23 +61,22 @@ public class SpotsPuzzle : MonoBehaviour
             if (bySequence)
             {
                 // If wrong spot in sequence reset
-                if (spot != _spotsCopy[_spotIndex])
+                if (_spotsInSequence.IndexOf(spot) > _spotSequenceIndex)
                 {
-                    for (int i = 0; i < _spotsCopy.Count; ++i)
+                    for (int i = 0; i < _spotsInSequence.Count; ++i)
                     {
-                        SpotDeactivated(_spotsCopy[i], other);
-                        _spotsCopy[i].GetComponent<SpotLightEffect>().FadeInLight();
+                        SpotDeactivated(_spotsInSequence[i], other);
+                        _spotScripts[i].FadeInLight();
                     }
-                    _spotIndex = 0;
+                    _spotSequenceIndex = 0;
 
                     eventResetPuzzle();
                     return;
                 }
-                else
+                else if (_spotsInSequence.IndexOf(spot) == _spotSequenceIndex)
                 {
-                    _spotIndex++;
-                    spot.GetComponent<SpotLightEffect>().FadeOutLight();
-                    // TODO: VISUAL CUE FOR CRACK IN SPIRIT ROCK
+                    _spotScripts[_spotSequenceIndex].FadeOutLight();
+                    _spotSequenceIndex++;
                 }
             }
 
