@@ -36,10 +36,10 @@ public class FinalPuzzle : MonoBehaviour
         {
             GameManager.Instance.FreezePlayer();
             GameManager.Instance.ReturnPlayerToCheckpoint(_puzzleReturnLocation.transform.position);
-            GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Hook);
+            GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.SequenceElements);
         })
             .AppendInterval(timeInStaticCamera + GameManager.Instance.CameraBlendTime)
-            .AppendCallback(() => { GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.River); })
+            .AppendCallback(() => { GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.HooksInTheSky); })
             .AppendInterval(timeInStaticCamera + GameManager.Instance.CameraBlendTime)
             .AppendCallback(() => GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Main))
             .AppendInterval(timeInStaticCamera + GameManager.Instance.CameraBlendTime)

@@ -47,7 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spotsPuzzle: {fileID: 0}
-  _testObject: {fileID: 0}
+  timeInStaticCamera: 0
+  _puzzleReturnLocation: {fileID: 0}
 --- !u!114 &2433525726061463201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,8 +62,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spots: []
-  _spotIndex: 0
-  _spotsCopy: []
+  _spotSequenceIndex: 0
+  _spotsInSequence: []
+  _spotScripts: []
   layersAllowedToEnterSpots:
     serializedVersion: 2
     m_Bits: 2048
@@ -134,8 +136,8 @@ Transform:
   m_LocalPosition: {x: -21.56, y: 7.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5374510260601954280}
   - {fileID: 5374510259933874167}
+  - {fileID: 5374510260601954280}
   - {fileID: 5374510260150567680}
   m_Father: {fileID: 2433525726061463200}
   m_RootOrder: 1
@@ -347,7 +349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7733672707719185947, guid: 2a3dae7c6642a3a468c173fea2544c0c, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7733672707719185947, guid: 2a3dae7c6642a3a468c173fea2544c0c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -471,7 +473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7733672707719185947, guid: 2a3dae7c6642a3a468c173fea2544c0c, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7733672707719185947, guid: 2a3dae7c6642a3a468c173fea2544c0c, type: 3}
       propertyPath: m_LocalPosition.x
