@@ -53,14 +53,7 @@ public class FinalPuzzle : MonoBehaviour
         {
             GameManager.Instance.FreezePlayer();
             GameManager.Instance.ReturnPlayerToCheckpoint(_puzzleCheckpointScript.transform.position);
-            GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.SequenceElements);
-        })
-            .AppendInterval(timeInStaticCamera + GameManager.Instance.CameraBlendTime)
-            .AppendCallback(() => { GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.HooksInTheSky); })
-            .AppendInterval(timeInStaticCamera + GameManager.Instance.CameraBlendTime)
-            .AppendCallback(() => GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Main))
-            .AppendInterval(timeInStaticCamera + GameManager.Instance.CameraBlendTime)
-            .AppendCallback(() => GameManager.Instance.UnfreezePlayer());
+        });
     }
 
     public void TriggerZoomEvent()

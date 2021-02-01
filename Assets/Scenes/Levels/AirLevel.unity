@@ -3602,6 +3602,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1518169644}
     m_Modifications:
+    - target: {fileID: 177849949, guid: 33afe621eca8de24fa74040761561c1e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 97.67
+      objectReference: {fileID: 0}
     - target: {fileID: 177849950, guid: 33afe621eca8de24fa74040761561c1e, type: 3}
       propertyPath: _airFallColliderScript
       value: 
