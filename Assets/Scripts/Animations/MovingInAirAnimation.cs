@@ -13,7 +13,7 @@ public class MovingInAirAnimation : MonoBehaviour
     // [SerializeField] private LayerMask pushableObjectLayerMask;
     [Header("Debugging")]
     [SerializeField] private Vector3 startPos;
-    private Tween animation;
+    private Tween _animation;
     private Transform previousParent;
    
 
@@ -36,7 +36,7 @@ public class MovingInAirAnimation : MonoBehaviour
         if (restartAnimation)
         {
             Debug.Log("Restarting animation");
-            animation.Kill();
+            _animation.Kill();
             StartAnimation();
             Utility.DisableInspectorButton(() => restartAnimation = false).Play();
         }
@@ -44,7 +44,7 @@ public class MovingInAirAnimation : MonoBehaviour
 
     private void SetAnimation()
     {
-        animation = transform.DOMoveY(transform.position.y - movementDist, movementDist / speed)
+        _animation = transform.DOMoveY(transform.position.y - movementDist, movementDist / speed)
             .SetLoops(-1, LoopType.Yoyo)
             .SetEase(easing);
     }

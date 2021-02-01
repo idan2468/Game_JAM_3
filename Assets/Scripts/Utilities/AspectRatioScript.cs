@@ -10,16 +10,14 @@ public class AspectRatioScript : MonoBehaviour
 
     void Start()
     {
-        
+        Calculate();
     }
 
     private void Update()
     {
-        Calculate();
+        
     }
 
-    // TODO: MOVE FROM UPDATE TO START
-    // TODO: CHECK EFFECT ON STATIC HOOK (WATER LEVEL) CAMERA
     void Calculate()
     {
         float windowAspect = (float)Screen.width / (float)Screen.height;
