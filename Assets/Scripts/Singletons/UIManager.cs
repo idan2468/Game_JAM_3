@@ -106,8 +106,10 @@ public class UIManager : Singleton<UIManager>
         Debug.Log("ActiveUISpirit");
         animation = DOTween.Sequence();
         animation.Append(_spiritsImages[0].DOFade(0, fadeTime).From(1));
+        animation.Join(_spiritsImages[0].gameObject.transform.DOScale(0, fadeTime).From(1));
         animation.AppendCallback(() => _spiritsImages[0].sprite = currFullSpirit);
         animation.Append(_spiritsImages[0].DOFade(1, fadeTime).From(0));
+        animation.Join(_spiritsImages[0].gameObject.transform.DOScale(1, fadeTime).From(0));
         animation.SetEase(UISpiritEase);
         animation.OnComplete(() => _spiritsImages.Remove(_spiritsImages[0]));
     }

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="" />
+    <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/AirLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/AirLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singletons/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Singletons/UIManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +58,6 @@
       <option value="$PROJECT_DIR$/Assets/TriggerZoomEnterEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EndLevelTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SelectButton.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/UIManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/WaterfallPuzzle/WaterfallPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/RiverPuzzle/RiverPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MakeChildEvent.cs" />
@@ -75,6 +78,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/HooksInTheSky/HooksInTheSky.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotsPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/SpotsPuzzle/SpotEnterEvent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/UIManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZ4YEMI8xej9xB9eS5RmwInxe2" />
@@ -137,6 +141,7 @@
       <workItem from="1610706159243" duration="35552000" />
       <workItem from="1611502077320" duration="14841000" />
       <workItem from="1612165363108" duration="200000" />
+      <workItem from="1612191572777" duration="696000" />
     </task>
     <servers />
   </component>
