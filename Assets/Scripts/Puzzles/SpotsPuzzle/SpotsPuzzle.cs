@@ -61,7 +61,7 @@ public class SpotsPuzzle : MonoBehaviour
                 // If wrong spot in sequence reset
                 if (spot != _spotsCopy[_spotIndex])
                 {
-                    for (int i = 0; i < _spotIndex; ++i)
+                    for (int i = 0; i < _spotsCopy.Count; ++i)
                     {
                         SpotDeactivated(_spotsCopy[i], other);
                         _spotsCopy[i].GetComponent<SpotLightEffect>().FadeInLight();
