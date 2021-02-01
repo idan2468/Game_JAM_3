@@ -178,38 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterfallPuzzle
       objectReference: {fileID: 0}
-    - target: {fileID: 3305970233570157169, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
-      propertyPath: m_Color.b
-      value: 0.8509804
-      objectReference: {fileID: 0}
-    - target: {fileID: 3305970233570157169, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
-      propertyPath: m_Color.g
-      value: 0.7764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 3305970233570157169, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
-      propertyPath: m_Color.r
-      value: 0.42352942
-      objectReference: {fileID: 0}
     - target: {fileID: 7730909952200221057, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
       propertyPath: _playerGO
       value: 
       objectReference: {fileID: 936675596}
-    - target: {fileID: 7822471871117006895, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 0cb93b8a9189f474dabd75b1e775917d, type: 3}
-    - target: {fileID: 7822471871117006895, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7822471871117006895, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7822471871117006895, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
 --- !u!1001 &116274735
@@ -285,14 +257,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1518169644}
     m_Modifications:
-    - target: {fileID: 850917501620612827, guid: 044654ea0dda49f48a04cab4c9b4bc13, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4270456488298377733, guid: 044654ea0dda49f48a04cab4c9b4bc13, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4280878896050366368, guid: 044654ea0dda49f48a04cab4c9b4bc13, type: 3}
       propertyPath: m_Name
       value: HookPuzzle
@@ -341,8 +305,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4270456488298377733, guid: 044654ea0dda49f48a04cab4c9b4bc13, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 044654ea0dda49f48a04cab4c9b4bc13, type: 3}
 --- !u!1001 &346812874
 PrefabInstance:
