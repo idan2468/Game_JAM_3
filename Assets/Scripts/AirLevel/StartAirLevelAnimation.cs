@@ -45,7 +45,8 @@ public class StartAirLevelAnimation : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (animationWasTriggered || !other.CompareTag("Player")) return;
+        //if (animationWasTriggered || !other.CompareTag("Player")) return;
+        if (!other.CompareTag("Player")) return;
         _playerMove = other.gameObject.GetComponentInParent<PlayerMove>();
         StartAnimation();
         animationWasTriggered = true;
