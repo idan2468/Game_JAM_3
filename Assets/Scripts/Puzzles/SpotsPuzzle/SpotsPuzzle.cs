@@ -19,11 +19,17 @@ public class SpotsPuzzle : MonoBehaviour
     [SerializeField] private GameObject _spotsContainer;
     [SerializeField] private bool bySequence = false;
     private Action eventToTrigger;
+    private Action eventResetPuzzle;
     [SerializeField] private float puzzleSuccessVolume = 1f;
 
     public Action EventToTrigger
     {
         set => eventToTrigger = value;
+    }
+
+    public Action EventResetPuzzle
+    {
+        set => eventResetPuzzle = value;
     }
 
     public bool IsBySequence => bySequence; 
@@ -61,6 +67,8 @@ public class SpotsPuzzle : MonoBehaviour
                         _spotsCopy[i].GetComponent<SpotLightEffect>().FadeInLight();
                     }
                     _spotIndex = 0;
+
+                    eventResetPuzzle();
                     return;
                 }
                 else
