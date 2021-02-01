@@ -8,7 +8,8 @@ public class FinalPuzzle : MonoBehaviour
     [Header("Debugging")] [SerializeField] private SpotsPuzzle _spotsPuzzle;
     [SerializeField] private Sequence _animation;
     [SerializeField] private float timeInStaticCamera;
-    [SerializeField] private GameObject _puzzleReturnLocation;
+    [SerializeField] private CheckpointEnterEvent _puzzleCheckpointScript;
+    [SerializeField] private GameObject _finalSpirit;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class FinalPuzzle : MonoBehaviour
         _spotsPuzzle = GetComponent<SpotsPuzzle>();
         _spotsPuzzle.EventToTrigger = CompletePuzzle;
         _spotsPuzzle.EventResetPuzzle = FailPuzzle;
+        _puzzleCheckpointScript.EventToTrigger = TriggerZoomEvent;
     }
 
     // Update is called once per frame
@@ -26,7 +28,22 @@ public class FinalPuzzle : MonoBehaviour
 
     private void CompletePuzzle()
     {
-        _spotsPuzzle.TurnOffPuzzle();
+        _animation = DOTween.Sequence()
+            .AppendCallback(() =>
+            {
+                GameManager.Instance.FreezePlayer();
+                GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.HooksInTheSky);
+            })
+            .AppendInterval(timeInStaticCamera + GameManager.Instance.CameraBlendTime)
+            .AppendCallback(() =>
+            {
+                _finalSpirit.SetActive(true);
+                _finalSpirit.GetComponent<SpiritAnimation>().TriggerFadeInAnimation();
+            })
+            .AppendCallback(() => _spotsPuzzle.TurnOffPuzzle())
+            .AppendCallback(() => GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Main))
+            .AppendInterval(GameManager.Instance.CameraBlendTime)
+            .AppendCallback(() => GameManager.Instance.UnfreezePlayer());
     }
 
     private void FailPuzzle()
@@ -35,11 +52,24 @@ public class FinalPuzzle : MonoBehaviour
         _animation.AppendCallback(() =>
         {
             GameManager.Instance.FreezePlayer();
-            GameManager.Instance.ReturnPlayerToCheckpoint(_puzzleReturnLocation.transform.position);
+            GameManager.Instance.ReturnPlayerToCheckpoint(_puzzleCheckpointScript.transform.position);
             GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.SequenceElements);
         })
             .AppendInterval(timeInStaticCamera + GameManager.Instance.CameraBlendTime)
             .AppendCallback(() => { GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.HooksInTheSky); })
+            .AppendInterval(timeInStaticCamera + GameManager.Instance.CameraBlendTime)
+            .AppendCallback(() => GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Main))
+            .AppendInterval(timeInStaticCamera + GameManager.Instance.CameraBlendTime)
+            .AppendCallback(() => GameManager.Instance.UnfreezePlayer());
+    }
+
+    public void TriggerZoomEvent()
+    {
+        _animation = DOTween.Sequence()
+            .AppendCallback(() => {
+                GameManager.Instance.FreezePlayer();
+                GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.SequenceElements); 
+            })
             .AppendInterval(timeInStaticCamera + GameManager.Instance.CameraBlendTime)
             .AppendCallback(() => GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Main))
             .AppendInterval(timeInStaticCamera + GameManager.Instance.CameraBlendTime)
