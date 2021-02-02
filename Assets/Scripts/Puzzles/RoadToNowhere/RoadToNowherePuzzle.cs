@@ -13,9 +13,11 @@ public class RoadToNowherePuzzle : MonoBehaviour
     [SerializeField] private Ease ease;
     [SerializeField] private float delayWatchingGeyserRelease = 1f;
     [Header("Debugging")] [SerializeField] private Sequence _animation;
+    [SerializeField] private bool animationTriggered;
 
     void Start()
     {
+        animationTriggered = false;
         _puzzle = GetComponent<SpotsPuzzle>();
         _puzzle.EventToTrigger = RemoveRockAnimation;
     }
@@ -27,6 +29,7 @@ public class RoadToNowherePuzzle : MonoBehaviour
 
     private void RemoveRockAnimation()
     {
+        if(animationTriggered) return;
         _animation = DOTween.Sequence();
         _animation.AppendCallback(() =>
         {
@@ -49,5 +52,7 @@ public class RoadToNowherePuzzle : MonoBehaviour
             _puzzle.TurnOffPuzzle();
         });
         _animation.SetEase(ease);
+        animationTriggered = true;
+
     }
 }

@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/GameScreenCanvas (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/GameScreenCanvas (1).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/AirLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/AirLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/WaterLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/WaterLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AirLevel/StartAirLevelAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AirLevel/StartAirLevelAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/RoadToNowhere/RoadToNowherePuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/RoadToNowhere/RoadToNowherePuzzle.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +29,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Animations/SpiritAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/WaterfallPuzzle/ParticleCollisionEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/SpotLightEffect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TextShow.cs" />
@@ -65,7 +62,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" />
       <option value="$PROJECT_DIR$/Assets/StartAirLevelAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StartAirLevelAnimation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" />
       <option value="$PROJECT_DIR$/Assets/HooksInTheSky.cs" />
       <option value="$PROJECT_DIR$/Assets/EnableNextHookEvent.cs" />
@@ -82,6 +78,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Animations/FinalAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/FinalPuzzle/FinalPuzzle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AirLevel/StartAirLevelAnimation.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/RoadToNowhere/RoadToNowherePuzzle.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZ4YEMI8xej9xB9eS5RmwInxe2" />
