@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2490d62a-e241-4e09-838c-6b725511f5e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game_JAM_3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animations/FinalAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/FinalAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/FinalPuzzle/FinalPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/FinalPuzzle/FinalPuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/GameScreenCanvas (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/GameScreenCanvas (1).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/AirLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/AirLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/WaterLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/WaterLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AirLevel/StartAirLevelAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AirLevel/StartAirLevelAnimation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +71,6 @@
       <option value="$PROJECT_DIR$/Assets/EnableNextHookEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/CluesManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/FlyHigh/FlyHighEffect.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AirLevel/StartAirLevelAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground Scripts/ParallaxLayer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/HookPuzzle/HookController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/HooksInTheSky/EnableNextHookEvent.cs" />
@@ -80,6 +81,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Animations/MovingInAirAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Animations/FinalAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/FinalPuzzle/FinalPuzzle.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AirLevel/StartAirLevelAnimation.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZ4YEMI8xej9xB9eS5RmwInxe2" />

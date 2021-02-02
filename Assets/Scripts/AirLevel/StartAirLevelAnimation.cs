@@ -12,9 +12,11 @@ public class StartAirLevelAnimation : MonoBehaviour
     [SerializeField] private Material fogFrontMaterial;
     [SerializeField] private SpriteRenderer fogBack;
     [SerializeField] private SpriteRenderer fogFront;
+    [SerializeField] private SpriteRenderer sun;
     [SerializeField] private CinemachineCameraOffset mainCamera;
     [SerializeField] private float yOffsetFromCamera = -2f;
     [SerializeField] private Collider2D fallCollider;
+    
     [Header("Debugging")]
     [SerializeField] private bool animationWasTriggered;
     [SerializeField] private float fogBackAlpha;
@@ -70,6 +72,7 @@ public class StartAirLevelAnimation : MonoBehaviour
         });
         _animation.Append(fogBack.DOFade(fogBackAlpha, fadeTime));
         _animation.Join(fogFront.DOFade(fogFrontAlpha, fadeTime));
+        _animation.Join(sun.DOFade(0, fadeTime));
         _animation.Join(
             DOTween.To(() => mainCamera.m_Offset.y, (x) => mainCamera.m_Offset.y = x,
                 yOffsetFromCamera, fadeTime));

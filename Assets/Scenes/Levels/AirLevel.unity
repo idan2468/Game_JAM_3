@@ -2647,6 +2647,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2979910742347812308, guid: a70f56816ccdea543a6355af837f23ea, type: 3}
+      propertyPath: sun
+      value: 
+      objectReference: {fileID: 1399976932}
+    - target: {fileID: 2979910742347812308, guid: a70f56816ccdea543a6355af837f23ea, type: 3}
       propertyPath: fogBack
       value: 
       objectReference: {fileID: 835345014}
@@ -3202,6 +3206,22 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2433525725609945945, guid: 33afe621eca8de24fa74040761561c1e, type: 3}
+      propertyPath: fadeTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2433525725609945945, guid: 33afe621eca8de24fa74040761561c1e, type: 3}
+      propertyPath: fadeTimeOnActivateAndDeactivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2433525725936742318, guid: 33afe621eca8de24fa74040761561c1e, type: 3}
+      propertyPath: fadeTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2433525725936742318, guid: 33afe621eca8de24fa74040761561c1e, type: 3}
+      propertyPath: fadeTimeOnActivateAndDeactivate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2433525726061463200, guid: 33afe621eca8de24fa74040761561c1e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3253,6 +3273,14 @@ PrefabInstance:
     - target: {fileID: 2433525726061463206, guid: 33afe621eca8de24fa74040761561c1e, type: 3}
       propertyPath: _tempAscent
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2433525727441319857, guid: 33afe621eca8de24fa74040761561c1e, type: 3}
+      propertyPath: fadeTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2433525727441319857, guid: 33afe621eca8de24fa74040761561c1e, type: 3}
+      propertyPath: fadeTimeOnActivateAndDeactivate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2810523997045191911, guid: 33afe621eca8de24fa74040761561c1e, type: 3}
       propertyPath: m_IsActive
@@ -3483,6 +3511,10 @@ PrefabInstance:
     - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
       propertyPath: cluesWater.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
+      propertyPath: delayForShowingAgainClue
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
       propertyPath: cluesAir.Array.data[0].objPos
@@ -4031,6 +4063,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 699e8bcb0413196419cea8274d6b5ab1, type: 3}
+--- !u!212 &1399976932 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3436042872306415660, guid: 7628954b227570249adcd68e7b08ec32, type: 3}
+  m_PrefabInstance: {fileID: 1952351899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1403122680 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 822818008089186038, guid: 50eb40961e6e45a4690499efdb4c66c5, type: 3}
@@ -4168,6 +4205,14 @@ PrefabInstance:
     - target: {fileID: 4065156801691532636, guid: e0f1ef764e452054f92e1dbe3806dd5e, type: 3}
       propertyPath: m_Name
       value: RoadToNowhere
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065156801818890805, guid: e0f1ef764e452054f92e1dbe3806dd5e, type: 3}
+      propertyPath: fadeTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065156801818890805, guid: e0f1ef764e452054f92e1dbe3806dd5e, type: 3}
+      propertyPath: fadeTimeOnActivateAndDeactivate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4065156802475852072, guid: e0f1ef764e452054f92e1dbe3806dd5e, type: 3}
       propertyPath: m_Enabled
@@ -5467,7 +5512,7 @@ GameObject:
   - component: {fileID: 1876540576}
   - component: {fileID: 1876540575}
   m_Layer: 0
-  m_Name: Checkpoint1 (1)
+  m_Name: Checkpoint5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5701,27 +5746,27 @@ PrefabInstance:
       objectReference: {fileID: 1838941023}
     - target: {fileID: 2960784062601323487, guid: 7628954b227570249adcd68e7b08ec32, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -93.901634
+      value: -93.9057
       objectReference: {fileID: 0}
     - target: {fileID: 2960784062601323487, guid: 7628954b227570249adcd68e7b08ec32, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.6706343
+      value: -3.6706333
       objectReference: {fileID: 0}
     - target: {fileID: 2960784063842422368, guid: 7628954b227570249adcd68e7b08ec32, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.385925
+      value: -25.389992
       objectReference: {fileID: 0}
     - target: {fileID: 2960784063842422368, guid: 7628954b227570249adcd68e7b08ec32, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.7319984
+      value: 6.7319994
       objectReference: {fileID: 0}
     - target: {fileID: 3436042872306415662, guid: 7628954b227570249adcd68e7b08ec32, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.5
+      value: -7.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 3436042872306415662, guid: 7628954b227570249adcd68e7b08ec32, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3999996
+      value: 3.4000006
       objectReference: {fileID: 0}
     - target: {fileID: 5380062215444263238, guid: 7628954b227570249adcd68e7b08ec32, type: 3}
       propertyPath: m_Name
@@ -5781,11 +5826,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5380062216207348449, guid: 7628954b227570249adcd68e7b08ec32, type: 3}
       propertyPath: m_BiasY
-      value: -0.49999964
+      value: -0.49999923
       objectReference: {fileID: 0}
     - target: {fileID: 5380062216207348449, guid: 7628954b227570249adcd68e7b08ec32, type: 3}
       propertyPath: m_DeadZoneHeight
-      value: 0.2
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380062216207348449, guid: 7628954b227570249adcd68e7b08ec32, type: 3}
+      propertyPath: m_SoftZoneHeight
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5380062217131276181, guid: 7628954b227570249adcd68e7b08ec32, type: 3}
       propertyPath: m_AnimatedTarget

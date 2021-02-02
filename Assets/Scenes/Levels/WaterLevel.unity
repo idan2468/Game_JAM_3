@@ -982,6 +982,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
+      propertyPath: delayForShowingAgainClue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255443635180419792, guid: 39e8cd7c2e06e4447b16ce11005ea63f, type: 3}
       propertyPath: interactObjects.Array.data[0]
       value: 
       objectReference: {fileID: 553466266}
