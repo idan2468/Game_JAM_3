@@ -1174,7 +1174,7 @@ PrefabInstance:
       objectReference: {fileID: 1838941023}
     - target: {fileID: 2960784062601323487, guid: 40dae33b633167f458da2c48ce138551, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -92.721634
+      value: -92.7257
       objectReference: {fileID: 0}
     - target: {fileID: 2960784062601323487, guid: 40dae33b633167f458da2c48ce138551, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1182,7 +1182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2960784063842422368, guid: 40dae33b633167f458da2c48ce138551, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.205925
+      value: -24.209991
       objectReference: {fileID: 0}
     - target: {fileID: 2960784063842422368, guid: 40dae33b633167f458da2c48ce138551, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1190,7 +1190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3436042872306415662, guid: 40dae33b633167f458da2c48ce138551, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.5
+      value: -7.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 3436042872306415662, guid: 40dae33b633167f458da2c48ce138551, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1383,6 +1383,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1518169644}
     m_Modifications:
+    - target: {fileID: 1446168778080280950, guid: 703295b07db36c94ea3d6106383563cd, type: 3}
+      propertyPath: strength
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3873828384920862933, guid: 703295b07db36c94ea3d6106383563cd, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1449,14 +1453,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1891026788}
     m_Modifications:
-    - target: {fileID: 8596960099930103758, guid: 9559580bb4f086f4ca70a666ac0a9bbc, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 26dfd9caea613a3419f8b48f1e9d09a2, type: 2}
-    - target: {fileID: 8596960099930103758, guid: 9559580bb4f086f4ca70a666ac0a9bbc, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -398196601188388461, guid: 26dfd9caea613a3419f8b48f1e9d09a2, type: 2}
     - target: {fileID: 8596960100539499464, guid: 9559580bb4f086f4ca70a666ac0a9bbc, type: 3}
       propertyPath: m_Name
       value: GameScreenCanvas
@@ -1554,6 +1550,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1518169644}
     m_Modifications:
+    - target: {fileID: 3366862756023284910, guid: 3629548a8756e23439a942b8f3032776, type: 3}
+      propertyPath: strength
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3478305795490893523, guid: 3629548a8756e23439a942b8f3032776, type: 3}
       propertyPath: m_LocalPosition.y
       value: 3.38
@@ -1643,6 +1643,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1518169644}
     m_Modifications:
+    - target: {fileID: 1665151961111049604, guid: 45537d05f7c58504c84f6cf662d00ede, type: 3}
+      propertyPath: strength
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6711893618292533831, guid: 45537d05f7c58504c84f6cf662d00ede, type: 3}
       propertyPath: m_RootOrder
       value: 1

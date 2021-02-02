@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: _playerGO
       value: 
       objectReference: {fileID: 936675596}
+    - target: {fileID: 7822471871117006893, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
+      propertyPath: strength
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
 --- !u!1 &106704324
@@ -1060,7 +1064,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 543374747
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &503485233
@@ -2160,7 +2164,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 543374747
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 40
   m_RenderMode: 0
   m_SortMode: 0
@@ -6970,6 +6974,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7007903869387119879, guid: 044654ea0dda49f48a04cab4c9b4bc13, type: 3}
+      propertyPath: strength
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 044654ea0dda49f48a04cab4c9b4bc13, type: 3}
 --- !u!61 &1597023927788844320
@@ -7069,7 +7077,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 543374747
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 30
   m_Sprite: {fileID: 21300000, guid: 8c77d11c721afe440b317f2640671675, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7216,6 +7224,10 @@ PrefabInstance:
     - target: {fileID: 7049241598307140012, guid: 0df75def638d32148ae99f995aba287c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049241598307140015, guid: 0df75def638d32148ae99f995aba287c, type: 3}
+      propertyPath: strength
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0df75def638d32148ae99f995aba287c, type: 3}

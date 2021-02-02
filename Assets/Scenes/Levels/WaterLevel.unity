@@ -130,6 +130,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1518169644}
     m_Modifications:
+    - target: {fileID: 962907590220672519, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 7500
+      objectReference: {fileID: 0}
+    - target: {fileID: 962907590220672519, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 962907590220672519, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 962907590220672519, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 962907590220672519, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
+      propertyPath: InitialModule.startSize.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 962907590220672519, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 962907590220672519, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 962907591715295482, guid: 9c32301c3b5f1144e8a039acd0742afc, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1255,10 +1283,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1891026788}
     m_Modifications:
-    - target: {fileID: 8596960099930103758, guid: 9559580bb4f086f4ca70a666ac0a9bbc, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8596960100539499464, guid: 9559580bb4f086f4ca70a666ac0a9bbc, type: 3}
       propertyPath: m_Name
       value: GameScreenCanvas
