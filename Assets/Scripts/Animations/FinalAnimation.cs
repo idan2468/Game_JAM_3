@@ -11,11 +11,12 @@ public class FinalAnimation : MonoBehaviour
     [SerializeField] private Ease ease = Ease.InOutSine;
     private Sequence _animation;
     [SerializeField] private Transform playerTransform;
+    private Collider2D[] playerColliders;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerColliders = GetComponentsInChildren<Collider2D>();
     }
 
     // Update is called once per frame
@@ -29,9 +30,24 @@ public class FinalAnimation : MonoBehaviour
         var dist = Vector3.Distance(playerTransform.position, _targetTemple.transform.position);
         _animation = 
             DOTween.Sequence()
-                .AppendCallback(() => GameManager.Instance.FreezePlayer())
+                .AppendCallback(() =>
+                {
+                    GameManager.Instance.FreezePlayer();
+                    foreach (var collider in playerColliders)
+                    {
+                        collider.enabled = false;
+                    }
+                    
+                })
             .Append(playerTransform.DOMove(_targetTemple.transform.position, _ascentSpeed != 0 ? dist / _ascentSpeed : _ascentSpeed))
-                .AppendCallback(() => GameManager.Instance.UnfreezePlayer())
+                .AppendCallback(() =>
+                {
+                    GameManager.Instance.UnfreezePlayer();
+                    foreach (var collider in playerColliders)
+                    {
+                        collider.enabled = true;
+                    }
+                })
             .SetEase(ease);
     }
     

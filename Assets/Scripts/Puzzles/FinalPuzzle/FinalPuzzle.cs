@@ -10,7 +10,6 @@ public class FinalPuzzle : MonoBehaviour
     [SerializeField] private float timeInStaticCamera;
     [SerializeField] private CheckpointEnterEvent _puzzleCheckpointScript;
     [SerializeField] private GameObject _finalSpirit;
-    [SerializeField] private GameObject _tempAscent;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +38,6 @@ public class FinalPuzzle : MonoBehaviour
             .AppendCallback(() =>
             {
                 _finalSpirit.SetActive(true);
-                _tempAscent.SetActive(true);
                 _finalSpirit.GetComponent<SpiritAnimation>().TriggerFadeInAnimation();
             })
             .AppendCallback(() => _spotsPuzzle.TurnOffPuzzle())
