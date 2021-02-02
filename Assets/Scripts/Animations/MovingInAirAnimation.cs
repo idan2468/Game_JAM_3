@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class MovingInAirAnimation : MonoBehaviour
 {
@@ -46,7 +47,7 @@ public class MovingInAirAnimation : MonoBehaviour
     {
         _animation = transform.DOMoveY(transform.position.y - movementDist, movementDist / speed)
             .SetLoops(-1, LoopType.Yoyo)
-            .SetEase(easing);
+            .SetEase(easing).SetDelay(Random.Range(0f,1f));
     }
 
     // Update is called once per frame
