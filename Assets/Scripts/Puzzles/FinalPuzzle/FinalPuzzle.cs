@@ -10,6 +10,7 @@ public class FinalPuzzle : MonoBehaviour
     [SerializeField] private float timeInStaticCamera;
     [SerializeField] private CheckpointEnterEvent _puzzleCheckpointScript;
     [SerializeField] private GameObject _finalSpirit;
+    [SerializeField] private bool _playedAnimation = false;
 
     // Start is called before the first frame update
     void Start()
@@ -54,11 +55,14 @@ public class FinalPuzzle : MonoBehaviour
         {
             GameManager.Instance.FreezePlayer();
             GameManager.Instance.ReturnPlayerToCheckpoint(_puzzleCheckpointScript.transform.position);
-        });
+        })
+            .AppendInterval(GameManager.Instance.CameraBlendTime)
+            .AppendCallback(() => GameManager.Instance.UnfreezePlayer());
     }
 
     public void TriggerZoomEvent()
     {
+        if (_playedAnimation) return;
         _animation = DOTween.Sequence()
             .AppendCallback(() => {
                 GameManager.Instance.FreezePlayer();
@@ -67,6 +71,7 @@ public class FinalPuzzle : MonoBehaviour
             .AppendInterval(timeInStaticCamera + GameManager.Instance.CameraBlendTime)
             .AppendCallback(() => GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Main))
             .AppendInterval(timeInStaticCamera + GameManager.Instance.CameraBlendTime)
+            .AppendCallback(() => _playedAnimation = true)
             .AppendCallback(() => GameManager.Instance.UnfreezePlayer());
     }
 }
