@@ -34,12 +34,13 @@ public class FinalPuzzle : MonoBehaviour
                 GameManager.Instance.FreezePlayer();
                 GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.HooksInTheSky);
             })
-            .AppendInterval(timeInStaticCamera + GameManager.Instance.CameraBlendTime)
+            .AppendInterval(GameManager.Instance.CameraBlendTime)
             .AppendCallback(() =>
             {
                 _finalSpirit.SetActive(true);
                 _finalSpirit.GetComponent<SpiritAnimation>().TriggerFadeInAnimation();
             })
+            .AppendInterval(GameManager.Instance.CameraBlendTime)
             .AppendCallback(() => _spotsPuzzle.TurnOffPuzzle())
             .AppendCallback(() => GameManager.Instance.ChangeVirtualCamera(GameManager.VirtualCamera.Main))
             .AppendInterval(GameManager.Instance.CameraBlendTime)

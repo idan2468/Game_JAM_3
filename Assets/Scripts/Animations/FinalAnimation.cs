@@ -48,6 +48,7 @@ public class FinalAnimation : MonoBehaviour
                         collider.enabled = true;
                     }
                 })
+            .AppendCallback(() => playerTransform.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero)
             .SetEase(ease);
     }
     
