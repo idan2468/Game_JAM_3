@@ -403,6 +403,16 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7036234989545868660, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
   m_PrefabInstance: {fileID: 389652976}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &389652979 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1765490230259100597, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
+  m_PrefabInstance: {fileID: 389652976}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &389652980 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1116834971275036190, guid: 74c3abf498e76e94cb8f7080b2c64b65, type: 3}
+  m_PrefabInstance: {fileID: 389652976}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &390069205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1164,7 +1174,7 @@ PrefabInstance:
       objectReference: {fileID: 1838941023}
     - target: {fileID: 2960784062601323487, guid: 40dae33b633167f458da2c48ce138551, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -92.7257
+      value: -92.721634
       objectReference: {fileID: 0}
     - target: {fileID: 2960784062601323487, guid: 40dae33b633167f458da2c48ce138551, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1172,7 +1182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2960784063842422368, guid: 40dae33b633167f458da2c48ce138551, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.209991
+      value: -24.205925
       objectReference: {fileID: 0}
     - target: {fileID: 2960784063842422368, guid: 40dae33b633167f458da2c48ce138551, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1180,7 +1190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3436042872306415662, guid: 40dae33b633167f458da2c48ce138551, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.5999985
+      value: -11.5
       objectReference: {fileID: 0}
     - target: {fileID: 3436042872306415662, guid: 40dae33b633167f458da2c48ce138551, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1791,9 +1801,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 78100ec51566da2419deccb4f5e8a74c, type: 3}
     - target: {fileID: 5685524055516157745, guid: 9ed6460f5cceba14d84967cb1408a8a7, type: 3}
+      propertyPath: _continueRockMenu
+      value: 
+      objectReference: {fileID: 389652980}
+    - target: {fileID: 5685524055516157745, guid: 9ed6460f5cceba14d84967cb1408a8a7, type: 3}
       propertyPath: _whiteSpiritImage
       value: 
       objectReference: {fileID: 21300000, guid: 80fd5192e0992e4459aac78eb3f9b546, type: 3}
+    - target: {fileID: 5685524055516157745, guid: 9ed6460f5cceba14d84967cb1408a8a7, type: 3}
+      propertyPath: _continueWaterMenu
+      value: 
+      objectReference: {fileID: 389652979}
     - target: {fileID: 5685524055516157745, guid: 9ed6460f5cceba14d84967cb1408a8a7, type: 3}
       propertyPath: _whiteSpiritSprite
       value: 

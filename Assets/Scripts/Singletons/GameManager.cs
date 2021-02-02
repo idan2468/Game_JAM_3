@@ -129,7 +129,6 @@ public class GameManager : Singleton<GameManager>
                     _player.SetActive(true);
                 }
             }).SetEase(ease).Play();
-       
     }
 
     public void AdvanceLevel()
